@@ -127,3 +127,54 @@ Migrating to ChangeUsers6 (20211230211541)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2095901650730621370)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-12-30 16:30:57 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Zeitwerk::NameError - expected file /home/caleb/AABootcamp/AAProjects/FULLSTACK - Willow/willow/app/controllers/static_pages_controller.rb to define constant StaticPagesController, but didn't:
+
+Started POST "/__better_errors/e711a3976d454c19/variables" for ::1 at 2021-12-30 16:30:57 -0500
+Started GET "/" for ::1 at 2021-12-30 16:32:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2641)
+  Rendered layout layouts/application.html.erb (Duration: 155.6ms | Allocations: 60900)
+Completed 200 OK in 169ms (Views: 159.0ms | ActiveRecord: 2.6ms | Allocations: 64290)
+
+
+Started GET "/" for ::1 at 2021-12-30 16:33:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 790)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4709)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 4953)
+
+
+Started GET "/" for ::1 at 2021-12-30 16:35:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 322.9ms | Allocations: 68403)
+Completed 200 OK in 324ms (Views: 323.2ms | ActiveRecord: 0.2ms | Allocations: 68646)
+
+
+Started GET "/" for ::1 at 2021-12-30 16:35:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 315.9ms | Allocations: 69800)
+Completed 200 OK in 317ms (Views: 316.2ms | ActiveRecord: 0.2ms | Allocations: 70038)
+
+

@@ -178,3 +178,330 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 317ms (Views: 316.2ms | ActiveRecord: 0.2ms | Allocations: 70038)
 
 
+Started GET "/" for ::1 at 2021-12-30 16:52:08 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2540)
+  Rendered layout layouts/application.html.erb (Duration: 462.0ms | Allocations: 77059)
+Completed 200 OK in 471ms (Views: 464.3ms | ActiveRecord: 1.6ms | Allocations: 79423)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:09:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2867)
+  Rendered layout layouts/application.html.erb (Duration: 338.3ms | Allocations: 73203)
+Completed 200 OK in 339ms (Views: 338.7ms | ActiveRecord: 2.9ms | Allocations: 73447)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:09:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 348.8ms | Allocations: 72462)
+Completed 200 OK in 350ms (Views: 349.0ms | ActiveRecord: 0.2ms | Allocations: 72700)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:20:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2865)
+  Rendered layout layouts/application.html.erb (Duration: 342.5ms | Allocations: 73201)
+Completed 200 OK in 343ms (Views: 343.0ms | ActiveRecord: 3.0ms | Allocations: 73439)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:21:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 328.3ms | Allocations: 71128)
+Completed 200 OK in 329ms (Views: 328.4ms | ActiveRecord: 0.2ms | Allocations: 71370)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:21:11 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"jim", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :username[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_F7ApdEjlIov_M1mOTmqig"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 401 Unauthorized in 193ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 10766)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:21:21 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"jim", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :username[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5G1ihSh2d_poEVYg2ULdPg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 401 Unauthorized in 181ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3966)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:21:37 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4703)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 4941)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:21:56 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Mr. Mime", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :username[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KBbSiyRGRgYfLZCyQJJy4g"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 401 Unauthorized in 181ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3963)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:22:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 332.5ms | Allocations: 71113)
+Completed 200 OK in 333ms (Views: 332.7ms | ActiveRecord: 0.2ms | Allocations: 71351)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:22:21 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Waluigi", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :username[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "aQRFHMKnZqdqRiBE8EYyDw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 401 Unauthorized in 180ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3987)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:23:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5780)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 2.6ms | Allocations: 6160)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:24:09 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jim2@jim.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :username[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xXXvTX556kHty7V5CUCsDw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 401 Unauthorized in 187ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 6949)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:26:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 330.8ms | Allocations: 72551)
+Completed 200 OK in 331ms (Views: 331.0ms | ActiveRecord: 0.2ms | Allocations: 72789)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:26:28 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"wario@wario.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wario@wario.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "IH1V2UJaQ5PFmdFxOIo7NA"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "session_token", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["password_digest", "$2a$12$vRh3mOwiok1/pksnHQ0dnO5BXvluHjKw/jo9fnAc3IKIbCU4RFKgC"], ["session_token", "IH1V2UJaQ5PFmdFxOIo7NA"], ["created_at", "2021-12-30 22:26:28.194055"], ["updated_at", "2021-12-30 22:26:28.194055"], ["email", "wario@wario.com"]]
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 1.9ms | Allocations: 5683)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "screen_name" violates not-null constraint
+DETAIL:  Failing row contains (1, $2a$12$vRh3mOwiok1/pksnHQ0dnO5BXvluHjKw/jo9fnAc3IKIbCU4RFKgC, IH1V2UJaQ5PFmdFxOIo7NA, 2021-12-30 22:26:28.194055, 2021-12-30 22:26:28.194055, null, null, wario@wario.com).:
+  app/controllers/api/users_controller.rb:4:in `create'
+
+Started GET "/" for ::1 at 2021-12-30 17:31:23 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 149.9ms | Allocations: 16808)
+Completed 200 OK in 158ms (Views: 152.1ms | ActiveRecord: 1.5ms | Allocations: 19172)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:31:28 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"4dfsdf", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "4dfsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eO0dsPIzEjkWnYYtS2wLCQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "session_token", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["password_digest", "$2a$12$HTHc2e54UH/fCMSuvcIIvuHHlq.MDUPnSdLihDfjUgg6LA26ifaky"], ["session_token", "eO0dsPIzEjkWnYYtS2wLCQ"], ["created_at", "2021-12-30 22:31:28.980705"], ["updated_at", "2021-12-30 22:31:28.980705"], ["email", "4dfsdf"]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 3.5ms | Allocations: 9539)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "screen_name" violates not-null constraint
+DETAIL:  Failing row contains (2, $2a$12$HTHc2e54UH/fCMSuvcIIvuHHlq.MDUPnSdLihDfjUgg6LA26ifaky, eO0dsPIzEjkWnYYtS2wLCQ, 2021-12-30 22:31:28.980705, 2021-12-30 22:31:28.980705, null, null, 4dfsdf).:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2095901650730621370)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeUsers7 (20211230223225)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP INDEX  "index_users_on_screen_name"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211230223225"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2095901650730621370)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-12-30 17:33:39 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 9759)
+Completed 200 OK in 60ms (Views: 51.8ms | ActiveRecord: 1.7ms | Allocations: 12282)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:33:41 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.2ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4713)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 4957)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:34:05 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"biglad@large.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "biglad@large.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kDUcSGBiszVMNq_U9AqTAw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "session_token", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["password_digest", "$2a$12$UuQ3yr599r9jRh/w9ily/OavCubg73j8R0gEcIe1PYWHsQjTNj4E."], ["session_token", "kDUcSGBiszVMNq_U9AqTAw"], ["created_at", "2021-12-30 22:34:05.624443"], ["updated_at", "2021-12-30 22:34:05.624443"], ["email", "biglad@large.com"]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 3.2ms | Allocations: 9519)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "screen_name" violates not-null constraint
+DETAIL:  Failing row contains (3, $2a$12$UuQ3yr599r9jRh/w9ily/OavCubg73j8R0gEcIe1PYWHsQjTNj4E., kDUcSGBiszVMNq_U9AqTAw, 2021-12-30 22:34:05.624443, 2021-12-30 22:34:05.624443, null, null, biglad@large.com).:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+Started GET "/" for ::1 at 2021-12-30 17:34:49 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2546)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 9767)
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 1.6ms | Allocations: 12132)
+
+
+Started GET "/" for ::1 at 2021-12-30 17:34:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4713)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 4957)
+
+
+Started POST "/api/users" for ::1 at 2021-12-30 17:35:05 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"324sdf324", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "324sdf324"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jfiYVoW2vjcj-d1sv_8FqA"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "session_token", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["password_digest", "$2a$12$MGWSEZwqLyOeqwTGr2apDuue/20Ec5lJbRyMqTpw0txiNMDQqe6yG"], ["session_token", "jfiYVoW2vjcj-d1sv_8FqA"], ["created_at", "2021-12-30 22:35:06.097559"], ["updated_at", "2021-12-30 22:35:06.097559"], ["email", "324sdf324"]]
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 3.1ms | Allocations: 9536)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "screen_name" violates not-null constraint
+DETAIL:  Failing row contains (4, $2a$12$MGWSEZwqLyOeqwTGr2apDuue/20Ec5lJbRyMqTpw0txiNMDQqe6yG, jfiYVoW2vjcj-d1sv_8FqA, 2021-12-30 22:35:06.097559, 2021-12-30 22:35:06.097559, null, null, 324sdf324).:
+  app/controllers/api/users_controller.rb:5:in `create'
+

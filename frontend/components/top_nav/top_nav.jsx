@@ -9,21 +9,31 @@ export default class TopNav extends React.Component {
 
     render() {
         const loggedIn = this.props.currentUser
-
-        if (loggedIn){
-            return (
-                <div id="top-nav">
-                    <h1>Hello, {this.props.currentUser.email}.</h1>
-                    <button onClick={this.props.logout}>Sign Out</button>
-                </div>
-            );
-        } else {
-            return (
-            <div id="top-nav">
+        const loginButton = loggedIn ? (
+            <div id="login">
+                <h1>Hello, {this.props.currentUser.email}.</h1>
+                <button onClick={this.props.logout}>Sign Out</button>
+            </div>
+        ) : (
+            <div id="login">
                 <Link to='/signup'>Sign Up</Link>
                 <Link to='/login'>Log In</Link>
             </div>
-            );
-        }
+        )
+
+        return (
+            <div className="top-nav">
+                <div className="top-left">
+                    <div>Buy</div>
+                    <div>Rent</div>
+                    <div>Sell</div>
+                </div>
+                <div className="top-logo">
+                </div>
+                <div className="top-right">
+                    { loginButton }
+                </div>
+            </div>
+        )
     }
 }

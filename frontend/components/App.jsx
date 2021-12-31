@@ -5,18 +5,14 @@ import { AuthRoute } from "../util/route_util";
 import TopNavContainer from "./top_nav/top_nav_container";
 import SignupFormContainer from "./form/signup_form_container";
 import LoginFormContainer from "./form/login_form_container";
+import SplashContent from "./splash/splash_content";
 
 const App = () => (
   <div className="app">
-    <div className="top-bar">
-      <header>
-        <h1>Willow</h1>
-      </header>
-      <TopNavContainer />
-    </div>
-
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
+    <TopNavContainer />
+    <SplashContent />
+    {/* <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} /> */}
   </div>
 );
 

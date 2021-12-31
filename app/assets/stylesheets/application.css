@@ -66,7 +66,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 24rem;
+    height: 34rem;
     /* background-image: url("../images/splash-image.png"); */
     background:rgb(134, 154, 243);
 }
@@ -77,7 +77,7 @@ html, body {
     color: white;
     /* font-family: "Dutch 809"; */
     font-weight: 600;
-    margin: 4rem 0 2rem;
+    margin: 6rem 0 2rem;
 }
 
 .splash-search .search-bar {

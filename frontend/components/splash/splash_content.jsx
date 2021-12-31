@@ -19,6 +19,9 @@ export default class SplashContent extends React.Component {
                     <TopNavContainer />
                     <SplashSearch />
                 </div>
+                <div className="splash-lower-tag">
+                    Whether you're buying, selling or renting, we can help you move forward.
+                </div>
                 <div className="cards">
                     <LinkCard type="buy" />
                     <LinkCard type="sell" />

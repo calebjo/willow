@@ -9,7 +9,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: ['.js', '.jsx', '*'],
+    alias: {
+        assets: path.resolve('./app/assets'),
+    }
   },
   module: {
     rules: [
@@ -22,8 +25,21 @@ module.exports = {
             presets: ['@babel/env', '@babel/react']
           }
         },
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg)(\?.*)?$/,
+        use: {
+          loader: 'file-loader', 
+          options: {
+            name: '[name][md5:hash].[ext]',
+            outputPath: 'webpack-assets/',
+            publicPath: '/assets/webpack-assets/'
+          }
+        }
       }
     ]
   },
   devtool: 'source-map'
+  
 };
+

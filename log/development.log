@@ -3018,3 +3018,1227 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 22555)
 
 
+Started GET "/" for ::1 at 2021-12-31 14:39:38 -0500
+
+ActiveRecord::ConnectionNotEstablished - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/60426c577a800adc/variables" for ::1 at 2021-12-31 14:39:38 -0500
+Started GET "/" for ::1 at 2021-12-31 14:40:10 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2535)
+  Rendered layout layouts/application.html.erb (Duration: 506.5ms | Allocations: 106387)
+Completed 200 OK in 517ms (Views: 506.9ms | ActiveRecord: 3.8ms | Allocations: 108752)
+
+
+Started GET "/" for ::1 at 2021-12-31 14:43:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 19502)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 19746)
+
+
+Started GET "/" for ::1 at 2021-12-31 14:44:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 22032)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms | Allocations: 22271)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:06:18 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2880)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 24375)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 2.8ms | Allocations: 24618)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:07:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.3ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 20917)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms | Allocations: 21155)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:08:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 19528)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms | Allocations: 19771)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:11:09 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 24908)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 25147)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:11:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 27569)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 27807)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:11:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 25043)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 25281)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:12:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 24909)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 25147)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:12:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 18062)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 18300)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:15:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 329.0ms | Allocations: 82867)
+Completed 200 OK in 330ms (Views: 329.1ms | ActiveRecord: 0.3ms | Allocations: 83106)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:16:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 23458)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 23696)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:17:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 26105)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 26347)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:17:18 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.2ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 24779)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.1ms | Allocations: 25017)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:17:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 19571)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.1ms | Allocations: 19809)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:01 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 23550)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 23788)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 26063)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 26301)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 30323)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 30562)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 22072)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 22310)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 26173)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 26411)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:18:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 25065)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 25303)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:19:01 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 769)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 23539)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 23777)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:19:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 23496)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 23734)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:19:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 19526)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 19764)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:19:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 25008)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 25246)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:20:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 26036)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.2ms | Allocations: 26274)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:21:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 24881)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 25119)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:21:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 19552)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 19790)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:22:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.2ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 27645)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 27883)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:22:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 23415)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms | Allocations: 23654)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:22:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 19655)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 19893)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 20904)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 21142)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 23751)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 23989)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:13 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 24752)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 24991)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 19516)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 19754)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 6664)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 6903)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:30 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 6670)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 6908)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 23527)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 23765)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 23299)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 23538)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 23682)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 23920)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 5278)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 5517)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:23:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 5260)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 5498)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:24:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 23382)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 23620)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:24:13 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.2ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 23462)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 23700)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:36:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2872)
+  Rendered layout layouts/application.html.erb (Duration: 349.1ms | Allocations: 106193)
+Completed 200 OK in 350ms (Views: 349.4ms | ActiveRecord: 2.6ms | Allocations: 106432)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:36:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 20977)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 21215)
+
+
+Started GET "/images/splash-image.png" for ::1 at 2021-12-31 15:36:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 15:37:59 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2546)
+  Rendered layout layouts/application.html.erb (Duration: 162.6ms | Allocations: 48791)
+Completed 200 OK in 169ms (Views: 164.2ms | ActiveRecord: 1.3ms | Allocations: 51155)
+
+
+Started GET "/" for ::1 at 2021-12-31 15:40:34 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5333)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms | Allocations: 7674)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.css" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:12
+
+Started POST "/__better_errors/4edaa9d275c6ac21/variables" for ::1 at 2021-12-31 15:40:35 -0500
+Started GET "/" for ::1 at 2021-12-31 15:40:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3059)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 3283)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.css" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:12
+
+Started POST "/__better_errors/5bf06de2489b70f9/variables" for ::1 at 2021-12-31 15:40:58 -0500
+Started GET "/" for ::1 at 2021-12-31 15:41:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 799)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3057)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 3280)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.css" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:12
+
+Started POST "/__better_errors/84ac1ebab1a2fdfe/variables" for ::1 at 2021-12-31 15:41:03 -0500
+Started GET "/" for ::1 at 2021-12-31 15:41:07 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 31695)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 1.5ms | Allocations: 34059)
+
+
+Started GET "/images/splash-image.png" for ::1 at 2021-12-31 15:41:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 15:55:40 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2534)
+  Rendered layout layouts/application.html.erb (Duration: 473.5ms | Allocations: 118487)
+Completed 200 OK in 481ms (Views: 475.1ms | ActiveRecord: 1.9ms | Allocations: 120852)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 15:56:45 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2530)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 10750)
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 1.5ms | Allocations: 13115)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 15:56:48 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 5268)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 5513)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:10:49 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 161.5ms | Allocations: 32415)
+Completed 200 OK in 170ms (Views: 163.1ms | ActiveRecord: 1.5ms | Allocations: 34780)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:11:24 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 50385)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 1.6ms | Allocations: 52750)
+
+
+Started GET "/images/splash-image.png" for ::1 at 2021-12-31 16:11:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-image.png"):
+  
+Started GET "/images/splash-image.png" for ::1 at 2021-12-31 16:11:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:20:09 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 26584)
+Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 1.4ms | Allocations: 28949)
+
+
+Started GET "/images/splash-image.png" for ::1 at 2021-12-31 16:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:20:44 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2530)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 52917)
+Completed 200 OK in 82ms (Views: 76.6ms | ActiveRecord: 1.2ms | Allocations: 55282)
+
+
+Started GET "/..assets/images/splash-image.png" for ::1 at 2021-12-31 16:20:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/..assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:21:06 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2540)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 54027)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 1.2ms | Allocations: 56405)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:24:17 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2550)
+  Rendered layout layouts/application.html.erb (Duration: 300.0ms | Allocations: 78318)
+Completed 200 OK in 308ms (Views: 302.5ms | ActiveRecord: 1.3ms | Allocations: 80682)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:25:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2534)
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 26902)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 1.3ms | Allocations: 29267)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:26:23 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2540)
+  Rendered layout layouts/application.html.erb (Duration: 303.3ms | Allocations: 79551)
+Completed 200 OK in 311ms (Views: 305.3ms | ActiveRecord: 1.5ms | Allocations: 81915)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/splash-image.png"):
+  
+Started GET "/" for ::1 at 2021-12-31 16:26:59 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 25498)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.5ms | Allocations: 27839)
+
+
+
+SassC::SyntaxError - Error: error in C function asset-data-url: couldn't find file '../assets/images/splash-image.png' under '/home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/stylesheets'
+       Checked in these paths: 
+         /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/config
+         /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/fonts
+         /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/images
+         /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/javascripts
+         /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/assets/stylesheets
+         /home/caleb/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/jquery-rails-4.4.0/vendor/assets/javascripts
+         /home/caleb/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/actioncable-6.1.4.4/app/assets/javascripts
+         /home/caleb/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/activestorage-6.1.4.4/app/assets/javascripts
+         /home/caleb/.rbenv/versions/2.7.3/lib/ruby/gems/2.7.0/gems/actionview-6.1.4.4/lib/assets/compiled
+        on line 69:23 of app/assets/stylesheets/application.css.scss, in function `asset-data-url`
+        from line 69:23 of app/assets/stylesheets/application.css.scss
+>>     background-image: asset-data-url("../assets/images/splash-image.png");
+   ----------------------^:
+  app/views/layouts/application.html.erb:12
+
+Started POST "/__better_errors/4169f70d2568fea5/variables" for ::1 at 2021-12-31 16:26:59 -0500
+Started GET "/" for ::1 at 2021-12-31 16:27:58 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 727.0ms | Allocations: 183378)
+Completed 200 OK in 734ms (Views: 729.0ms | ActiveRecord: 1.4ms | Allocations: 185748)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:30:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 626.3ms | Allocations: 160859)
+Completed 200 OK in 627ms (Views: 626.6ms | ActiveRecord: 0.2ms | Allocations: 161103)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:33:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 647.2ms | Allocations: 155508)
+Completed 200 OK in 648ms (Views: 647.3ms | ActiveRecord: 0.2ms | Allocations: 155750)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:33:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 796)
+  Rendered layout layouts/application.html.erb (Duration: 666.7ms | Allocations: 169480)
+Completed 200 OK in 667ms (Views: 666.9ms | ActiveRecord: 0.2ms | Allocations: 169723)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:33:39 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 611.3ms | Allocations: 154041)
+Completed 200 OK in 612ms (Views: 611.4ms | ActiveRecord: 0.2ms | Allocations: 154279)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:33:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 618.1ms | Allocations: 158210)
+Completed 200 OK in 619ms (Views: 618.3ms | ActiveRecord: 0.2ms | Allocations: 158448)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:34:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.4ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 684.7ms | Allocations: 172654)
+Completed 200 OK in 685ms (Views: 684.9ms | ActiveRecord: 0.2ms | Allocations: 172892)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:34:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 615.0ms | Allocations: 156715)
+Completed 200 OK in 616ms (Views: 615.2ms | ActiveRecord: 0.1ms | Allocations: 156953)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:34:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 614.4ms | Allocations: 157025)
+Completed 200 OK in 615ms (Views: 614.6ms | ActiveRecord: 0.2ms | Allocations: 157263)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:37:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 498.1ms | Allocations: 158450)
+Completed 200 OK in 499ms (Views: 498.4ms | ActiveRecord: 0.1ms | Allocations: 158692)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:39:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 328.2ms | Allocations: 74006)
+Completed 200 OK in 329ms (Views: 328.5ms | ActiveRecord: 0.1ms | Allocations: 74244)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:39:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 43239)
+Completed 200 OK in 107ms (Views: 106.5ms | ActiveRecord: 0.1ms | Allocations: 43477)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:40:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 108.9ms | Allocations: 47393)
+Completed 200 OK in 109ms (Views: 109.1ms | ActiveRecord: 0.1ms | Allocations: 47631)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:40:37 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 45763)
+Completed 200 OK in 107ms (Views: 106.5ms | ActiveRecord: 0.2ms | Allocations: 46001)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:40:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 109.5ms | Allocations: 44625)
+Completed 200 OK in 110ms (Views: 109.7ms | ActiveRecord: 0.2ms | Allocations: 44863)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:41:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 106.6ms | Allocations: 47287)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.1ms | Allocations: 47525)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:41:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 109.7ms | Allocations: 47250)
+Completed 200 OK in 110ms (Views: 109.8ms | ActiveRecord: 0.2ms | Allocations: 47488)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:41:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 7148)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 7387)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:42:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 44657)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.3ms | Allocations: 44895)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:42:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 108.3ms | Allocations: 43241)
+Completed 200 OK in 109ms (Views: 108.5ms | ActiveRecord: 0.1ms | Allocations: 43479)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:42:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 107.4ms | Allocations: 52613)
+Completed 200 OK in 108ms (Views: 107.7ms | ActiveRecord: 0.1ms | Allocations: 52851)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:43:06 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 108.1ms | Allocations: 43170)
+Completed 200 OK in 109ms (Views: 108.3ms | ActiveRecord: 0.1ms | Allocations: 43408)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:43:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 107.8ms | Allocations: 45930)
+Completed 200 OK in 108ms (Views: 108.1ms | ActiveRecord: 0.1ms | Allocations: 46168)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:43:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 109.2ms | Allocations: 51263)
+Completed 200 OK in 110ms (Views: 109.4ms | ActiveRecord: 0.2ms | Allocations: 51502)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:44:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 329.7ms | Allocations: 89067)
+Completed 200 OK in 330ms (Views: 330.0ms | ActiveRecord: 0.1ms | Allocations: 89306)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:45:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 99.7ms | Allocations: 38726)
+Completed 200 OK in 100ms (Views: 99.9ms | ActiveRecord: 0.1ms | Allocations: 38964)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:45:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 769)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 5577)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 5815)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:45:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.3ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 45997)
+Completed 200 OK in 110ms (Views: 109.9ms | ActiveRecord: 0.2ms | Allocations: 46236)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:46:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 99.1ms | Allocations: 42622)
+Completed 200 OK in 100ms (Views: 99.4ms | ActiveRecord: 0.1ms | Allocations: 42860)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:46:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 38362)
+Completed 200 OK in 97ms (Views: 96.2ms | ActiveRecord: 0.1ms | Allocations: 38600)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:46:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 6997)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 7236)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:46:39 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 99.9ms | Allocations: 42638)
+Completed 200 OK in 101ms (Views: 100.2ms | ActiveRecord: 0.1ms | Allocations: 42876)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:46:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.2ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 112.6ms | Allocations: 43848)
+Completed 200 OK in 113ms (Views: 112.9ms | ActiveRecord: 0.2ms | Allocations: 44086)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:47:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 113.6ms | Allocations: 40952)
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.1ms | Allocations: 41191)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:47:28 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 98.0ms | Allocations: 46405)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.1ms | Allocations: 46643)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:48:10 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 99.3ms | Allocations: 42646)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.1ms | Allocations: 42884)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:49:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 47703)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.2ms | Allocations: 47941)
+
+
+Started GET "/" for ::1 at 2021-12-31 16:49:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 96.2ms | Allocations: 42520)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.1ms | Allocations: 42758)
+
+

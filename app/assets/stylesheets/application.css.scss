@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* @font-face {
+    font-family: "Dutch 809";
+    src: url("../fonts/Dutch809BoldBT.ttf") format("truetype");
+} */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+}
+
+.top-left, .top-right {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.top-left > div, .top-right > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-logo img {
+    width: 183px;
+    height: 38px;
+}
+
+// disable anti-aliasing for a sharper logo
+img { 
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.splash-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 34rem;
+    background-image: asset-data-url("splash-image.webp");
+}
+
+.splash-header {
+    display: flex;
+    font-size: 2rem;
+    color: white;
+    /* font-family: "Dutch 809"; */
+    font-weight: 600;
+    margin: 6rem 0 2rem;
+}
+
+.splash-search .search-bar {
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 207, 207);
+    background-color: white;
+}
+
+.splash-lower-tag {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 4rem 3rem 3rem;
+    background-color: #f9f9fb;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9fb;
+}
+
+.link-card {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+    background-color: rgb(183, 183, 233);
+    height: 8rem;
+    margin: 1rem 0;
+}
+
+.footer {
+    display: flex;
+    height: 20rem;
+    background-color: white;
+}
+
+/* ---------------------------------------------------- */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 900px) {
+    .top-nav {
+        background-color:white;
+        display: flex; // DEBUG
+    }
+    .top-left, .top-right {
+        display: flex;
+    }
+}

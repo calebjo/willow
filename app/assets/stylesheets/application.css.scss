@@ -28,16 +28,11 @@ html, body {
     display: flex;
 }
 
-.splash-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 .top-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 3rem;
+    padding: 0.5rem;
 }
 
 .top-left, .top-right {
@@ -47,12 +42,27 @@ html, body {
 }
 
 .top-left > div, .top-right > div {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
     font-size: 1.25rem;
     font-family: 'Open Sans', sans-serif;
+}
+
+#login {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#login a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.sign-up {
+    display: none;
 }
 
 .top-logo {
@@ -61,20 +71,24 @@ html, body {
     align-items: center;
 }
 
-.top-logo img {
-    width: 183px;
-    height: 38px;
-}
-
 // disable anti-aliasing for a sharper logo
-img { 
+.top-logo img {
+    width: 120px;
+    height: 25px;
+    filter: brightness(0) invert(1);
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    image-rendering: optimizeSpeed;
+    background-image: asset-data-url("splash-image.webp");
 }
 
 .splash-search {
@@ -82,8 +96,7 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 34rem;
-    background-image: asset-data-url("splash-image.webp");
+    height: 23.5rem;
 }
 
 .splash-header {
@@ -92,7 +105,7 @@ img {
     color: white;
     /* font-family: "Dutch 809"; */
     font-weight: 600;
-    margin: 6rem 0 2rem;
+    margin: 4.5rem 0 1rem;
 }
 
 .splash-search .search-bar {
@@ -139,12 +152,26 @@ img {
 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 890px) {
     .top-nav {
         background-color:white;
         display: flex; // DEBUG
     }
+
     .top-left, .top-right {
         display: flex;
+    }
+
+    .top-left div, .top-right div {
+        display: flex;
+    }
+
+    .top-logo img {
+        filter: none;
+    }
+
+    #login a {
+        color: black;
+        font-size: inherit;
     }
 }

@@ -18,8 +18,12 @@ export default class TopNav extends React.Component {
             </div>
         ) : (
             <div id="login">
-                <Link to='/signup'>Sign Up</Link>
-                <Link to='/login'>Log In</Link>
+                <div className="sign-up">
+                    <Link to='/signup'>Sign up</Link>
+                </div>
+                <div className="sign-in">
+                    <Link to='/login'>Sign in</Link>
+                </div>
             </div>
         )
 

@@ -89,6 +89,7 @@ html, body {
     width: 100%;
     image-rendering: optimizeSpeed;
     background-image: asset-data-url("splash-image.webp");
+    background-position: 80% 60%;
 }
 
 .splash-search {
@@ -101,7 +102,7 @@ html, body {
 
 .splash-header {
     display: flex;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: white;
     /* font-family: "Dutch 809"; */
     font-weight: 600;
@@ -120,7 +121,7 @@ html, body {
     text-align: center;
     font-size: 1.25rem;
     font-weight: 600;
-    padding: 4rem 3rem 3rem;
+    padding: 4rem 3rem 1.25rem;
     background-color: #f9f9fb;
 }
 
@@ -133,11 +134,10 @@ html, body {
 .link-card {
     display: flex;
     width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
-    background-color: rgb(183, 183, 233);
-    height: 8rem;
-    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
+    background-color: white;
+    height: 31rem;
+    margin: 0.7rem 0;
 }
 
 .footer {

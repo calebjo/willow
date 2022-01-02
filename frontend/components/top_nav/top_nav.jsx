@@ -18,9 +18,6 @@ export default class TopNav extends React.Component {
             </div>
         ) : (
             <div id="login">
-                <div className="sign-up">
-                    <Link to='/signup'>Sign up</Link>
-                </div>
                 <div className="sign-in">
                     <Link to='/login'>Sign in</Link>
                 </div>
@@ -29,6 +26,8 @@ export default class TopNav extends React.Component {
 
         return (
             <div className="top-nav">
+                <div className="top-hamburger">
+                </div>
                 <div className="top-left">
                     <div>Buy</div>
                     <div>Rent</div>

@@ -29,6 +29,17 @@ html, body {
     display: flex;
 }
 
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+}
+
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -114,12 +125,40 @@ html, body {
     margin: 4.75rem 0 1rem;
 }
 
-.splash-search .search-bar {
+.search-container {
     width: 75%;
     height: 3.5rem;
+    background: white;
     border-radius: 5px;
     border: 1px solid rgb(207, 207, 207);
-    background-color: white;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.search-container form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    input {
+        width: 90%;
+        padding: 1.25rem;
+    }
+}
+
+#search-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    img {
+        filter: opacity(70%);
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: 1rem;
+    }
 }
 
 .splash-lower-tag {
@@ -204,7 +243,7 @@ html, body {
         margin: 0 2rem 0;
     }
 
-    .splash-search .search-bar {
+    .search-container {
         height: 4rem;
     }
 }
@@ -213,7 +252,7 @@ html, body {
     .splash-header {
         font-size: 2.5rem;
     }
-    .splash-search .search-bar {
+    .search-container {
         width: 30rem;
     }
 }
@@ -226,8 +265,8 @@ html, body {
 
 @media (min-width: 890px) {
     .top-nav {
+        display: flex;
         background-color:white;
-        display: flex; // DEBUG
     }
 
     .top-left, .top-right {
@@ -240,6 +279,8 @@ html, body {
 
     .top-logo img {
         filter: none;
+        width: 175px;
+        height: 35px;
     }
 
     #login a {
@@ -249,6 +290,10 @@ html, body {
 }
 
 @media (min-width: 1024px) {
+    .search-container {
+        width: 42rem;
+    }
+
     .cards {
         flex-direction: row;
     }

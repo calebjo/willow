@@ -1,21 +1,14 @@
 import React from "react";
+import FormSwitch from "../form/form_switch";
 
 export default class WelcomeModal extends React.Component {
     constructor(props){
         super(props)
-        this.state = { type: "signin" }
-        this.form = <LoginFormContainer />
+        this.state = {}
     }
 
-    componentDidUpdate(){
-        switch (this.state.type) {
-            case "signin":
-                this.form = <LoginFormContainer />
-            case "signup":
-                this.form = <SignupFormContainer />
-            default:
-                console.log("Something went wrong in the welcome modal.")
-        }
+    setFormType(type){
+        this.state.type = type
     }
 
     // renders the appropriate form within the modal (sign in or sign up)
@@ -26,14 +19,14 @@ export default class WelcomeModal extends React.Component {
                     Welcome to Zillow
                 </div>
                 <div className="modal-switch">
-                    <div className="sign-in-link" onClick={this.setState({[type]:"signin"})}>
+                    <div className="sign-in-link" onClick={this.setFormType("signin")}>
                         Sign in
                     </div>
-                    <div className="sign-up-link" onClick={this.setState({[type]:"signup"})}>
+                    <div className="sign-up-link" onClick={this.setFormType("signup")}>
                         New account
                     </div>
                 </div>
-                { this.form }
+                <FormSwitch type={this.state.type}/>
             </div>
         )
     }

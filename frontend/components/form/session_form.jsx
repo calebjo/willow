@@ -28,7 +28,6 @@ class SessionForm extends React.Component {
         return (
         <div className="session-form">
             <form onSubmit={this.handleSubmit}>
-                <h1>{this.props.formType}</h1>
                 <label>Email
                     <input type="text" value={this.state.email} onChange={this.updateField("email")}/>
                 </label>

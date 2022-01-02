@@ -17,9 +17,9 @@ export default class SplashContent extends React.Component {
     render() {
         return(
             <div className="splash-content">
+                <WelcomeModal />
                 <div className="top-container">
                     <Dropdown />
-                    <WelcomeModal />
                     <TopNavContainer />
                     <SplashSearch />
                 </div>

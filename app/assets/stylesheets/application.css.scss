@@ -25,6 +25,10 @@ html, body {
     overflow-x: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 #root {
     display: flex;
 }
@@ -39,6 +43,25 @@ input {
     font-family: 'Open sans', sans-serif;
     font-weight: 600;
 }
+
+// SPLASH MODAL -----------------------------------------------
+
+.welcome-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 46rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    background: white;
+}
+
+
+
+// TOP NAV ------------------------------------------------
 
 .top-nav {
     display: flex;

@@ -42,9 +42,13 @@ input {
 
 .top-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 4rem;
     padding: 0.5rem;
+}
+
+.top-hamburger {
+    position: absolute;
 }
 
 .top-left, .top-right {

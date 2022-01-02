@@ -22,6 +22,9 @@
 html, body {
     margin: 0;
     padding: 0;
+}
+
+body {
     overflow-x: hidden;
 }
 
@@ -46,6 +49,26 @@ input {
 
 // SPLASH MODAL -----------------------------------------------
 
+.modal-cover {
+    z-index: 99;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    animation: modal-cover 0.5s;
+}
+
+@keyframes modal-cover {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
 .welcome-modal {
     z-index: 100;
     display: flex;
@@ -63,6 +86,7 @@ input {
     border-radius: 10px;
     background: white;
     font-family: "Open sans", sans-serif;
+    animation: open-modal 0.4s;
 
     .signin-form, .signup-form {
         width: 100%;
@@ -77,6 +101,7 @@ input {
             flex-direction: column;
             margin: 0.5rem 0;
         }
+
         input {
             background: rgb(246, 246, 246);
             border: 1px solid lightgray;
@@ -98,6 +123,16 @@ input {
         input[type="submit"]:hover {
             background: #003f97;
         }
+    }
+}
+
+@keyframes open-modal {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
     }
 }
 
@@ -161,7 +196,7 @@ input {
     padding: 0.5rem;
 }
 
-.top-nav div div:hover {
+.top-left div:hover, .top-right div:hover {
     color: #006aff;
     cursor: pointer;
 }

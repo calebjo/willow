@@ -21,12 +21,14 @@ export default class TopNav extends React.Component {
     showModal = () => {
         console.log("in showmodal")
         this.setState({ modal: true })
+        document.body.classList.add("modal-open")
     }
 
     hideModal = () => {
         console.log("in hidemodal")
         this.setState({ modal: false })
         document.removeEventListener("click", this.hideModal, false)
+        document.body.classList.remove("modal-open")
     }
 
     render() {

@@ -8,17 +8,20 @@ export default class WelcomeModal extends React.Component {
     }
 
     handleClick(e){
-        let targetForm;
-        switch (e.target.classList[0]) {
-            case "sign-in-link":
-                targetForm = e.target.parentNode.parentNode.children[2]
-                targetForm.classList.toggle("hidden")
-            case "sign-up-link":
-                targetForm = e.target.parentNode.parentNode.children[3]
-                targetForm.classList.toggle("hidden")
-                targetForm = e.target.parentNode.parentNode.children[2]
-                targetForm.classList.toggle("hidden")
-            default:
+        let signinForm = e.target.parentNode.parentNode.children[2]
+        let signupForm= e.target.parentNode.parentNode.children[3]
+        if (e.target.classList[0] === "sign-in-link") {
+            console.log("in signinlink case")
+            if (signinForm.classList.contains("hidden")) {
+                signinForm.classList.remove("hidden")
+                signupForm.classList.add("hidden")
+            }
+        } else {
+            console.log("in signuplink case")
+            if (signupForm.classList.contains("hidden")) {
+                signinForm.classList.add("hidden")
+                signupForm.classList.remove("hidden")
+            }
         }
     }
 

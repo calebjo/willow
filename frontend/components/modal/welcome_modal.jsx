@@ -8,32 +8,41 @@ export default class WelcomeModal extends React.Component {
     }
 
     onClickForm(e){
-        let signinForm = e.target.parentNode.parentNode.children[2]
-        let signupForm= e.target.parentNode.parentNode.children[3]
+        e.preventDefault();
+        let signinForm = e.target.parentNode.parentNode.children[3]
+        let signupForm= e.target.parentNode.parentNode.children[4]
         if (e.target.classList[0] === "sign-in-link") {
             console.log("in signinlink case")
             if (signinForm.classList.contains("hidden")) {
-                signinForm.classList.remove("hidden")
                 signupForm.classList.add("hidden")
+                signinForm.classList.remove("hidden")
+                e.target.parentNode.children[1].classList.remove("toggled")
+                e.target.classList.add("toggled")
             }
         } else {
             console.log("in signuplink case")
             if (signupForm.classList.contains("hidden")) {
                 signinForm.classList.add("hidden")
                 signupForm.classList.remove("hidden")
+                e.target.parentNode.children[0].classList.remove("toggled")
+                e.target.classList.add("toggled")
             }
         }
     }
 
     // renders the appropriate form within the modal (sign in or sign up)
     render(){
+        const modalClasses = this.props.show ? ("welcome-modal") : ("welcome-modal hidden")
         return (
-            <div className="welcome-modal hidden">
+            <div className={ modalClasses }>
+                <div className="modal-exit">
+                    X
+                </div>
                 <div className="modal-header">
                     Welcome to Willow
                 </div>
                 <div className="modal-switch">
-                    <div className="sign-in-link" onClick={this.onClickForm}>
+                    <div className="sign-in-link toggled" onClick={this.onClickForm}>
                         Sign in
                     </div>
                     <div className="sign-up-link" onClick={this.onClickForm}>
@@ -42,6 +51,9 @@ export default class WelcomeModal extends React.Component {
                 </div>
                 <LoginFormContainer />
                 <SignupFormContainer />
+                <div className="modal-lower">
+                    
+                </div>
             </div>
         )
     }

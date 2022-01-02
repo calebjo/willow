@@ -8,37 +8,43 @@ import WelcomeModal from "../modal/welcome_modal";
 export default class TopNav extends React.Component {
     constructor(props){
         super(props)
-        this.state = { show: false }
+        this.state = { modal: false }
+        this.handleClick = this.handleClick.bind(this)
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
     }
 
+    handleClick = () => {
+        this.showModal()
+    }
+
     showModal = () => {
-        this.setState({ show: true })
+        console.log("in showmodal")
+        this.setState({ modal: true })
     }
 
     hideModal = () => {
-        this.setState({ show: false })
+        console.log("in hidemodal")
+        this.setState({ modal: false })
+        document.removeEventListener("click", this.hideModal, false)
     }
 
     render() {
         const loggedIn = this.props.currentUser
         const loginButton = loggedIn ? (
             <div id="login">
-                <h1>Hello, {this.props.currentUser.email}.</h1>
                 <button onClick={this.props.logout}>Sign Out</button>
             </div>
         ) : (
             <div id="login">
-                <div className="sign-in">
-                    <Link to='/login'>Sign in</Link>
+                <div className="sign-in" onClick={this.handleClick}>
+                    Sign in
                 </div>
             </div>
         )
-
         return (
             <div className="top-nav">
-                <WelcomeModal hidden={this.state.hideModal}/>
+                <WelcomeModal show={this.state.modal}/>
                 <div className="top-left">
                     <div>Buy</div>
                     <div>Rent</div>

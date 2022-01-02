@@ -6,9 +6,13 @@ export class Dropdown extends React.Component {
         this.state = { open: false }
     }
 
+    handleClick(e){
+        e.currentTarget.classList.toggle("dropdown-active")
+    }
+
     render() {
         return(
-            <div className="top-dropdown">
+            <div className="top-dropdown" onClick={this.handleClick}>
                 <div className="dropdown-bar"></div>
                 <div className="dropdown-bar"></div>
                 <div className="dropdown-bar"></div>

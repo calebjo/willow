@@ -291,6 +291,10 @@ input:focus, textarea:focus, select:focus{
         background-color:white;
     }
 
+    .top-dropdown {
+        display: none;
+    }
+
     .top-left, .top-right {
         display: flex;
     }

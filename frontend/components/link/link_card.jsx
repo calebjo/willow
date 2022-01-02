@@ -8,13 +8,14 @@ import SellHome from "assets/images/sell-home.webp"
 export default class LinkCard extends React.Component {
     constructor(props){
         super(props)
+        this.state = { type: null }
         this.image = null;
         this.title = null;
         this.copy = null;
         this.buttonText = null;
         this.setCardContent = this.setCardContent.bind(this)
     }
-
+    
     setCardContent(){
         console.log(this.props)
         switch(this.props.type){

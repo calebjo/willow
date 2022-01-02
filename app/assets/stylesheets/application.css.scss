@@ -14,10 +14,10 @@
  *= require_self
  */
 
-/* @font-face {
+@font-face {
     font-family: "Dutch 809";
-    src: url("../fonts/Dutch809BoldBT.ttf") format("truetype");
-} */
+    src: asset-data-url("Dutch809BoldBT.ttf") format("truetype");
+}
 
 html, body {
     margin: 0;
@@ -27,6 +27,10 @@ html, body {
 
 body.modal-open {
     overflow: hidden;
+}
+
+.hidden {
+    display: none;
 }
 
 #root {
@@ -47,19 +51,34 @@ input {
 // SPLASH MODAL -----------------------------------------------
 
 .welcome-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 28rem;
     height: 46rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.384);
     border-radius: 10px;
     background: white;
 }
 
+.modal-header {
+    padding: 2.5rem;
+    font-family: "Dutch 809";
+    font-size: 1.5rem;
+    color:rgb(51, 51, 51);
+}
 
+.modal-switch {
+    display: flex;
+    div {
+        margin: 1rem;
+    }
+}
 
 // TOP NAV ------------------------------------------------
 

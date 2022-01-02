@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import WillowLogo from "assets/images/willow-logo.png"
+import WillowLogo from "assets/images/willow-logo.png";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
@@ -26,8 +26,6 @@ export default class TopNav extends React.Component {
 
         return (
             <div className="top-nav">
-                <div className="top-hamburger">
-                </div>
                 <div className="top-left">
                     <div>Buy</div>
                     <div>Rent</div>

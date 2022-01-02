@@ -6,6 +6,7 @@ import LoginFormContainer from "../form/login_form_container";
 import Footer from "../footer/footer";
 import SplashSearch from "./splash_search";
 import LinkCard from "../link/link_card";
+import { Dropdown } from "./dropdown";
 
 export default class SplashContent extends React.Component {
     constructor(props){
@@ -16,6 +17,7 @@ export default class SplashContent extends React.Component {
         return(
             <div className="splash-content">
                 <div className="top-container">
+                    <Dropdown />
                     <TopNavContainer />
                     <SplashSearch />
                 </div>

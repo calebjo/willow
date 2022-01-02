@@ -42,13 +42,31 @@ input {
 
 .top-nav {
     display: flex;
-    justify-content: space-evenly;
-    height: 4rem;
+    justify-content: space-between;
+    height: 3rem;
     padding: 0.5rem;
 }
 
-.top-hamburger {
+.top-dropdown {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    left: 0;
+    margin: 1.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.top-dropdown:focus {
+    border: 4px solid white;
+}
+
+.dropdown-bar {
+    display: flex;
+    width: 1.1rem;
+    height: 0.15rem;
+    margin: 0.125rem;
+    border-radius: 4px;
+    background: white;
 }
 
 .top-left, .top-right {

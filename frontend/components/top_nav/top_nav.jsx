@@ -2,11 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import WillowLogo from "assets/images/willow-logo.png";
+import WelcomeModal from "../modal/welcome_modal";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
     constructor(props){
         super(props)
+        this.state = { show: false }
+        this.showModal = this.showModal.bind(this)
+        this.hideModal = this.hideModal.bind(this)
+    }
+
+    showModal = () => {
+        this.setState({ show: true })
+    }
+
+    hideModal = () => {
+        this.setState({ show: false })
     }
 
     render() {
@@ -26,6 +38,7 @@ export default class TopNav extends React.Component {
 
         return (
             <div className="top-nav">
+                <WelcomeModal hidden={this.state.hideModal}/>
                 <div className="top-left">
                     <div>Buy</div>
                     <div>Rent</div>

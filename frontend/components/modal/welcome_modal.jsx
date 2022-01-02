@@ -7,7 +7,7 @@ export default class WelcomeModal extends React.Component {
         super(props)
     }
 
-    handleClick(e){
+    onClickForm(e){
         let signinForm = e.target.parentNode.parentNode.children[2]
         let signupForm= e.target.parentNode.parentNode.children[3]
         if (e.target.classList[0] === "sign-in-link") {
@@ -28,15 +28,15 @@ export default class WelcomeModal extends React.Component {
     // renders the appropriate form within the modal (sign in or sign up)
     render(){
         return (
-            <div className="welcome-modal">
+            <div className="welcome-modal hidden">
                 <div className="modal-header">
                     Welcome to Willow
                 </div>
                 <div className="modal-switch">
-                    <div className="sign-in-link" onClick={this.handleClick}>
+                    <div className="sign-in-link" onClick={this.onClickForm}>
                         Sign in
                     </div>
-                    <div className="sign-up-link" onClick={this.handleClick}>
+                    <div className="sign-up-link" onClick={this.onClickForm}>
                         New account
                     </div>
                 </div>

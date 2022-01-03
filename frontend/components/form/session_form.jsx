@@ -14,11 +14,21 @@ class SessionForm extends React.Component {
         this.updateField = this.updateField.bind(this)
     }
 
+    componentWillUnmount() {
+        this.props.removeSessionErrors()
+    }
+
     handleSubmit(e) {
         e.preventDefault();
+        this.props.removeSessionErrors()
         const user = Object.assign({}, this.state)
-        this.hideModal()
         this.props.processForm(user)
+        setTimeout(() => {
+            console.log(this.props.errors)
+            if (this.props.errors.length === 0){
+                this.props.hideModal()
+            }
+        }, 100)
     }
 
     handleDemoSubmit(e) {
@@ -29,10 +39,10 @@ class SessionForm extends React.Component {
         )
     }
 
-    hideModal() {
-        const modal = document.querySelector(".modal-container")
-        modal.classList.add("hidden")
-    }
+    // hideModal() {
+    //     const modal = document.querySelector(".modal-container")
+    //     modal.classList.add("hidden")
+    // }
 
     updateField(type){
         return (e) => this.setState({[type]: e.target.value});

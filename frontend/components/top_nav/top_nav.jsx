@@ -16,7 +16,7 @@ export default class TopNav extends React.Component {
     }
 
     showModal = (e) => {
-        console.log("in showModal")
+        console.log("in TOPNAV showModal")
 
         this.setState({ modal: true })
 
@@ -25,10 +25,7 @@ export default class TopNav extends React.Component {
             modal.classList.remove("hidden")
         }
 
-        // const modal = document.querySelector(".modal-container")
-        
         document.body.classList.add("modal-open")
-        // modal.classList.add("hidden")
         setTimeout(() => {
             const modalCover = document.querySelector(".modal-cover")
             const modalClose = document.querySelector(".modal-exit")
@@ -38,9 +35,8 @@ export default class TopNav extends React.Component {
     }
 
     hideModal = (e) => {
-        console.log("in hideModal")
+        console.log("in TOPNAV hideModal")
 
-        // const modal = document.querySelector(".modal-container")
         const modalCover = document.querySelector(".modal-cover")
         const modalClose = document.querySelector(".modal-exit")
         modalCover.removeEventListener("click", this.hideModal)
@@ -80,7 +76,8 @@ export default class TopNav extends React.Component {
         return (
             <div className="top-nav">
                 {this.state.modal && 
-                    <WelcomeModal />
+                    <WelcomeModal 
+                        hideModal={this.hideModal}/>
                 }
                 <div className="top-left">
                     <div>Buy</div>

@@ -15,7 +15,7 @@ export default class TopNav extends React.Component {
         this.hideModal = this.hideModal.bind(this)
     }
 
-    showModal = () => {
+    showModal = (e) => {
         this.setState({ modal: true })
         document.body.classList.add("modal-open")
         setTimeout(() => {
@@ -44,7 +44,7 @@ export default class TopNav extends React.Component {
         const dropdown = document.querySelector(".session-dropdown")
         if (e.target !== dropdown) {
             this.setState({ dropdown: false })
-            document.removeEventListener("click", this.hideModal)
+            document.removeEventListener("click", this.hideDropdown)
         }
     }
 

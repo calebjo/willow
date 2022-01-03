@@ -32,9 +32,8 @@ export default class WelcomeModal extends React.Component {
 
     // renders the appropriate form within the modal (sign in or sign up)
     render(){
-        const modalClasses = this.props.show ? ("modal-container") : ("modal-container hidden")
         return (
-            <div className={ modalClasses }>
+            <div className="modal-container">
                 <div className="modal-cover"></div>
                 <div className="welcome-modal">
                     <div className="modal-exit">

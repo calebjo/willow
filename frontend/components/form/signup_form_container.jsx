@@ -1,15 +1,17 @@
 import { connect } from "react-redux";
-import { signup } from "../../actions/session_actions";
+import { signup, removeSessionErrors } from "../../actions/session_actions";
 import SessionForm from "./session_form";
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
     errors: Object.values(state.errors.session),
     formType: 'Submit',
-    className: 'signup-form hidden'
+    className: 'signup-form hidden',
+    hideModal: ownProps.hideModal
 });
 
 const mapDispatchToProps = dispatch => ({
-    processForm: user => dispatch(signup(user))
+    processForm: user => dispatch(signup(user)),
+    removeSessionErrors: () => dispatch(removeSessionErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

@@ -16,21 +16,37 @@ export default class TopNav extends React.Component {
     }
 
     showModal = (e) => {
+        console.log("in showModal")
+
         this.setState({ modal: true })
+
+        const modal = document.querySelector(".modal-container")
+        if (modal && modal.classList.contains("hidden")) { 
+            modal.classList.remove("hidden")
+        }
+
+        // const modal = document.querySelector(".modal-container")
+        
         document.body.classList.add("modal-open")
+        // modal.classList.add("hidden")
         setTimeout(() => {
-            document.addEventListener("click", this.hideModal)
-        }, 100)
+            const modalCover = document.querySelector(".modal-cover")
+            const modalClose = document.querySelector(".modal-exit")
+            modalCover.addEventListener("click", this.hideModal)
+            modalClose.addEventListener("click", this.hideModal)
+        }, 25)
     }
 
     hideModal = (e) => {
+        console.log("in hideModal")
+
+        // const modal = document.querySelector(".modal-container")
         const modalCover = document.querySelector(".modal-cover")
         const modalClose = document.querySelector(".modal-exit")
-        if (e.target === modalCover || e.target === modalClose) {
-            this.setState({ modal: false })
-            document.body.classList.remove("modal-open")
-            document.removeEventListener("click", this.hideModal)
-        }
+        modalCover.removeEventListener("click", this.hideModal)
+        modalClose.removeEventListener("click", this.hideModal)
+        document.body.classList.remove("modal-open")
+        this.setState({ modal: false })
     }
 
     showDropdown = () => {

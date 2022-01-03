@@ -16,10 +16,9 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        document.body.classList.remove("modal-open")
+        const user = Object.assign({}, this.state)
         this.hideModal()
-        this.props.processForm(user);
+        this.props.processForm(user)
     }
 
     handleDemoSubmit(e) {

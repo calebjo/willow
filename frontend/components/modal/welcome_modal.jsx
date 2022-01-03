@@ -7,12 +7,11 @@ export default class WelcomeModal extends React.Component {
         super(props)
     }
 
-    onClickForm(e){
+    toggleForm(e){
         e.preventDefault();
         let signinForm = e.target.parentNode.parentNode.children[3]
-        let signupForm= e.target.parentNode.parentNode.children[4]
+        let signupForm = e.target.parentNode.parentNode.children[4]
         if (e.target.classList[0] === "sign-in-link") {
-            // console.log("in signinlink case")
             if (signinForm.classList.contains("hidden")) {
                 signupForm.classList.add("hidden")
                 signinForm.classList.remove("hidden")
@@ -20,7 +19,6 @@ export default class WelcomeModal extends React.Component {
                 e.target.classList.add("toggled")
             }
         } else {
-            // console.log("in signuplink case")
             if (signupForm.classList.contains("hidden")) {
                 signinForm.classList.add("hidden")
                 signupForm.classList.remove("hidden")
@@ -37,16 +35,16 @@ export default class WelcomeModal extends React.Component {
                 <div className="modal-cover"></div>
                 <div className="welcome-modal">
                     <div className="modal-exit">
-                        X
+                        x
                     </div>
                     <div className="modal-header">
                         Welcome to Willow
                     </div>
                     <div className="modal-switch">
-                        <div className="sign-in-link toggled" onClick={this.onClickForm}>
+                        <div className="sign-in-link toggled" onClick={this.toggleForm}>
                             Sign in
                         </div>
-                        <div className="sign-up-link" onClick={this.onClickForm}>
+                        <div className="sign-up-link" onClick={this.toggleForm}>
                             New account
                         </div>
                     </div>

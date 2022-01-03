@@ -6,7 +6,6 @@ export class SessionDropdown extends React.Component {
     }
 
     handleClick(e){
-        debugger
         e.currentTarget.classList.toggle("hidden")
     }
 

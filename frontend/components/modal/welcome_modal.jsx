@@ -12,7 +12,7 @@ export default class WelcomeModal extends React.Component {
         let signinForm = e.target.parentNode.parentNode.children[3]
         let signupForm= e.target.parentNode.parentNode.children[4]
         if (e.target.classList[0] === "sign-in-link") {
-            console.log("in signinlink case")
+            // console.log("in signinlink case")
             if (signinForm.classList.contains("hidden")) {
                 signupForm.classList.add("hidden")
                 signinForm.classList.remove("hidden")
@@ -20,7 +20,7 @@ export default class WelcomeModal extends React.Component {
                 e.target.classList.add("toggled")
             }
         } else {
-            console.log("in signuplink case")
+            // console.log("in signuplink case")
             if (signupForm.classList.contains("hidden")) {
                 signinForm.classList.add("hidden")
                 signupForm.classList.remove("hidden")

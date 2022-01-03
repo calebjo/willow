@@ -17,28 +17,28 @@ export default class LinkCard extends React.Component {
     }
     
     setCardContent(){
-        console.log(this.props)
+        // console.log(this.props)
         switch(this.props.type){
             case ("buy"):
                 this.image = BuyHome
                 this.title = "Buy a home"
                 this.copy = "Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else."
                 this.buttonText = "Search homes"
-                console.log("Rendering a buy card")
+                // console.log("Rendering a buy card")
             case ("rent"):
                 this.image = RentHome
                 this.title = "Sell a home"
                 this.copy = "No matter what path you take to sell your home, we can help you navigate a successful sale."
                 this.buttonText = "See your options"
-                console.log("Rendering a rent card")
+                // console.log("Rendering a rent card")
             case ("sell"):
                 this.image = SellHome
                 this.title = "Rent a home"
                 this.copy = "We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent."
                 this.buttonText = "Find rentals"
-                console.log("Rendering a sell card")
+                // console.log("Rendering a sell card")
             default:
-                console.log("There's an error in the card component.")
+                // console.log("There's an error in the card component.")
         }
     }
 

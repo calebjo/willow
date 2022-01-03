@@ -1,7 +1,5 @@
 import React from "react";
 
-import SearchIcon from "assets/images/search-icon.png"
-
 export default class SearchBar extends React.Component {
     constructor(props){
         super(props)
@@ -17,7 +15,7 @@ export default class SearchBar extends React.Component {
                         placeholder="Enter an address, neighborhood, city or ZIP code"
                         name="s"
                     />
-                    <button type="submit" id="search-submit"><img src={SearchIcon} /></button>
+                    <button type="submit" id="search-submit"><img src={window.searchIcon} /></button>
                 </form>
             </div>
         );

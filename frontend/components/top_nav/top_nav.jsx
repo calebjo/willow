@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import WillowLogo from "assets/images/willow-logo.png";
 import WelcomeModal from "../modal/welcome_modal";
 import { SessionDropdown } from "../splash/session_dropdown";
 

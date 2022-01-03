@@ -73,7 +73,7 @@ export default class TopNav extends React.Component {
                     <div>Sell</div>
                 </div>
                 <div className="top-logo">
-                    <img src={WillowLogo} />
+                    <img src={window.willowLogo} />
                 </div>
                 <div className="top-right">
                     { loginButton }

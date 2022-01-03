@@ -1,9 +1,5 @@
 import React from "react";
 
-import BuyHome from "assets/images/buy-home.webp"
-import RentHome from "assets/images/rent-home.webp"
-import SellHome from "assets/images/sell-home.webp"
-
 // SKELETON
 export default class LinkCard extends React.Component {
     constructor(props){
@@ -20,19 +16,19 @@ export default class LinkCard extends React.Component {
         // console.log(this.props)
         switch(this.props.type){
             case ("buy"):
-                this.image = BuyHome
+                this.image = window.buyHome
                 this.title = "Buy a home"
                 this.copy = "Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else."
                 this.buttonText = "Search homes"
                 // console.log("Rendering a buy card")
             case ("rent"):
-                this.image = RentHome
+                this.image = window.rentHome
                 this.title = "Sell a home"
                 this.copy = "No matter what path you take to sell your home, we can help you navigate a successful sale."
                 this.buttonText = "See your options"
                 // console.log("Rendering a rent card")
             case ("sell"):
-                this.image = SellHome
+                this.image = window.sellHome
                 this.title = "Rent a home"
                 this.copy = "We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent."
                 this.buttonText = "Find rentals"

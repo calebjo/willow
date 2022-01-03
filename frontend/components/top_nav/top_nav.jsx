@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 
 import WillowLogo from "assets/images/willow-logo.png";
 import WelcomeModal from "../modal/welcome_modal";
+import { SessionDropdown } from "../splash/session_dropdown";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
     constructor(props){
         super(props)
-        this.state = { modal: false}
+        this.state = { modal: false, dropdown: false }
+        this.showDropdown = this.showDropdown.bind(this)
+        this.hideDropdown = this.hideDropdown.bind(this)
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
     }
@@ -31,18 +34,32 @@ export default class TopNav extends React.Component {
         }
     }
 
+    showDropdown = () => {
+        this.setState({ dropdown: true })
+        setTimeout(() => {
+            document.addEventListener("click", this.hideDropdown)
+        }, 100)
+    }
+
+    hideDropdown = () => {
+        const dropdown = document.querySelector(".session-dropdown")
+        if (e.target !== dropdown) {
+            this.setState({ dropdown: false })
+            document.removeEventListener("click", this.hideModal)
+        }
+    }
+
     render() {
         const loggedIn = this.props.currentUser
         const loginButton = loggedIn ? (
-            <div id="login">
-                <h3>Hello, {this.props.currentUser.email}.</h3>
-                <button onClick={this.props.logout}>Sign Out</button>
-            </div>
+            <SessionDropdown 
+                currentUser={this.props.currentUser} 
+                logout={this.props.logout}
+                onClick={this.showDropdown}
+            />
         ) : (
-            <div id="login">
-                <div className="sign-in" onClick={this.showModal}>
-                    Sign in
-                </div>
+            <div className="sign-in" onClick={this.showModal}>
+                Sign in
             </div>
         )
         return (

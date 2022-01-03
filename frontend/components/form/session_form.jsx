@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        this.hideModal()
         this.props.processForm(user);
     }
 
@@ -26,6 +27,11 @@ class SessionForm extends React.Component {
             password: "xc9u0981234n123o"}, () => 
             this.handleSubmit(e)
         )
+    }
+
+    hideModal() {
+        const modal = document.querySelector(".modal-container")
+        modal.classList.add("hidden")
     }
 
     updateField(type){

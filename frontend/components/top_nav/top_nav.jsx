@@ -80,15 +80,21 @@ export default class TopNav extends React.Component {
                         hideModal={this.hideModal}/>
                 }
                 <div className="top-left">
-                    <Link to="/homes">
-                        Buy
-                    </Link>
-                    <Link to="/homes">
-                        Rent
-                    </Link>
-                    <Link to="/homes">
-                        Sell
-                    </Link>
+                    <div>
+                        <Link to="/homes">
+                            Buy
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to="/homes">
+                            Rent
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to="/homes">
+                            Sell
+                        </Link>
+                    </div>
                 </div>
                 <div className="top-logo">
                     <Link to="/">

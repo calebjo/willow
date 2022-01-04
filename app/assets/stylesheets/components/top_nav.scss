@@ -22,10 +22,7 @@
     cursor: pointer;
 }
 
-.top-dropdown:focus {
-    border: 4px solid white;
-}
-
+// DEBUG -- CHANGE TO AN ICON EVENTUALLY
 .dropdown-bar {
     display: flex;
     width: 1.1rem;
@@ -33,6 +30,10 @@
     margin: 0.125rem;
     border-radius: 4px;
     background: white;
+}
+
+.map-content .dropdown-bar {
+    background: #006aff;
 }
 
 .top-left, .top-right {
@@ -92,5 +93,35 @@
         image-rendering: -o-crisp-edges;
         image-rendering: -webkit-optimize-contrast;
         -ms-interpolation-mode: nearest-neighbor;
+    }
+}
+
+@media (min-width: 890px) {
+    .top-nav {
+        display: flex;
+        background-color:white;
+    }
+
+    .top-dropdown {
+        display: none;
+    }
+
+    .top-left, .top-right {
+        display: flex;
+    }
+
+    .top-left div, .top-right div {
+        display: flex;
+    }
+
+    .top-logo img {
+        filter: none;
+        width: 175px;
+        height: 35px;
+    }
+
+    .sign-in {
+        color: black;
+        font-size: inherit;
     }
 }

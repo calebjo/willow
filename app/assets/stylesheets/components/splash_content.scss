@@ -77,3 +77,62 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width: 480px) {
+    .cards {
+        margin: 0 2rem 0;
+    }
+
+    .search-container {
+        height: 4rem;
+    }
+}
+
+@media (min-width: 770px) {
+    .splash-header {
+        font-size: 2.5rem;
+    }
+    .search-container {
+        width: 30rem;
+    }
+}
+
+@media (min-width: 852px) {
+    .top-container {
+        height: 35.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-container {
+        width: 42rem;
+    }
+
+    .cards {
+        flex-direction: row;
+        margin: 0;
+        .link-card {
+            margin: 0 0.75rem 0;
+            .card-image {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1218px) {
+    .cards {
+        justify-content: center;
+        .link-card {
+            width: 26rem;
+        }
+    }
+}
+
+@media (min-width: 1450px) {
+    .top-container {
+        background-size: 100%;
+    }
+}

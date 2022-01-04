@@ -98,10 +98,29 @@
 
     .cards {
         flex-direction: row;
+        margin: 0;
+        .link-card {
+            margin: 0 0.75rem 0;
+            .card-image {
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
+}
 
-    .link-card {
-        width: 30%; // DEBUG
-        margin: 0 0.75rem 0;
+@media (min-width: 1218px) {
+    .cards {
+        justify-content: center;
+        .link-card {
+            width: 26rem;
+        }
+    }
+}
+
+@media (min-width: 1450px) {
+    .top-container {
+        background-size: 100%;
     }
 }

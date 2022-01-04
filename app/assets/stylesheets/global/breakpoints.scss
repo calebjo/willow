@@ -1,0 +1,72 @@
+
+// DEBUG -- doesn't seem to work right now, manually pasted media queries for now
+
+@media (min-width: 480px) {
+    .cards {
+        margin: 0 2rem 0;
+    }
+
+    .search-container {
+        height: 4rem;
+    }
+}
+
+@media (min-width: 770px) {
+    .splash-header {
+        font-size: 2.5rem;
+    }
+    .search-container {
+        width: 30rem;
+    }
+}
+
+@media (min-width: 852px) {
+    .top-container {
+        height: 35.25rem;
+    }
+}
+
+@media (min-width: 890px) {
+    .top-nav {
+        display: flex;
+        background-color:white;
+    }
+
+    .top-dropdown {
+        display: none;
+    }
+
+    .top-left, .top-right {
+        display: flex;
+    }
+
+    .top-left div, .top-right div {
+        display: flex;
+    }
+
+    .top-logo img {
+        filter: none;
+        width: 175px;
+        height: 35px;
+    }
+
+    .sign-in {
+        color: black;
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-container {
+        width: 42rem;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .link-card {
+        width: 30%; // DEBUG
+        margin: 0 0.75rem 0;
+    }
+}

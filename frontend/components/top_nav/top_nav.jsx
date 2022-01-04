@@ -16,7 +16,7 @@ export default class TopNav extends React.Component {
     }
 
     showModal = (e) => {
-        console.log("in TOPNAV showModal")
+        // console.log("in TOPNAV showModal")
 
         this.setState({ modal: true })
 
@@ -35,7 +35,7 @@ export default class TopNav extends React.Component {
     }
 
     hideModal = (e) => {
-        console.log("in TOPNAV hideModal")
+        // console.log("in TOPNAV hideModal")
 
         const modalCover = document.querySelector(".modal-cover")
         const modalClose = document.querySelector(".modal-exit")

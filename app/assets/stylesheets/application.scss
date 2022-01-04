@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "global/reset";
+@import "global/colors";
+@import "global/fonts";
+@import "global/page_layouts";
+@import "global/breakpoints";
+
+// ----------------------------------------
+
+@import "components/footer";
+@import "components/link_card";
+@import "components/nav_dropdown";
+@import "components/property_modal";
+@import "components/search_bar";
+@import "components/session_dropdown";
+@import "components/session_form";
+@import "components/splash_content";
+@import "components/top_nav";
+@import "components/welcome_modal";
+
+// ----------------------------------------
+// Media breakpoints 
+
+@media (min-width: 480px) {
+    .cards {
+        margin: 0 2rem 0;
+    }
+
+    .search-container {
+        height: 4rem;
+    }
+}
+
+@media (min-width: 770px) {
+    .splash-header {
+        font-size: 2.5rem;
+    }
+    .search-container {
+        width: 30rem;
+    }
+}
+
+@media (min-width: 852px) {
+    .top-container {
+        height: 35.25rem;
+    }
+}
+
+@media (min-width: 890px) {
+    .top-nav {
+        display: flex;
+        background-color:white;
+    }
+
+    .top-dropdown {
+        display: none;
+    }
+
+    .top-left, .top-right {
+        display: flex;
+    }
+
+    .top-left div, .top-right div {
+        display: flex;
+    }
+
+    .top-logo img {
+        filter: none;
+        width: 175px;
+        height: 35px;
+    }
+
+    .sign-in {
+        color: black;
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-container {
+        width: 42rem;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .link-card {
+        width: 30%; // DEBUG
+        margin: 0 0.75rem 0;
+    }
+}

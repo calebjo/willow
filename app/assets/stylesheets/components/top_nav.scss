@@ -1,0 +1,88 @@
+
+// Top nav
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0.5rem;
+}
+
+.top-left div:hover, .top-right div:hover {
+    color: #006aff;
+    cursor: pointer;
+}
+
+.top-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin: 1.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.top-dropdown:focus {
+    border: 4px solid white;
+}
+
+.dropdown-bar {
+    display: flex;
+    width: 1.1rem;
+    height: 0.15rem;
+    margin: 0.125rem;
+    border-radius: 4px;
+    background: white;
+}
+
+.top-left, .top-right {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.top-left > div, .top-right > div {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.top-left > div {
+    display: none;
+}
+
+.sign-in {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sign-up {
+    display: none;
+}
+
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// disable anti-aliasing for a sharper logo
+.top-logo img {
+    width: 120px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}

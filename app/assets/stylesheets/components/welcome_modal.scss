@@ -1,0 +1,151 @@
+
+// Splash welcome modal
+
+.modal-cover {
+    z-index: 99;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    background: rgba(0, 0, 0, 0.5);
+    animation: modal-cover 0.5s;
+}
+
+@keyframes modal-cover {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.modal-container {
+    z-index: 100;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    width: 25.5rem;
+    height: 44rem;
+}
+
+.welcome-modal {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem;
+    
+    
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    background: white;
+    font-family: "Open sans", sans-serif;
+    animation: open-modal 0.4s;
+
+    .signin-form, .signup-form {
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 1.5rem 0; 
+        label {
+            display: flex;
+            flex-direction: column;
+            margin: 0.5rem 0;
+        }
+
+        input {
+            background: rgb(246, 246, 246);
+            border: 1px solid lightgray;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            height: 2rem;
+        }
+        
+        input[type="submit"]{
+            background: #006aff;
+            border: none;
+            color: white;
+            margin: 2rem 0;
+            height: 3rem;
+            transition: background 0.15s;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #003f97;
+        }
+    }
+}
+
+@keyframes open-modal {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.modal-exit {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: "Varela Round", sans-serif;
+    cursor: pointer;
+}
+
+.modal-exit:hover {
+    background: rgb(235, 235, 235);
+}
+
+.modal-header {
+    padding: 0 0 1.5rem 0;
+    font-family: "Dutch 809";
+    font-size: 1.5rem;
+    color:rgb(51, 51, 51);
+}
+
+.modal-switch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    div {
+        padding: 1rem;
+    }
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.modal-switch div.toggled {
+    border-bottom: 4px solid #006aff;
+}
+
+.modal-switch div:hover {
+    color: #006aff;
+}
+
+.modal-lower {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid lightgray;
+}

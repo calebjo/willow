@@ -1,0 +1,29 @@
+
+// Global page layouts and properties
+
+body {
+    overflow-x: hidden;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}

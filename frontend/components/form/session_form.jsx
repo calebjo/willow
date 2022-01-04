@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state)
         this.props.processForm(user)
         setTimeout(() => {
-            console.log(this.props.errors)
+            // console.log(this.props.errors)
             if (this.props.errors.length === 0){
                 this.props.hideModal()
             }

@@ -2,9 +2,9 @@ import React from "react";
 
 import TopNavContainer from "../top_nav/top_nav_container";
 import Footer from "../footer/footer";
-import SplashSearch from "./splash_search";
 import LinkCard from "../link/link_card";
 import { Dropdown } from "./dropdown";
+import SearchBar from "../search/search_bar"
 
 export default class SplashContent extends React.Component {
     constructor(props){
@@ -17,7 +17,10 @@ export default class SplashContent extends React.Component {
                 <div className="top-container">
                     <Dropdown />
                     <TopNavContainer />
-                    <SplashSearch />
+                    <div className="splash-search">
+                        <div className="splash-header">Change starts here</div>
+                        <SearchBar type="splash" />
+                    </div>
                 </div>
                 <div className="splash-lower-tag">
                     Whether you're buying, selling or renting, we can help you move forward.

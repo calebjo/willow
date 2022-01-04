@@ -1,7 +1,7 @@
 import React from "react";
 
 import TopNavContainer from "../top_nav/top_nav_container";
-import Footer from "../footer/footer";
+import Footer from "./footer";
 import LinkCard from "../link/link_card";
 import { Dropdown } from "./dropdown";
 import SearchBar from "../search/search_bar"
@@ -31,8 +31,6 @@ export default class SplashContent extends React.Component {
                     <LinkCard type="rent" />
                 </div>
                 <Footer />
-            {/* <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} /> */}
             </div>
         );
     }

@@ -1,11 +1,21 @@
 import React from "react";
-import { Route } from "react-router";
-import { AuthRoute } from "../util/route_util";
+import { 
+    Route, 
+    Redirect,
+    Switch,
+    Link,
+    HashRouter 
+} from "react-router-dom";
 
+import { AuthRoute } from "../util/route_util";
 import SplashContent from "./splash/splash_content"
 
 const App = () => (
-    <SplashContent />
+    <Switch>
+        <Route exact path="/" component={SplashContent} />
+        <Route exact path="/homes" component={SplashContent} />
+        {/* <Route exact path="/mywillow/savedhomes" component={SplashContent} /> */}
+    </Switch>
 );
 
 export default App;

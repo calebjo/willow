@@ -1,2 +1,20 @@
-json.extract! property, :id, :price, :bedrooms, :bathrooms
+json.extract! property, 
+    :id,
+    :address,
+    :price,
+    :bedrooms,
+    :bathrooms,
+    :square_feet,
+    :lot_size,
+    :year_built,
+    :has_basement,
+    :num_stories,
+    :parking_spots,
+    :heating,
+    :cooling,
+    :hoa_fee,
+    :for_sale,
+    :for_rent,
+    :agent_listing,
+    :description
 # json.picture_url property.picture_url || url_for(property.photo)

@@ -3,15 +3,13 @@ import { Link } from 'react-router';
 
 const PropertyDetail = (props) => {
   return (
-    <div>
-      <ul className="property-item">
+    <div className="property-item">
         {/* <img className="index-image" src={property.picture_url}/> */}
-        <li>${props.property.price}</li>
-        <li>{props.property.bedrooms} bd</li>
-        <li>{props.property.bathrooms} ba</li>
-        <li>{props.property.square_feet} sqft</li>
-        <li>{props.property.address}</li>
-      </ul>
+        <div className="prop-price">${props.property.price}</div>
+        <div className="prop-bd">{props.property.bedrooms} bd</div>
+        <div className="prop-ba">{props.property.bathrooms} ba</div>
+        <div className="prop-sqft">{props.property.square_feet} sqft</div>
+        <div className="prop-address">{props.property.address}</div>
     </div>
   );
 };

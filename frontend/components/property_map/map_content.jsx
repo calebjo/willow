@@ -17,8 +17,10 @@ export default class MapContent extends React.Component {
                 <Dropdown />
                 <TopNavContainer />
                 <SearchNav />
-                <PropertyMap />
-                <PropertyShowContainer />
+                <div className="properties-container">
+                    <PropertyMap />
+                    <PropertyShowContainer />
+                </div>
             </div>
         );
     }

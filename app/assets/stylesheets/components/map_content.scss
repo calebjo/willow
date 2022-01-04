@@ -21,10 +21,35 @@
         .search-nav-center {
             padding: 0 0.25rem;
             div {
-                padding: 0.5rem 1rem;
-                margin: 0 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.75rem;
+                height: 0.85rem;
+                padding: 0.5rem 2rem;
+                margin: 0 0.35rem;
                 border-radius: 2px;
                 border: 1px solid #006aff;
+                color: #006aff;
+                font-family: "Open Sans", sans-serif;
+                font-size: 0.75rem;
+                text-align: center;
+            }
+            // Beds/Baths and all after
+            :nth-child(n+3) {
+                border: 1px solid lightgray;
+            }
+            // More
+            :nth-child(5) {
+                width: 0.35rem;
+            }
+            // Save search
+            :nth-child(6) {
+                width: 1.25rem;
+                height: 1rem;
+                background: #006aff;
+                border-radius: 4px;
+                color: white;
             }
         }
     }

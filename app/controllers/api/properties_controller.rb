@@ -2,6 +2,7 @@ class Api::PropertiesController < ApplicationController
     before_action :require_logged_in, only: [:create]
   
     def index
+        @properties = Property.all
         render :index
     end
   
@@ -26,7 +27,7 @@ class Api::PropertiesController < ApplicationController
             :square_feet,
             :lot_size,
             :year_built,
-            :type,
+            :property_type,
             :has_basement,
             :num_stories,
             :parking_spots,

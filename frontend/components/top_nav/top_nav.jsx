@@ -80,12 +80,20 @@ export default class TopNav extends React.Component {
                         hideModal={this.hideModal}/>
                 }
                 <div className="top-left">
-                    <div>Buy</div>
-                    <div>Rent</div>
-                    <div>Sell</div>
+                    <Link to="/homes">
+                        Buy
+                    </Link>
+                    <Link to="/homes">
+                        Rent
+                    </Link>
+                    <Link to="/homes">
+                        Sell
+                    </Link>
                 </div>
                 <div className="top-logo">
-                    <img src={window.willowLogo} />
+                    <Link to="/">
+                        <img src={window.willowLogo} />
+                    </Link>
                 </div>
                 <div className="top-right">
                     { loginButton }

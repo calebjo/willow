@@ -40,8 +40,10 @@ export class SessionDropdown extends React.Component {
                     <div className="session-dropdown-link">Offers & Closing</div>
                     <div className="session-dropdown-link">Renting</div>
                     <div className="session-dropdown-link">Account settings</div>
-                    <div className="session-dropdown-link">
-                        <button onClick={this.props.logout}>Sign out</button>
+                    <div className="sign-out-section">
+                        <div className="session-dropdown-link">
+                            <button onClick={this.props.logout}>Sign out</button>
+                        </div>
                     </div>
                 </div>
             </div>

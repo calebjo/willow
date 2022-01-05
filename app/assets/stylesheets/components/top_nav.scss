@@ -129,14 +129,37 @@
 }
 
 .session-dropdown {
+    z-index: 100;
     position: absolute;
     width: 100%;
     top: 4rem;
     right: 0;
     background: white;
     border-radius: 4px;
+
+    .session-dropdown-link, .sign-out-section button {
+        background: none;
+        border: none;
+        padding: 1rem;
+        font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        font: rgb(42,42,51);
+    }
+    .sign-out-section {
+        border-top: 2px solid lightgray;
+        button {
+            padding: 0;
+        }
+    }
 }
 
+// Session nav gets smaller
+@media (min-width: 760px) {
+
+}
+
+// Full nav breaks out
 @media (min-width: 890px) {
     .top-nav {
         display: flex;

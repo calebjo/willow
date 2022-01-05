@@ -45,6 +45,39 @@
     background: indianred;
 }
 
+.prop-age {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    height: 70%;
+    background:rgba(0, 0, 0, 0.5);
+    font-size: 0.75rem;
+}
+.prop-saved {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.prop-heart {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 2rem 2rem 0 0;
+}
+.prop-heart::before {
+    content: "";
+    background: blue;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+}
+
 .property-item {
     display: flex;
     flex-direction: column;
@@ -65,22 +98,6 @@
         height: 2.5rem;
         color: white;
         font-family: 'Open sans', sans-serif;
-        .prop-age {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 0.5rem;
-            height: 70%;
-            background:rgba(0, 0, 0, 0.5);
-            font-size: 0.75rem;
-        }
-        .prop-saved {
-            display: flex;
-            align-self: flex-end;
-            width: 2.25rem;
-            height: 2.25rem;
-            background:rgb(35, 165, 89);
-        }
     }
     .prop-image {
         img {

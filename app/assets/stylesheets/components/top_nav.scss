@@ -8,7 +8,7 @@
     padding: 0.5rem;
 }
 
-.top-left div:hover, .top-right div:hover {
+.top-left div:hover {
     color: #006aff;
     cursor: pointer;
 }
@@ -17,8 +17,9 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    top: 0;
     left: 0;
-    margin: 1.5rem 0.75rem;
+    margin: 1rem;
     cursor: pointer;
 }
 
@@ -32,6 +33,7 @@
     background: white;
 }
 
+// Different color for map page
 .map-content .dropdown-bar {
     background: #006aff;
 }
@@ -44,7 +46,6 @@
     div {
         justify-content: center;
         align-items: center;
-        width: 100%;
         font-size: 1rem;
         font-family: 'Open Sans', sans-serif;
         a {
@@ -57,6 +58,7 @@
 
 .top-left > div {
     display: none;
+    width: 100%;
 }
 
 .top-right {
@@ -96,6 +98,45 @@
     }
 }
 
+// User profile links dropdown
+.session-dropdown-container {
+    background: aquamarine;
+}
+
+.profile-icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.profile-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+    background: rgb(171, 101, 236);
+    border-radius: 2rem;
+}
+
+.dropdown-chip {
+    position: absolute;
+    top: 3.85rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.session-dropdown {
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    right: 0;
+    background: white;
+    border-radius: 4px;
+}
+
 @media (min-width: 890px) {
     .top-nav {
         display: flex;
@@ -110,7 +151,7 @@
         display: flex;
     }
 
-    .top-left div, .top-right div {
+    .top-left div {
         display: flex;
     }
 

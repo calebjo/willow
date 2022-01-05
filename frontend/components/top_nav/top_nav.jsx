@@ -9,15 +9,12 @@ export default class TopNav extends React.Component {
     constructor(props){
         super(props)
         this.state = { modal: false, dropdown: false }
-        this.showDropdown = this.showDropdown.bind(this)
-        this.hideDropdown = this.hideDropdown.bind(this)
+    
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
     }
 
     showModal = (e) => {
-        // console.log("in TOPNAV showModal")
-
         this.setState({ modal: true })
 
         const modal = document.querySelector(".modal-container")
@@ -35,8 +32,6 @@ export default class TopNav extends React.Component {
     }
 
     hideModal = (e) => {
-        // console.log("in TOPNAV hideModal")
-
         const modalCover = document.querySelector(".modal-cover")
         const modalClose = document.querySelector(".modal-exit")
         modalCover.removeEventListener("click", this.hideModal)
@@ -45,24 +40,9 @@ export default class TopNav extends React.Component {
         this.setState({ modal: false })
     }
 
-    showDropdown = () => {
-        this.setState({ dropdown: true })
-        setTimeout(() => {
-            document.addEventListener("click", this.hideDropdown)
-        }, 100)
-    }
-
-    hideDropdown = () => {
-        const dropdown = document.querySelector(".session-dropdown")
-        if (e.target !== dropdown) {
-            this.setState({ dropdown: false })
-            document.removeEventListener("click", this.hideDropdown)
-        }
-    }
-
     render() {
         const loggedIn = this.props.currentUser
-        const loginButton = loggedIn ? (
+        const userButton = loggedIn ? (
             <SessionDropdown 
                 currentUser={this.props.currentUser} 
                 logout={this.props.logout}
@@ -102,7 +82,7 @@ export default class TopNav extends React.Component {
                     </Link>
                 </div>
                 <div className="top-right">
-                    { loginButton }
+                    { userButton }
                 </div>
             </div>
         )

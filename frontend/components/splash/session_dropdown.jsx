@@ -34,12 +34,24 @@ export class SessionDropdown extends React.Component {
             <div className="dropdown-popup">
                 <div className="dropdown-chip" />
                 <div className="session-dropdown">
-                    <div className="session-dropdown-link">Saved homes</div>
-                    <div className="session-dropdown-link">Saved searches</div>
-                    <div className="session-dropdown-link">Your home</div>
-                    <div className="session-dropdown-link">Offers & Closing</div>
-                    <div className="session-dropdown-link">Renting</div>
-                    <div className="session-dropdown-link">Account settings</div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Saved homes</Link>
+                    </div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Saved searches</Link>
+                    </div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Your home</Link>
+                    </div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Offers & Closings</Link>
+                    </div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Renting</Link>
+                    </div>
+                    <div className="session-dropdown-link">
+                        <Link to="/">Account settings</Link>
+                    </div>
                     <div className="sign-out-section">
                         <div className="session-dropdown-link">
                             <button onClick={this.props.logout}>Sign out</button>

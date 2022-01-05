@@ -99,9 +99,6 @@
 }
 
 // User profile links dropdown
-.session-dropdown-container {
-    background: aquamarine;
-}
 
 .profile-icon-container {
     position: absolute;
@@ -140,16 +137,19 @@
     .session-dropdown-link, .sign-out-section button {
         background: none;
         border: none;
-        padding: 1rem;
+        padding: 0 1rem;
         font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
         font-size: 0.85rem;
         font-weight: 600;
         font: rgb(42,42,51);
+        a {
+            line-height: 340%;
+        }
     }
     .sign-out-section {
         border-top: 2px solid lightgray;
         button {
-            padding: 0;
+            padding: 1rem 0;
         }
     }
 }

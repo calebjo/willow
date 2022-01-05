@@ -76,6 +76,7 @@ input:focus, textarea:focus, select:focus{
 .cards {
     display: flex;
     flex-direction: column;
+    padding: 0 0 8rem 0;
 }
 
 @media (min-width: 480px) {

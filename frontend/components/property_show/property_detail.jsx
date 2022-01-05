@@ -14,7 +14,7 @@ const PropertyDetail = (props) => {
                 </div>
             </div>
             <div className="prop-image">
-                {/* <img className="index-image" src={property.picture_url}/> */}
+                <img src={props.property.photo_url} />
             </div>
         </div>
         <div className="prop-bottom">

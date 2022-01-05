@@ -17,4 +17,5 @@ json.extract! property,
     :for_rent,
     :agent_listing,
     :description
-# json.picture_url property.picture_url || url_for(property.photo)
+
+json.photo_url url_for(property.photo)

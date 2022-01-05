@@ -12,6 +12,7 @@ export default class PropertyShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties()
+        
     }
 
     render() {

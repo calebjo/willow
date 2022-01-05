@@ -36357,3 +36357,2396 @@ Processing by Api::PropertiesController#index as JSON
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1988)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-04 22:28:47 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02cjwtFV_2TSAOirHwm18A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__2921465283290526826_15460 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.4ms | Allocations: 104)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 19.9ms | Allocations: 7340)
+  Rendered layout layouts/application.html.erb (Duration: 238.5ms | Allocations: 99218)
+Completed 200 OK in 242ms (Views: 237.3ms | ActiveRecord: 2.6ms | Allocations: 101586)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-04 22:28:50 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.3ms | Allocations: 127)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 17.2ms | Allocations: 11998)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 2.6ms | Allocations: 14007)
+
+
+Started GET "/" for ::1 at 2022-01-05 08:58:07 -0500
+
+ActiveRecord::ConnectionNotEstablished - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/fd70bb92b844534e/variables" for ::1 at 2022-01-05 08:58:08 -0500
+Started GET "/" for 127.0.0.1 at 2022-01-05 08:58:45 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3524)
+  Rendered layout layouts/application.html.erb (Duration: 114.8ms | Allocations: 21671)
+Completed 200 OK in 121ms (Views: 114.2ms | ActiveRecord: 2.9ms | Allocations: 24037)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 08:58:47 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.5ms | Allocations: 127)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 17.4ms | Allocations: 12156)
+Completed 200 OK in 21ms (Views: 15.0ms | ActiveRecord: 4.0ms | Allocations: 14165)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:05:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2889)
+  Rendered layout layouts/application.html.erb (Duration: 319.2ms | Allocations: 189128)
+Completed 200 OK in 320ms (Views: 319.6ms | ActiveRecord: 2.9ms | Allocations: 189372)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:05:45 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.5ms | Allocations: 1760)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2032)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:06:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11701)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 11945)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:06:16 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.3ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 7.3ms | Allocations: 2886)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 3285)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:06:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 773)
+  Rendered layout layouts/application.html.erb (Duration: 225.0ms | Allocations: 87761)
+Completed 200 OK in 226ms (Views: 225.2ms | ActiveRecord: 0.2ms | Allocations: 88004)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:06:33 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 13.9ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 24.5ms | Allocations: 4102)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 1.1ms | Allocations: 4652)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:06:39 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 203.8ms | Allocations: 86171)
+Completed 200 OK in 204ms (Views: 204.0ms | ActiveRecord: 0.2ms | Allocations: 86409)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:06:39 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 8.9ms | Allocations: 3053)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.8ms | Allocations: 4108)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:06:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 204.0ms | Allocations: 88978)
+Completed 200 OK in 205ms (Views: 204.2ms | ActiveRecord: 0.2ms | Allocations: 89216)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:06:59 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 9.9ms | Allocations: 4604)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.8ms | Allocations: 4976)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:07:09 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 201.0ms | Allocations: 90587)
+Completed 200 OK in 202ms (Views: 201.2ms | ActiveRecord: 0.2ms | Allocations: 90826)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:07:09 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 6.8ms | Allocations: 2625)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 3083)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:07:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 749)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10195)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 10434)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:07:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.4ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 7.7ms | Allocations: 3023)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.0ms | Allocations: 3478)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:07:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 11672)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 11911)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:07:27 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (1.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 9.1ms | Allocations: 3558)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.6ms | Allocations: 3993)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:08:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 200.8ms | Allocations: 90426)
+Completed 200 OK in 201ms (Views: 201.0ms | ActiveRecord: 0.1ms | Allocations: 90664)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:08:31 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 4.4ms | Allocations: 1755)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 2662)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:08:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 205.8ms | Allocations: 86250)
+Completed 200 OK in 206ms (Views: 206.1ms | ActiveRecord: 0.1ms | Allocations: 86489)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:08:49 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 7.6ms | Allocations: 3100)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 3732)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:09:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 204.2ms | Allocations: 89090)
+Completed 200 OK in 205ms (Views: 204.4ms | ActiveRecord: 0.2ms | Allocations: 89328)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:09:04 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 12.4ms | Allocations: 4690)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.2ms | Allocations: 5021)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:16:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2868)
+  Rendered layout layouts/application.html.erb (Duration: 552.7ms | Allocations: 184002)
+Completed 200 OK in 553ms (Views: 553.0ms | ActiveRecord: 3.0ms | Allocations: 184240)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:16:24 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.7ms | Allocations: 1760)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2030)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:16:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.5ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 10165)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 10404)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:16:27 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.1ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:16:39 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 19.5ms | Allocations: 3623)
+  Rendered layout layouts/application.html.erb (Duration: 201.1ms | Allocations: 36610)
+Completed 200 OK in 209ms (Views: 204.5ms | ActiveRecord: 1.4ms | Allocations: 38975)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:16:40 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.3ms | Allocations: 127)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 17.0ms | Allocations: 12146)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 3.0ms | Allocations: 14141)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:17:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 779)
+  Rendered layout layouts/application.html.erb (Duration: 222.5ms | Allocations: 96869)
+Completed 200 OK in 223ms (Views: 222.7ms | ActiveRecord: 0.2ms | Allocations: 97114)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:17:09 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.3ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:17:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 228.2ms | Allocations: 87737)
+Completed 200 OK in 229ms (Views: 228.3ms | ActiveRecord: 0.2ms | Allocations: 87980)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:17:34 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:17:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 199.3ms | Allocations: 87903)
+Completed 200 OK in 200ms (Views: 199.4ms | ActiveRecord: 0.2ms | Allocations: 88145)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:17:49 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:18:13 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 198.7ms | Allocations: 89252)
+Completed 200 OK in 199ms (Views: 198.9ms | ActiveRecord: 0.2ms | Allocations: 89490)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:18:13 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:18:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 11660)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 11899)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:18:20 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.0ms | Allocations: 1728)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2009)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:18:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 199.3ms | Allocations: 88977)
+Completed 200 OK in 200ms (Views: 199.5ms | ActiveRecord: 0.2ms | Allocations: 89215)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:18:39 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.0ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:18:41 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 201.1ms | Allocations: 90524)
+Completed 200 OK in 202ms (Views: 201.4ms | ActiveRecord: 0.1ms | Allocations: 90762)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:18:42 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:19:02 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 201.0ms | Allocations: 87721)
+Completed 200 OK in 202ms (Views: 201.3ms | ActiveRecord: 0.1ms | Allocations: 87959)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:19:02 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.8ms | Allocations: 1718)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1998)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:19:13 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 203.6ms | Allocations: 87917)
+Completed 200 OK in 204ms (Views: 203.9ms | ActiveRecord: 0.2ms | Allocations: 88156)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:19:13 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:19:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 202.1ms | Allocations: 85134)
+Completed 200 OK in 203ms (Views: 202.4ms | ActiveRecord: 0.1ms | Allocations: 85373)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:19:19 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:19:41 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-01-05 09:19:49 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@dmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@dmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13:in `find_by_credentials'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "lmL2b7IQXEo1ga8VZjYmnA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lmL2b7IQXEo1ga8VZjYmnA"], ["updated_at", "2022-01-05 14:19:49.663044"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Redirected to http://127.0.0.1:3000/api/users/1
+Completed 302 Found in 192ms (ActiveRecord: 5.6ms | Allocations: 7552)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2022-01-05 09:19:49 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14:in `show'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (Duration: 0.5ms | Allocations: 68)
+  Rendered api/users/show.json.jbuilder (Duration: 1.6ms | Allocations: 356)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1684)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-01-05 09:19:54 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lmL2b7IQXEo1ga8VZjYmnA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "IanYMwNH17nwiCdsxmoI2Q"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "IanYMwNH17nwiCdsxmoI2Q"], ["updated_at", "2022-01-05 14:19:54.644266"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 4021)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:19:55 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:22:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 759)
+  Rendered layout layouts/application.html.erb (Duration: 202.4ms | Allocations: 88971)
+Completed 200 OK in 203ms (Views: 202.7ms | ActiveRecord: 0.1ms | Allocations: 89211)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:22:17 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.0ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:22:30 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 11663)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 11902)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:22:30 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:23:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 754)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10139)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 10378)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:23:20 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:24:25 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:26:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 252.6ms | Allocations: 93855)
+Completed 200 OK in 253ms (Views: 252.8ms | ActiveRecord: 0.2ms | Allocations: 94093)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:26:16 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:26:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 204.2ms | Allocations: 89112)
+Completed 200 OK in 205ms (Views: 204.3ms | ActiveRecord: 0.3ms | Allocations: 89351)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:26:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:26:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.3ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 202.1ms | Allocations: 87719)
+Completed 200 OK in 203ms (Views: 202.3ms | ActiveRecord: 0.2ms | Allocations: 87958)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:26:37 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:27:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 204.4ms | Allocations: 91868)
+Completed 200 OK in 205ms (Views: 204.7ms | ActiveRecord: 0.1ms | Allocations: 92107)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:27:08 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.4ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:27:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 208.0ms | Allocations: 91868)
+Completed 200 OK in 209ms (Views: 208.3ms | ActiveRecord: 0.1ms | Allocations: 92107)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:27:47 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.2ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:28:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 200.7ms | Allocations: 89086)
+Completed 200 OK in 201ms (Views: 201.0ms | ActiveRecord: 0.1ms | Allocations: 89325)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:28:17 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.8ms | Allocations: 1740)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2011)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:28:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 205.4ms | Allocations: 90423)
+Completed 200 OK in 206ms (Views: 205.7ms | ActiveRecord: 0.1ms | Allocations: 90662)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:28:26 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.3ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 09:28:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 10194)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 10433)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:28:34 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:29:44 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.2ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:36:57 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 8.1ms | Allocations: 3836)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 2.7ms | Allocations: 4107)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 09:41:35 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:02:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2793)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 13679)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 3.1ms | Allocations: 13917)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:02:24 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.1ms | Allocations: 1760)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2030)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:04:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 206.8ms | Allocations: 89073)
+Completed 200 OK in 207ms (Views: 207.0ms | ActiveRecord: 0.2ms | Allocations: 89312)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:04:05 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.1ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:04:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 203.9ms | Allocations: 89096)
+Completed 200 OK in 205ms (Views: 204.3ms | ActiveRecord: 0.2ms | Allocations: 89335)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:04:21 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.4ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:04:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 204.2ms | Allocations: 86284)
+Completed 200 OK in 205ms (Views: 204.4ms | ActiveRecord: 0.3ms | Allocations: 86523)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:04:34 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.1ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:05:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 223.2ms | Allocations: 93986)
+Completed 200 OK in 224ms (Views: 223.4ms | ActiveRecord: 0.2ms | Allocations: 94225)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:05:15 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:08:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 232.3ms | Allocations: 90452)
+Completed 200 OK in 233ms (Views: 232.4ms | ActiveRecord: 0.2ms | Allocations: 90690)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:08:19 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:08:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 10197)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 10435)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:08:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:10:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10166)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 10405)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:10:03 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:10:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 200.0ms | Allocations: 89077)
+Completed 200 OK in 201ms (Views: 200.3ms | ActiveRecord: 0.1ms | Allocations: 89315)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:10:35 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:10:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 11666)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 11905)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:10:51 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.4ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:12:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 203.7ms | Allocations: 87526)
+Completed 200 OK in 204ms (Views: 203.9ms | ActiveRecord: 0.1ms | Allocations: 87765)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:12:50 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:13:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 746)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10144)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 10382)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:13:04 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.0ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:13:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 201.0ms | Allocations: 86380)
+Completed 200 OK in 202ms (Views: 201.3ms | ActiveRecord: 0.1ms | Allocations: 86618)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:13:49 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.7ms | Allocations: 1740)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 2010)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:14:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 204.0ms | Allocations: 89187)
+Completed 200 OK in 205ms (Views: 204.2ms | ActiveRecord: 0.2ms | Allocations: 89426)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:14:35 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:14:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 203.6ms | Allocations: 87773)
+Completed 200 OK in 204ms (Views: 203.8ms | ActiveRecord: 0.1ms | Allocations: 88012)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:14:43 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.3ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:14:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 203.2ms | Allocations: 89288)
+Completed 200 OK in 204ms (Views: 203.4ms | ActiveRecord: 0.1ms | Allocations: 89527)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:14:47 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:14:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 204.4ms | Allocations: 89165)
+Completed 200 OK in 205ms (Views: 204.7ms | ActiveRecord: 0.1ms | Allocations: 89404)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:14:55 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:15:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 237.1ms | Allocations: 89270)
+Completed 200 OK in 238ms (Views: 237.3ms | ActiveRecord: 0.1ms | Allocations: 89508)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:15:26 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:15:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 11668)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 11907)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:15:39 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.4ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:15:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 222.5ms | Allocations: 92618)
+Completed 200 OK in 223ms (Views: 222.7ms | ActiveRecord: 0.2ms | Allocations: 92856)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:15:51 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:15:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 203.9ms | Allocations: 87731)
+Completed 200 OK in 204ms (Views: 204.1ms | ActiveRecord: 0.1ms | Allocations: 87969)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:15:58 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.6ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:16:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 754)
+  Rendered layout layouts/application.html.erb (Duration: 202.6ms | Allocations: 91862)
+Completed 200 OK in 203ms (Views: 202.9ms | ActiveRecord: 0.1ms | Allocations: 92100)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:16:05 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.7ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:16:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 205.0ms | Allocations: 89172)
+Completed 200 OK in 206ms (Views: 205.2ms | ActiveRecord: 0.1ms | Allocations: 89410)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:16:45 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.1ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:16:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 204.6ms | Allocations: 86479)
+Completed 200 OK in 205ms (Views: 204.8ms | ActiveRecord: 0.2ms | Allocations: 86718)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:16:55 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:17:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 201.3ms | Allocations: 87728)
+Completed 200 OK in 202ms (Views: 201.4ms | ActiveRecord: 0.2ms | Allocations: 87967)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:17:24 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:17:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 11652)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 11890)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:17:46 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:17:48 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 11676)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 11915)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:17:48 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.2ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:17:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 756)
+  Rendered layout layouts/application.html.erb (Duration: 203.6ms | Allocations: 87832)
+Completed 200 OK in 204ms (Views: 203.8ms | ActiveRecord: 0.2ms | Allocations: 88070)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:17:59 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:18:06 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 203.4ms | Allocations: 89100)
+Completed 200 OK in 204ms (Views: 203.6ms | ActiveRecord: 0.2ms | Allocations: 89338)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:18:06 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:18:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 208.6ms | Allocations: 89170)
+Completed 200 OK in 209ms (Views: 208.9ms | ActiveRecord: 0.1ms | Allocations: 89408)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:18:14 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:18:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 11655)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 11893)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:18:17 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.3ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:19:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 201.6ms | Allocations: 86510)
+Completed 200 OK in 202ms (Views: 201.9ms | ActiveRecord: 0.2ms | Allocations: 86748)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:19:23 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:19:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 221.6ms | Allocations: 94564)
+Completed 200 OK in 222ms (Views: 221.8ms | ActiveRecord: 0.1ms | Allocations: 94802)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:19:33 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:19:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 225.4ms | Allocations: 91882)
+Completed 200 OK in 226ms (Views: 225.7ms | ActiveRecord: 0.1ms | Allocations: 92120)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:19:43 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 4.1ms | Allocations: 1718)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:19:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 12.6ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 214.1ms | Allocations: 86310)
+Completed 200 OK in 215ms (Views: 214.3ms | ActiveRecord: 0.2ms | Allocations: 86548)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:19:50 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:20:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 205.1ms | Allocations: 90460)
+Completed 200 OK in 206ms (Views: 205.3ms | ActiveRecord: 0.1ms | Allocations: 90698)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:20:19 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:20:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 201.9ms | Allocations: 91883)
+Completed 200 OK in 202ms (Views: 202.1ms | ActiveRecord: 0.1ms | Allocations: 92121)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:20:30 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:20:37 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 199.4ms | Allocations: 87866)
+Completed 200 OK in 200ms (Views: 199.6ms | ActiveRecord: 0.1ms | Allocations: 88104)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:20:37 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:20:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 200.0ms | Allocations: 90549)
+Completed 200 OK in 201ms (Views: 200.3ms | ActiveRecord: 0.2ms | Allocations: 90787)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:20:45 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:20:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 201.5ms | Allocations: 89118)
+Completed 200 OK in 202ms (Views: 201.7ms | ActiveRecord: 0.1ms | Allocations: 89356)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:20:57 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.2ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:21:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 202.9ms | Allocations: 90467)
+Completed 200 OK in 204ms (Views: 203.2ms | ActiveRecord: 0.2ms | Allocations: 90706)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:21:26 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:21:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 203.5ms | Allocations: 90447)
+Completed 200 OK in 204ms (Views: 203.8ms | ActiveRecord: 0.1ms | Allocations: 90686)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:21:49 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.9ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:21:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 218.7ms | Allocations: 94572)
+Completed 200 OK in 219ms (Views: 219.0ms | ActiveRecord: 0.1ms | Allocations: 94811)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:21:58 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:22:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 203.5ms | Allocations: 89112)
+Completed 200 OK in 204ms (Views: 203.7ms | ActiveRecord: 0.2ms | Allocations: 89351)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:22:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 3.2ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:22:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 201.7ms | Allocations: 89106)
+Completed 200 OK in 202ms (Views: 202.0ms | ActiveRecord: 0.1ms | Allocations: 89345)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:22:27 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:22:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 201.5ms | Allocations: 87748)
+Completed 200 OK in 202ms (Views: 201.6ms | ActiveRecord: 0.2ms | Allocations: 87987)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:22:45 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:22:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10205)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 10443)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:22:56 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 202.3ms | Allocations: 89004)
+Completed 200 OK in 203ms (Views: 202.6ms | ActiveRecord: 0.1ms | Allocations: 89243)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:03 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.6ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 11663)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 11901)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:08 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.5ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 207.1ms | Allocations: 91885)
+Completed 200 OK in 208ms (Views: 207.3ms | ActiveRecord: 0.2ms | Allocations: 92124)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:14 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:18 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 11648)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 11887)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:18 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.7ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 203.9ms | Allocations: 90543)
+Completed 200 OK in 204ms (Views: 204.1ms | ActiveRecord: 0.1ms | Allocations: 90782)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:26 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.8ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1988)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 10:23:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 204.2ms | Allocations: 90555)
+Completed 200 OK in 205ms (Views: 204.4ms | ActiveRecord: 0.2ms | Allocations: 90794)
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2022-01-05 10:23:32 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 35)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 32)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 33)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 31)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.0ms | Allocations: 32)
+  Rendered api/properties/index.json.jbuilder (Duration: 2.4ms | Allocations: 1718)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+

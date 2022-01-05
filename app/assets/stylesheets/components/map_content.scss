@@ -9,22 +9,37 @@
 
 .properties-container {
     display: flex;
+    position: relative;
     flex-grow: 1;
 }
 
 .property-map {
-    flex-grow: 1;
+    width: 100%;
+    margin-right: 21.5rem;
     background: rgb(159, 221, 66);
 }
 
-.property-list-container {
+.property-list-wrapper {
+    position: absolute;
+    overflow-y: scroll;
     width: 21.5rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.property-list-container {
+    display: flex;
+    flex-direction: column;
     background: white;
-    box-shadow: -4px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.property-list {
+    width: 20rem;
 }
 
 .property-header {
-    width: 100%;
     height: 4.25rem;
     margin: 0.75rem;
     background: indianred;
@@ -33,8 +48,8 @@
 .property-item {
     display: flex;
     flex-direction: column;
-    width:  100%;
-    margin: 0.5rem 0.75rem;
+    margin: 0.75rem 0 0.75rem 0.75rem;
+    border: 1px solid rgb(230, 230, 230);
 
     .prop-top {
         width: 100%;
@@ -192,4 +207,9 @@
     // .search-nav-right div{
     //     display: flex;
     // }
+}
+
+// Property listings become two columns
+@media (mind-width: 1280px) {
+
 }

@@ -30,6 +30,7 @@ export class SessionDropdown extends React.Component {
     }
 
     render() {
+        const profileImg = this.props.currentUser.photo_url
         const popup = (
             <div className="dropdown-popup">
                 <div className="dropdown-chip" />
@@ -64,6 +65,8 @@ export class SessionDropdown extends React.Component {
             <div className="session-dropdown-container">
                 <div className="profile-icon-container" onClick={this.showDropdown}>
                     <div className="profile-icon">
+                        { profileImg && 
+                        <img src={ profileImg } />}
                     </div>
                 </div>
                 {this.state.show && popup }

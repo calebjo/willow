@@ -19,3 +19,4 @@ json.extract! property,
     :description
 
 json.photo_url url_for(property.photo)
+# json.photos property.photos

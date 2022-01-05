@@ -16,6 +16,7 @@ export default class PropertyShow extends React.Component {
     }
 
     render() {
+        // debugger
         const properties = this.props.properties.map((property, idx) => {
             if (property.id) {
                 return (

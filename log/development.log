@@ -45682,3 +45682,919 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 213ms (Views: 212.5ms | ActiveRecord: 0.2ms | Allocations: 90910)
 
 
+Started GET "/" for ::1 at 2022-01-05 15:18:10 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb___565548857573914727_16640 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.3ms | Allocations: 104)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 14.8ms | Allocations: 7349)
+  Rendered layout layouts/application.html.erb (Duration: 284.6ms | Allocations: 114116)
+Completed 200 OK in 288ms (Views: 283.0ms | ActiveRecord: 2.9ms | Allocations: 116479)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:18:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 11708)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 11953)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:18:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 257.2ms | Allocations: 90652)
+Completed 200 OK in 258ms (Views: 257.4ms | ActiveRecord: 0.2ms | Allocations: 90895)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:19:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 218.3ms | Allocations: 90760)
+Completed 200 OK in 219ms (Views: 218.5ms | ActiveRecord: 0.2ms | Allocations: 90998)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:19:39 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 210.3ms | Allocations: 92123)
+Completed 200 OK in 211ms (Views: 210.5ms | ActiveRecord: 0.2ms | Allocations: 92365)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:20:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 790)
+  Rendered layout layouts/application.html.erb (Duration: 226.9ms | Allocations: 90649)
+Completed 200 OK in 228ms (Views: 227.1ms | ActiveRecord: 0.2ms | Allocations: 90887)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:20:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 218.4ms | Allocations: 92127)
+Completed 200 OK in 219ms (Views: 218.7ms | ActiveRecord: 0.2ms | Allocations: 92366)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:20:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 230.5ms | Allocations: 92637)
+Completed 200 OK in 231ms (Views: 230.7ms | ActiveRecord: 0.2ms | Allocations: 92875)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:20:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 11667)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 11906)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:21:41 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 430.1ms | Allocations: 125881)
+Completed 200 OK in 431ms (Views: 430.4ms | ActiveRecord: 0.2ms | Allocations: 126120)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:21:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 11665)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 11903)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:22:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.5ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 209.8ms | Allocations: 90674)
+Completed 200 OK in 210ms (Views: 210.1ms | ActiveRecord: 0.1ms | Allocations: 90912)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:22:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 11691)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 11930)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:23:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 211.2ms | Allocations: 92095)
+Completed 200 OK in 212ms (Views: 211.4ms | ActiveRecord: 0.2ms | Allocations: 92333)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:23:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 210.2ms | Allocations: 90651)
+Completed 200 OK in 211ms (Views: 210.5ms | ActiveRecord: 0.2ms | Allocations: 90889)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:23:41 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 11702)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 11941)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:25:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 213.2ms | Allocations: 92100)
+Completed 200 OK in 214ms (Views: 213.4ms | ActiveRecord: 0.2ms | Allocations: 92338)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:26:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 216.9ms | Allocations: 92130)
+Completed 200 OK in 218ms (Views: 217.1ms | ActiveRecord: 0.2ms | Allocations: 92373)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:26:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 260.1ms | Allocations: 90840)
+Completed 200 OK in 261ms (Views: 260.4ms | ActiveRecord: 0.2ms | Allocations: 91078)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:26:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 790)
+  Rendered layout layouts/application.html.erb (Duration: 213.4ms | Allocations: 89510)
+Completed 200 OK in 214ms (Views: 213.7ms | ActiveRecord: 0.2ms | Allocations: 89749)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:27:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 211.4ms | Allocations: 89424)
+Completed 200 OK in 212ms (Views: 211.7ms | ActiveRecord: 0.2ms | Allocations: 89662)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:27:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 231.8ms | Allocations: 95403)
+Completed 200 OK in 232ms (Views: 232.1ms | ActiveRecord: 0.2ms | Allocations: 95641)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:27:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 211.4ms | Allocations: 92114)
+Completed 200 OK in 212ms (Views: 211.6ms | ActiveRecord: 0.2ms | Allocations: 92352)
+
+
+Started DELETE "/api/session" for ::1 at 2022-01-05 15:27:36 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YiJ5KAoO-2PiJtTFzUU8-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Dr8Yb3xy64CXRrXxbu3n4g"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Dr8Yb3xy64CXRrXxbu3n4g"], ["updated_at", "2022-01-05 20:27:36.910610"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 4.8ms | Allocations: 4350)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:27:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 10173)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 10411)
+
+
+Started POST "/api/session" for ::1 at 2022-01-05 15:27:47 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@dmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@dmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13:in `find_by_credentials'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "wy3iOjCCE5uP35LvjEfK_g"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wy3iOjCCE5uP35LvjEfK_g"], ["updated_at", "2022-01-05 20:27:47.692834"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Redirected to http://localhost:3000/api/users/1
+Completed 302 Found in 191ms (ActiveRecord: 6.7ms | Allocations: 4069)
+
+
+Started GET "/api/users/1" for ::1 at 2022-01-05 15:27:47 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14:in `show'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (Duration: 0.2ms | Allocations: 68)
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 364)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 2222)
+
+
+Started DELETE "/api/session" for ::1 at 2022-01-05 15:27:49 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wy3iOjCCE5uP35LvjEfK_g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Ydg7dE2jcd13bjhvp0ndEA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ydg7dE2jcd13bjhvp0ndEA"], ["updated_at", "2022-01-05 20:27:49.990949"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 4.5ms | Allocations: 3925)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:27:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 784)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10193)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 10432)
+
+
+Started POST "/api/session" for ::1 at 2022-01-05 15:27:54 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@dmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@dmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13:in `find_by_credentials'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["updated_at", "2022-01-05 20:27:54.993998"], ["id", 1]]
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42:in `reset_session_token!'
+Redirected to http://localhost:3000/api/users/1
+Completed 302 Found in 188ms (ActiveRecord: 5.0ms | Allocations: 3959)
+
+
+Started GET "/api/users/1" for ::1 at 2022-01-05 15:27:55 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14:in `show'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 126)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 858)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:35:46 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 36.7ms | Allocations: 51666)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.7ms | Allocations: 1752)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.4ms | Allocations: 1753)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.0ms | Allocations: 1751)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.0ms | Allocations: 1752)
+  Rendered api/properties/index.json.jbuilder (Duration: 77.2ms | Allocations: 72634)
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 11.7ms | Allocations: 74760)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168/elmo.jpg" for ::1 at 2022-01-05 15:35:46 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07/elmo.jpg" for ::1 at 2022-01-05 15:35:46 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d/elmo.jpg" for ::1 at 2022-01-05 15:35:46 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7/elmo.jpg" for ::1 at 2022-01-05 15:35:46 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7/elmo.jpg" for ::1 at 2022-01-05 15:35:46 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7", "filename"=>"elmo"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7", "filename"=>"elmo"}
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  S3 Storage (3.0ms) [0m[34mGenerated URL for file at key: 9edvj68r7qwmkd8ye1fd8fvco5la (https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab90a7c47053b716f3f34e9b4d38a833e7b8672bdc5dde28f26a6e5d9cc42db7)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab90a7c47053b716f3f34e9b4d38a833e7b8672bdc5dde28f26a6e5d9cc42db7
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms | Allocations: 5224)
+
+
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: e51gin46hwetxkaa6euqfxrmyzlz (https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0c0d43bd9f1614d31c6291013ea93bb33e1358d4d028db0857d09d69aefabf78)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0c0d43bd9f1614d31c6291013ea93bb33e1358d4d028db0857d09d69aefabf78
+Completed 302 Found in 27ms (ActiveRecord: 15.8ms | Allocations: 13908)
+
+
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  S3 Storage (1.1ms) [0m[34mGenerated URL for file at key: xgato0bxg6p7e0lagkyf0igxgotl (https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fae733ac26c313f69b1656159c7e8960b44e3067bbc4eaece38b2246a4e9036f)[0m
+  [1m[36mActiveStorage::Blob Load (3.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (3.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fae733ac26c313f69b1656159c7e8960b44e3067bbc4eaece38b2246a4e9036f
+[36m  S3 Storage (2.9ms) [0m[34mGenerated URL for file at key: zoa6upuc4no6ly363323vr0j79xt (https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=55a7705ce7afa5b6f9a227691ed623c8859c5a27e2ddca19f1d6fa396cc2b524)[0m
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: 6hbx2a3vnnw54zm6oufht1xquwab (https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a6b164893039962d33d157fc2a108bf33a793dc7f86a27aa874f930ef17b4463)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=55a7705ce7afa5b6f9a227691ed623c8859c5a27e2ddca19f1d6fa396cc2b524
+Redirected to https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T203546Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a6b164893039962d33d157fc2a108bf33a793dc7f86a27aa874f930ef17b4463
+Completed 302 Found in 40ms (ActiveRecord: 14.1ms | Allocations: 18542)
+
+
+Completed 302 Found in 38ms (ActiveRecord: 13.5ms | Allocations: 17851)
+
+
+Completed 302 Found in 37ms (ActiveRecord: 9.1ms | Allocations: 18069)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@dmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "mzj8ymx269439b3f0730ptqn1gdj"], ["filename", "heman.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "amazon_dev"], ["byte_size", 43866], ["checksum", "fXgf3PM8X9gzoWy96whx+w=="], ["created_at", "2022-01-05 20:48:12.017593"]]
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "User"], ["record_id", 1], ["blob_id", 6], ["created_at", "2022-01-05 20:48:12.018934"]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2022-01-05 20:48:12.019681"], ["id", 1]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (155.6ms) [0m[32mUploaded file to key: mzj8ymx269439b3f0730ptqn1gdj (checksum: fXgf3PM8X9gzoWy96whx+w==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: afe58456-3751-490b-a52c-9631e0719645) to Async(default) with arguments: #<GlobalID:0x000055ec4831ae40 @uri=#<URI::GID gid://willow/ActiveStorage::Blob/6>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645] Performing ActiveStorage::AnalyzeJob (Job ID: afe58456-3751-490b-a52c-9631e0719645) from Async(default) enqueued at 2022-01-05T20:48:12Z with arguments: #<GlobalID:0x000055ec481ce460 @uri=#<URI::GID gid://willow/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645] [36m  S3 Storage (56.8ms) [0m[34mDownloaded file from key: mzj8ymx269439b3f0730ptqn1gdj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645]   [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afe58456-3751-490b-a52c-9631e0719645] Performed ActiveStorage::AnalyzeJob (Job ID: afe58456-3751-490b-a52c-9631e0719645) from Async(default) in 66.3ms
+Started GET "/" for ::1 at 2022-01-05 15:48:43 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb___3794989963173942317_16640 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.4ms | Allocations: 105)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 15.1ms | Allocations: 8088)
+  Rendered layout layouts/application.html.erb (Duration: 556.4ms | Allocations: 119996)
+Completed 200 OK in 559ms (Views: 554.8ms | ActiveRecord: 2.9ms | Allocations: 122358)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:48:44 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 6.9ms | Allocations: 6742)
+  Rendered api/properties/index.json.jbuilder (Duration: 24.1ms | Allocations: 19889)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.0ms | Allocations: 25565)
+
+
+
+NoMethodError - undefined method `photo' for #<Property:0x000055954b6c5850>
+Did you mean?  photos
+               photos=:
+  app/views/api/properties/_property.json.jbuilder:21
+  app/views/api/properties/index.json.jbuilder:3
+  app/views/api/properties/index.json.jbuilder:2
+  app/views/api/properties/index.json.jbuilder:1
+  app/controllers/api/properties_controller.rb:6:in `index'
+
+Started GET "/" for ::1 at 2022-01-05 15:49:55 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__1617616628390253569_16640 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.3ms | Allocations: 105)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 15.1ms | Allocations: 8094)
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 26235)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 2.8ms | Allocations: 28598)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:49:55 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 34.1ms | Allocations: 13626)
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.9ms | Allocations: 2196)
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.4ms | Allocations: 1879)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.4ms | Allocations: 1777)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.4ms | Allocations: 1727)
+  Rendered api/properties/index.json.jbuilder (Duration: 90.0ms | Allocations: 33831)
+Completed 200 OK in 94ms (Views: 82.8ms | ActiveRecord: 8.9ms | Allocations: 36993)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:49:55 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.2ms | Allocations: 995)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.0ms | Allocations: 988)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.1ms | Allocations: 989)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 1.7ms | Allocations: 987)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 1.8ms | Allocations: 988)
+  Rendered api/properties/index.json.jbuilder (Duration: 13.0ms | Allocations: 6547)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.4ms | Allocations: 6819)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:50:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 42)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 3.1ms | Allocations: 807)
+  Rendered layout layouts/application.html.erb (Duration: 417.9ms | Allocations: 107925)
+Completed 200 OK in 419ms (Views: 419.0ms | ActiveRecord: 0.2ms | Allocations: 108170)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:50:25 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.0ms | Allocations: 1000)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.6ms | Allocations: 988)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.9ms | Allocations: 989)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.2ms | Allocations: 987)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photos"]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 2.1ms | Allocations: 988)
+  Rendered api/properties/index.json.jbuilder (Duration: 17.5ms | Allocations: 6561)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.9ms | Allocations: 6841)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:51:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__1617616628390253569_18080 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.2ms | Allocations: 94)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1270)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 10905)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 11852)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:51:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.4ms | Allocations: 117)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 40)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 38)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/properties/index.json.jbuilder (Duration: 6.1ms | Allocations: 3427)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 4727)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:52:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__1617616628390253569_20240 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.3ms | Allocations: 96)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.7ms | Allocations: 6236)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 15871)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 2.2ms | Allocations: 16841)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:52:39 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 42.7ms | Allocations: 50632)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 6.1ms | Allocations: 1753)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.9ms | Allocations: 1753)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 5.2ms | Allocations: 1751)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.7ms | Allocations: 1752)
+  Rendered api/properties/index.json.jbuilder (Duration: 80.4ms | Allocations: 68504)
+Completed 200 OK in 85ms (Views: 71.6ms | ActiveRecord: 10.6ms | Allocations: 70729)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168/elmo.jpg" for ::1 at 2022-01-05 15:52:40 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d/elmo.jpg" for ::1 at 2022-01-05 15:52:40 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7/elmo.jpg" for ::1 at 2022-01-05 15:52:40 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07/elmo.jpg" for ::1 at 2022-01-05 15:52:40 -0500
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168", "filename"=>"elmo"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7/elmo.jpg" for ::1 at 2022-01-05 15:52:40 -0500
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+[36m  S3 Storage (2.5ms) [0m[34mGenerated URL for file at key: zoa6upuc4no6ly363323vr0j79xt (https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4842f6990447c0f496e7feacca8ffadca0a93ca23fe63ff88d90955ad54979df)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7", "filename"=>"elmo"}
+Redirected to https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4842f6990447c0f496e7feacca8ffadca0a93ca23fe63ff88d90955ad54979df
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms | Allocations: 4917)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d", "filename"=>"elmo"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: e51gin46hwetxkaa6euqfxrmyzlz (https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=750276055333be2e30609384112defd03d5a8b7f7c17d893d437241e606ad2db)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=750276055333be2e30609384112defd03d5a8b7f7c17d893d437241e606ad2db
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2710)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: 6hbx2a3vnnw54zm6oufht1xquwab (https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7329817ac11f04a26fd320c12e6bfd86cbc601f747118fc024decee7994048f8)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7329817ac11f04a26fd320c12e6bfd86cbc601f747118fc024decee7994048f8
+Completed 302 Found in 21ms (ActiveRecord: 9.2ms | Allocations: 10889)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: 9edvj68r7qwmkd8ye1fd8fvco5la (https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c7018b4f4b54a7fdb9cdf596d4df4cc2ff7ea729fa94b8959eaf99cfa2ba9b90)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c7018b4f4b54a7fdb9cdf596d4df4cc2ff7ea729fa94b8959eaf99cfa2ba9b90
+Completed 302 Found in 20ms (ActiveRecord: 8.9ms | Allocations: 11436)
+
+
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: xgato0bxg6p7e0lagkyf0igxgotl (https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=496e48fdd93ec0b18f479f70837ebc14115ac023cc7b8700bbca9dd9990752b9)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T205240Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=496e48fdd93ec0b18f479f70837ebc14115ac023cc7b8700bbca9dd9990752b9
+Completed 302 Found in 25ms (ActiveRecord: 12.1ms | Allocations: 13796)
+
+
+Started GET "/" for ::1 at 2022-01-05 15:58:37 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__1617616628390253569_25940 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.3ms | Allocations: 94)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3332)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 12992)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 3.0ms | Allocations: 13939)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:58:39 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 12.7ms | Allocations: 9389)
+  Rendered api/properties/index.json.jbuilder (Duration: 15.4ms | Allocations: 10299)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 11576)
+
+
+
+NoMethodError - undefined method `photos' for #<Property:0x00007fdaa0213680>
+Did you mean?  photo
+               photo=:
+  app/views/api/properties/_property.json.jbuilder:22
+  app/views/api/properties/index.json.jbuilder:3
+  app/views/api/properties/index.json.jbuilder:2
+  app/views/api/properties/index.json.jbuilder:1
+  app/controllers/api/properties_controller.rb:6:in `index'
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:58:42 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 6.2ms | Allocations: 6187)
+  Rendered api/properties/index.json.jbuilder (Duration: 8.9ms | Allocations: 6858)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 7111)
+
+
+
+NoMethodError - undefined method `photos' for #<Property:0x00007fdaa0966d10>
+Did you mean?  photo
+               photo=:
+  app/views/api/properties/_property.json.jbuilder:22
+  app/views/api/properties/index.json.jbuilder:3
+  app/views/api/properties/index.json.jbuilder:2
+  app/views/api/properties/index.json.jbuilder:1
+  app/controllers/api/properties_controller.rb:6:in `index'
+
+Started GET "/" for ::1 at 2022-01-05 15:59:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered api/users/_user.json.jbuilder (Duration: 0.1ms | Allocations: 44)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5776)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 15188)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 3.1ms | Allocations: 15568)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 15:59:07 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.2ms | Allocations: 60)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 40)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 38)
+  Rendered api/properties/_property.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/properties/index.json.jbuilder (Duration: 18.8ms | Allocations: 15014)
+Completed 200 OK in 33ms (Views: 16.8ms | ActiveRecord: 2.9ms | Allocations: 16993)
+
+
+Started GET "/" for ::1 at 2022-01-05 16:03:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9H1MdI3qr-3n_GRL6c_HLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: api/users/_user.json.jbuilder (called from _app_views_static_pages_root_html_erb__1617616628390253569_30520 at /home/caleb/AABootcamp/AAProjects/FSP - Willow/willow/app/views/static_pages/root.html.erb:3)
+  Rendered api/users/_user.json.jbuilder (Duration: 0.2ms | Allocations: 96)
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 11.1ms | Allocations: 6179)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 15839)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 2.2ms | Allocations: 16814)
+
+
+Started GET "/api/properties" for ::1 at 2022-01-05 16:03:31 -0500
+Processing by Api::PropertiesController#index as JSON
+  Rendering api/properties/index.json.jbuilder
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/views/api/properties/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 26.9ms | Allocations: 18741)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.5ms | Allocations: 1752)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.6ms | Allocations: 1753)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 4.9ms | Allocations: 1751)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Property"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/properties/_property.json.jbuilder:21
+  Rendered api/properties/_property.json.jbuilder (Duration: 3.9ms | Allocations: 1752)
+  Rendered api/properties/index.json.jbuilder (Duration: 60.8ms | Allocations: 36612)
+Completed 200 OK in 66ms (Views: 52.5ms | ActiveRecord: 10.4ms | Allocations: 38839)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168/elmo.jpg" for ::1 at 2022-01-05 16:03:31 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07/elmo.jpg" for ::1 at 2022-01-05 16:03:31 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7/elmo.jpg" for ::1 at 2022-01-05 16:03:31 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d/elmo.jpg" for ::1 at 2022-01-05 16:03:31 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7/elmo.jpg" for ::1 at 2022-01-05 16:03:31 -0500
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c6efe86c2fa747d32b0666f867392e7a94d1168", "filename"=>"elmo"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e61f2fb4451158af2fd800b2f621b89402c86c7", "filename"=>"elmo"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (3.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c45f0a42942b302b1cb732472a02a1e2403e80d", "filename"=>"elmo"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2cf3b35be67e7c1f5bed2477336c75bfb25bfe07", "filename"=>"elmo"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: zoa6upuc4no6ly363323vr0j79xt (https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0def1e49b29c335e98b7b66a2552d57f70477eade26bb39cb04c7653f413ea80)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06ab6b29a7619f7591dee005e3a2d9619f9659a7", "filename"=>"elmo"}
+Redirected to https://willow-aa-dev.s3.amazonaws.com/zoa6upuc4no6ly363323vr0j79xt?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0def1e49b29c335e98b7b66a2552d57f70477eade26bb39cb04c7653f413ea80
+Completed 302 Found in 14ms (ActiveRecord: 3.7ms | Allocations: 4301)
+
+
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  S3 Storage (1.6ms) [0m[34mGenerated URL for file at key: e51gin46hwetxkaa6euqfxrmyzlz (https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=08379e28fc0122992b7b6d16c1e174034a1a1bd67fbad764ffdd30cd8c288d2d)[0m
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: xgato0bxg6p7e0lagkyf0igxgotl (https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f35e3b8d66b3d1a1f7c9d56cd02bc271a36a7914e14fc0ef0900b6f665a850a7)[0m
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: 6hbx2a3vnnw54zm6oufht1xquwab (https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=67d9e13ee83e01dcc044d3705e5a7c5d9f1558888d7b0696f411a3a8e4640ed2)[0m
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: 9edvj68r7qwmkd8ye1fd8fvco5la (https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7991528c3cd76ea22c6d000d3108156d74dc744380a573cd92f34ae7a1b39949)[0m
+Redirected to https://willow-aa-dev.s3.amazonaws.com/e51gin46hwetxkaa6euqfxrmyzlz?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=08379e28fc0122992b7b6d16c1e174034a1a1bd67fbad764ffdd30cd8c288d2d
+Redirected to https://willow-aa-dev.s3.amazonaws.com/xgato0bxg6p7e0lagkyf0igxgotl?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f35e3b8d66b3d1a1f7c9d56cd02bc271a36a7914e14fc0ef0900b6f665a850a7
+Redirected to https://willow-aa-dev.s3.amazonaws.com/6hbx2a3vnnw54zm6oufht1xquwab?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=67d9e13ee83e01dcc044d3705e5a7c5d9f1558888d7b0696f411a3a8e4640ed2
+Redirected to https://willow-aa-dev.s3.amazonaws.com/9edvj68r7qwmkd8ye1fd8fvco5la?response-content-disposition=inline%3B%20filename%3D%22elmo.jpg%22%3B%20filename%2A%3DUTF-8%27%27elmo.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3AVJFIZSVBSGA4HL%2F20220105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220105T210331Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7991528c3cd76ea22c6d000d3108156d74dc744380a573cd92f34ae7a1b39949
+Completed 302 Found in 29ms (ActiveRecord: 8.7ms | Allocations: 14769)
+
+
+Completed 302 Found in 31ms (ActiveRecord: 10.9ms | Allocations: 15233)
+
+
+Completed 302 Found in 38ms (ActiveRecord: 12.8ms | Allocations: 18030)
+
+
+Completed 302 Found in 33ms (ActiveRecord: 10.1ms | Allocations: 15669)
+
+

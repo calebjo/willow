@@ -3,6 +3,7 @@ class Property < ApplicationRecord
   
     belongs_to :user
     # Active Storage Association
+    #has_many_attached :photos
     has_one_attached :photo
 end
   

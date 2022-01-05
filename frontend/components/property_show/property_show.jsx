@@ -1,5 +1,5 @@
 import React from "react";
-import PropertyDetail from "../property_detail/property_detail";
+import PropertyDetail from "./property_detail";
 
 export default class PropertyShow extends React.Component {
     constructor(props){
@@ -7,7 +7,10 @@ export default class PropertyShow extends React.Component {
         console.log("Component is constructing....")
     }
 
-    componentDidMount(){
+    calcTimeOnWillow() {
+    }
+
+    componentDidMount() {
         this.props.fetchProperties()
         console.log("Component has mounted!")
     }
@@ -23,8 +26,13 @@ export default class PropertyShow extends React.Component {
             }
         })
         return(
-            <div className="properties">
-                { properties }
+            <div className="property-list-container">
+                <div className="property-header">
+                    {/* check if rental or for sale, render accordingly */}
+                </div>
+                <div className="property-list">
+                    { properties }
+                </div>
             </div>
         );
     }

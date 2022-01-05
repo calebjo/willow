@@ -1,22 +1,63 @@
 
+#root {
+    overflow: hidden;
+}
+
+.map-content {
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
 .properties-container {
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-grow: 1;
 }
 
 .property-map {
+    flex-grow: 1;
+    background: rgb(159, 221, 66);
+}
+
+.property-list-container {
+    width: 21.5rem;
+    background: white;
+    overflow-y: scroll;
+}
+
+.property-header {
     width: 100%;
-    height: 100%;
-    background: rgb(209, 236, 168);
+    height: 5rem;
+    background: indianred;
 }
 
-.properties {
-    width: 32rem;
-    height: 100%;
-    background: hotpink;
-}
+.property-item {
+    display: flex;
+    flex-direction: column;
+    width:  100%;
+    margin: 0.5rem 0.75rem;
 
+    .prop-top {
+        width: 100%;
+        height: 7.75rem;
+        background: rgb(243, 120, 161);
+    }
+    .prop-details {
+        display: flex;
+        height: 2rem;
+        background:rgb(128, 232, 240);
+        color: white;
+        font-family: 'Open sans', sans-serif;
+        .prop-age {
+            background:rgba(0, 0, 0, 0.5);
+        }
+    }
+    .prop-bottom {
+        background: rgb(252, 191, 221);
+    }
+}
 
 // Property listings become two columns, margin is added to container
 @media (min-width: 640px) {
@@ -31,8 +72,6 @@
 @media (min-width: 1007px) {
     // map content changes to full desktop view
     .map-content {
-        width: 100vw;
-        height: 100vh;
         .top-nav {
             justify-content: space-between;
             border-bottom: 1px solid lightgray;

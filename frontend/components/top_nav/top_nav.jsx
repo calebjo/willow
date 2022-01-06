@@ -66,12 +66,12 @@ export default class TopNav extends React.Component {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/homes">
+                        <Link to="/homes/for_rent">
                             Rent
                         </Link>
                     </div>
                     <div>
-                        <Link to="/homes">
+                        <Link to="/sell">
                             Sell
                         </Link>
                     </div>

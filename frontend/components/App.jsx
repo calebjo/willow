@@ -23,12 +23,13 @@ const App = () => (
     <Switch>
         <Route exact path="/" component={SplashContent} />
         <Route exact path="/homes" component={MapContent} />
-        <Route exact path="/mywillow/favorites" component={SavedHomesContent} />
-        <Route exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
-        <Route exact path="/renting" component={RentingContent} />
-        <Route exact path="/mywillow/yourhome" component={YourHomeContent} />
-        <Route exact path="/mywillow/OffersAndClosings" component={OffersClosingsContent} />
-        <Route exact path="/mywillow/account" component={ProfileContent} />
+        <Route exact path="/homes/for_rent" component={MapContent} />
+        <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
+        <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
+        <AuthRoute exact path="/renting" component={RentingContent} />
+        <AuthRoute exact path="/mywillow/yourhome" component={YourHomeContent} />
+        <AuthRoute exact path="/mywillow/OffersAndClosings" component={OffersClosingsContent} />
+        <AuthRoute exact path="/mywillow/account" component={ProfileContent} />
     </Switch>
 );
 

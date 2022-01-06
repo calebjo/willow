@@ -25,8 +25,11 @@ export default class PropertyModal extends React.Component {
             saleType = "Sold"
             ballStyle = { background: "rgb(255,210,55)" }
         }
-        // DEBUG -- REPLACE WITH ACTUAL CALCULATION
-        const westimate = (this.props.property.price) * .95
+        // DEBUG -- REPLACE WITH ACTUAL CALCULATION IF YOU WANT LMAO
+        const multiplier = (Math.random() * (1.2 - 0.8) + 0.8)
+        const westimate = Math.round((this.props.property.price) * multiplier)
+        const rentWestimate = Math.round((this.props.property.price) * multiplier)
+
         return (
             <div className="property-modal-container">
                 <div className="modal-cover"></div>
@@ -71,17 +74,26 @@ export default class PropertyModal extends React.Component {
                                     <div className="property-sale-ball" style={ ballStyle }></div>
                                     <div className="property-sale-type">{ saleType }</div>
                                 </div>
+                                {/* DEBUG -- ADD WESTIMATE LATER */}
+                                { this.props.property.for_sale && 
                                 <div className="property-lower-westimate">
-                                    {/* DEBUG -- ADD WESTIMATE LATER */}
                                     Westimate: <span>${westimate.toLocaleString()}</span>
                                 </div>
+                                }
+                                { this.props.property.for_rent && 
+                                <div className="property-lower-westimate">
+                                    Rent Westimate: <span>${rentWestimate.toLocaleString()}</span>
+                                </div>
+                                }
                             </div>
+                            { this.props.property.for_sale && 
                             <div className="property-details-footer">
                                 <div className="footer-payment-estimate">
                                     {/* DEBUG -- ADD PROPER PAYMENT ESTIMATE LATER */}
                                     <span>Est. payment: </span>$WHOLEWALLET
                                 </div>
                             </div>
+                            }
                         </div>
                         {/*  DEBUG -- DONT USE HASH LINKS */}
                         <div className="property-nav-bar">

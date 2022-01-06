@@ -19,8 +19,6 @@ export default class MapContent extends React.Component {
     }
 
     getClickedProperty(property){
-        console.log("in getClickedProperty in MapContent")
-        console.log(`This property is ${property.price}`)
         this.setState({ property: property })
         this.showPropModal()
     }

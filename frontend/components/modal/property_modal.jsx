@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link'
 
-export default class Propertymodal extends React.Component {
+export default class PropertyModal extends React.Component {
     constructor(props){
         super(props)
     }
@@ -26,6 +26,12 @@ export default class Propertymodal extends React.Component {
                 <div className="modal-cover"></div>
                 <div className="property-modal">
                     <div className="property-item">
+                        <div className="property-modal-top">
+                            <div className="modal-exit" onClick={this.props.hidePropModal}></div>
+                            <div className="property-modal-like"></div>
+                            <div className="property-modal-share"></div>
+                            <div className="property-modal-like"></div>
+                        </div>
                         <div className="property-carousel">
                             <div className="property-image">
                                 <img src={this.props.property.photo_url} />

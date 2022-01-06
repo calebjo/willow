@@ -87,15 +87,19 @@
     align-self: center;
     // disable anti-aliasing for a sharper logo
     img {
+        filter: brightness(0) invert(1);
         width: 120px;
         height: 25px;
-        filter: brightness(0) invert(1);
         image-rendering: optimizeSpeed;
         image-rendering: -moz-crisp-edges;
         image-rendering: -o-crisp-edges;
         image-rendering: -webkit-optimize-contrast;
         -ms-interpolation-mode: nearest-neighbor;
     }
+}
+
+.map-content .top-logo img {
+    filter: none;
 }
 
 // User profile links dropdown

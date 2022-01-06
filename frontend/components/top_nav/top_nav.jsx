@@ -8,7 +8,7 @@ import { SessionDropdown } from "./session_dropdown";
 export default class TopNav extends React.Component {
     constructor(props){
         super(props)
-        this.state = { modal: false, dropdown: false }
+        this.state = { modal: false }
     
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
@@ -55,7 +55,7 @@ export default class TopNav extends React.Component {
         )
         return (
             <div className="top-nav">
-                {this.state.modal && 
+                { this.state.modal && 
                     <WelcomeModal 
                         hideModal={this.hideModal}/>
                 }

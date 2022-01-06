@@ -1,0 +1,17 @@
+
+.map-content {
+    .modal-container {
+        z-index: 103;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .modal-cover {
+        z-index: 102;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+}

@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import WelcomeModal from "../modal/welcome_modal";
-import { SessionDropdown } from "../splash/session_dropdown";
+import { SessionDropdown } from "./session_dropdown";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
     constructor(props){
         super(props)
-        this.state = { modal: false, dropdown: false }
+        this.state = { modal: false }
     
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
@@ -55,7 +55,7 @@ export default class TopNav extends React.Component {
         )
         return (
             <div className="top-nav">
-                {this.state.modal && 
+                { this.state.modal && 
                     <WelcomeModal 
                         hideModal={this.hideModal}/>
                 }
@@ -66,12 +66,12 @@ export default class TopNav extends React.Component {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/homes">
+                        <Link to="/homes/for_rent">
                             Rent
                         </Link>
                     </div>
                     <div>
-                        <Link to="/homes">
+                        <Link to="/sell">
                             Sell
                         </Link>
                     </div>

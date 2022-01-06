@@ -2,10 +2,12 @@
 // Top nav
 
 .top-nav {
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     height: 3.5rem;
     padding: 0.5rem;
+    background: none;
 }
 
 .top-left div:hover {
@@ -14,6 +16,7 @@
 }
 
 .top-dropdown {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -87,9 +90,9 @@
     align-self: center;
     // disable anti-aliasing for a sharper logo
     img {
+        filter: brightness(0) invert(1);
         width: 120px;
         height: 25px;
-        filter: brightness(0) invert(1);
         image-rendering: optimizeSpeed;
         image-rendering: -moz-crisp-edges;
         image-rendering: -o-crisp-edges;
@@ -98,12 +101,18 @@
     }
 }
 
+.map-content .top-logo img {
+    filter: none;
+}
+
 // User profile links dropdown
 
 .profile-icon-container {
+    z-index: 3;
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .profile-icon {
@@ -116,6 +125,7 @@
 
 .dropdown-chip {
     position: absolute;
+    z-index: 101;
     top: 3.85rem;
     right: 1rem;
     width: 2rem;
@@ -136,12 +146,13 @@
     right: 0;
     background: white;
     border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.295);
+    color: rgb(42,42,51);
 
     .session-dropdown-link, .sign-out-section button {
         width: 100%;
         background: none;
         border: none;
-        padding: 0 1rem;
         font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
         font-size: 0.85rem;
         font-weight: 600;
@@ -154,21 +165,34 @@
             line-height: 340%;
         }
     }
+
+    .session-dropdown-link:hover {
+        background: rgb(242,250,255);
+        cursor: pointer;
+    }
+
     .sign-out-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
         border-top: 2px solid lightgray;
         button {
             padding: 1rem 0;
+            cursor: pointer;
         }
     }
 }
 
 // Session nav gets smaller
-@media (min-width: 760px) {
-
+@media (min-width: 770px) {
+    .session-dropdown {
+        width: 22.5rem;
+    }
 }
 
-// Full nav breaks out
+// Full nav breaks out, session nav gets smaller and detaches from right
 @media (min-width: 890px) {
+
     .top-nav {
         display: flex;
         background-color:white;
@@ -193,7 +217,16 @@
     }
 
     .sign-in {
-        color: black;
+        color: rgb(42,42,51);
         font-size: inherit;
+    }
+
+    .session-dropdown {
+        width: 18.5rem;
+        right: 1rem;
+    }
+
+    .dropdown-chip {
+        right: 2rem;
     }
 }

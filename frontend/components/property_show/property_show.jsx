@@ -4,6 +4,7 @@ import PropertyDetail from "./property_detail";
 export default class PropertyShow extends React.Component {
     constructor(props){
         super(props)
+        // debugger
     }
 
     calcTimeOnWillow() {
@@ -12,7 +13,6 @@ export default class PropertyShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties()
-        
     }
 
     render() {
@@ -20,7 +20,10 @@ export default class PropertyShow extends React.Component {
         const properties = this.props.properties.map((property, idx) => {
             if (property.id) {
                 return (
-                    <PropertyDetail property={property} key={idx} />
+                    <PropertyDetail 
+                        property={property}
+                        getClickedProperty={this.props.getClickedProperty} 
+                        key={idx} />
                 )
             }
         })

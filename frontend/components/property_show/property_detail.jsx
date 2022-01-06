@@ -1,35 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PropertyDetail = (props) => {
-  return (
-    <div className="property-item">
-        <div className="prop-top">
-            <div className="prop-details">
-                <div className="prop-age">
-                    {/* { props.timeOnWillow } */}
-                    2 days on Willow
-                </div>
-                <div className="prop-saved">
-                    <div className="prop-heart">
+// A single listing of a property, which can be opened into a detailed modal
+export default class PropertyDetail extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = { modal: false }
+    }
+
+    render(){
+        const property = this.props.property
+        return (
+            <div className="property-item" onClick={ () => this.props.getClickedProperty(property) }>
+                <div className="prop-top">
+                    <div className="prop-details">
+                        <div className="prop-age">
+                            {/* DEBUG */}
+                            {/* { this.props.timeOnWillow } */}
+                            2 days on Willow
+                        </div>
+                        <div className="prop-saved">
+                            <div className="prop-heart">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="prop-image">
+                        <img src={property.photo_url} />
                     </div>
                 </div>
+                <div className="prop-bottom">
+                    <div className="prop-price">${property.price.toLocaleString()}</div>
+                    <div className="prop-mid-info">
+                        <div className="prop-bd">{property.bedrooms} bd</div>
+                        <div className="prop-ba">{property.bathrooms} ba</div>
+                        <div className="prop-sqft">{property.square_feet.toLocaleString()} sqft</div>
+                    </div>
+                    <div className="prop-address">{property.address}</div>
+                </div>
             </div>
-            <div className="prop-image">
-                <img src={props.property.photo_url} />
-            </div>
-        </div>
-        <div className="prop-bottom">
-            <div className="prop-price">${props.property.price}</div>
-            <div className="prop-mid-info">
-                <div className="prop-bd">{props.property.bedrooms} bd</div>
-                <div className="prop-ba">{props.property.bathrooms} ba</div>
-                <div className="prop-sqft">{props.property.square_feet} sqft</div>
-            </div>
-            <div className="prop-address">{props.property.address}</div>
-        </div>
-    </div>
-  );
-};
-
-export default PropertyDetail;
+        );
+    }
+}

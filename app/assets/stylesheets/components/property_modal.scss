@@ -1,17 +1,17 @@
 
-.map-content {
-    .modal-container {
-        z-index: 103;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    }
-    .modal-cover {
-        z-index: 102;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-    }
+@mixin center-fullscreen {
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    background: rgba(0, 0, 0, 0.3);
+    animation: modal-cover 0.5s;
+}
+
+.property-modal-container, .property-modal {
+    @include center-fullscreen();
 }

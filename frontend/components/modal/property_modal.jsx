@@ -22,7 +22,7 @@ export default class PropertyModal extends React.Component {
             ballStyle = { background: "rgb(255,210,55)" }
         }
         return (
-            <div className="modal-container">
+            <div className="property-modal-container">
                 <div className="modal-cover"></div>
                 <div className="property-modal">
                     <div className="property-item">

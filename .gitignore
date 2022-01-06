@@ -6,5 +6,4 @@ master.key
 /tmp/*
 !/tmp/.keep
 /log/*
-development.log
 !/log/.keep

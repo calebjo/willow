@@ -1,56 +1,129 @@
 import React from "react";
-import LoginFormContainer from "../form/login_form_container"
-import SignupFormContainer from "../form/signup_form_container"
 
-export default class WelcomeModal extends React.Component {
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'
+
+export default class Propertymodal extends React.Component {
     constructor(props){
         super(props)
     }
 
-    toggleForm(e){
-        e.preventDefault();
-        let signinForm = e.target.parentNode.parentNode.children[3]
-        let signupForm = e.target.parentNode.parentNode.children[4]
-        if (e.target.classList[0] === "sign-in-link") {
-            if (signinForm.classList.contains("hidden")) {
-                signupForm.classList.add("hidden")
-                signinForm.classList.remove("hidden")
-                e.target.parentNode.children[1].classList.remove("toggled")
-                e.target.classList.add("toggled")
-            }
-        } else {
-            if (signupForm.classList.contains("hidden")) {
-                signinForm.classList.add("hidden")
-                signupForm.classList.remove("hidden")
-                e.target.parentNode.children[0].classList.remove("toggled")
-                e.target.classList.add("toggled")
-            }
-        }
-    }
-
     // renders the appropriate form within the modal (sign in or sign up)
     render(){
+        let saleType, ballStyle
+        if (this.props.for_sale) { 
+            saleType = "For sale"
+            ballStyle = { background: "rgb(255,90,80)" }
+        } else if (this.props.for_rent) { 
+            saleType = "For rent"
+            ballStyle = { background: "rgb(152,93,255)" }
+        } else {
+            saleType = "Sold"
+            ballStyle = { background: "rgb(255,210,55)" }
+        }
         return (
             <div className="modal-container">
                 <div className="modal-cover"></div>
-                <div className="welcome-modal">
-                    <div className="modal-exit">
-                        x
-                    </div>
-                    <div className="modal-header">
-                        Welcome to Willow
-                    </div>
-                    <div className="modal-switch">
-                        <div className="sign-in-link toggled" onClick={this.toggleForm}>
-                            Sign in
+                <div className="property-modal">
+                    <div className="property-item">
+                        <div className="property-carousel">
+                            <div className="property-image">
+                                <img src={this.props.property.photo_url} />
+                            </div>
                         </div>
-                        <div className="sign-up-link" onClick={this.toggleForm}>
-                            New account
+                        <div className="property-details">
+                            <div className="property-main-details">
+                                <div className="property-details-price">
+
+                                </div>
+                                <div className="property-details-smaller">
+                                    <div className="property-smaller-bedrooms">
+                                        {this.props.property.bedrooms}
+                                    </div>
+                                    <div className="property-smaller-bathrooms">
+                                        {this.props.property.bedrooms}
+                                    </div>
+                                    <div className="property-smaller-footage">
+                                        {this.props.property.square_feet}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="property-address">
+                                {this.props.property.address}
+                            </div>
+                            <div className="property-lower-details">
+                                <div className="property-lower-sale">
+                                    <div className="property-sale-ball" style={ ballStyle }></div>
+                                    <div className="property-sale-type">{ saleType }</div>
+                                </div>
+                                <div className="property-lower-westimate">
+                                    {/* DEBUG -- ADD WESTIMATE LATER */}
+                                    $123123
+                                </div>
+                            </div>
+                            <div className="property-details-footer">
+                                <div className="footer-payment-estimate">
+                                    {/* DEBUG -- ADD PROPER PAYMENT ESTIMATE LATER */}
+                                    <span>Est. payment: </span>$WHOLEWALLET
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <LoginFormContainer hideModal={this.props.hideModal}/>
-                    <SignupFormContainer hideModal={this.props.hideModal}/>
-                    <div className="modal-lower">
+                        <div className="property-nav-bar">
+                            <div className="property-nav-link">
+                                <HashLink to="home-page#property-small-map">Overview</HashLink>
+                            </div>
+                            <div className="property-nav-link">
+                                <HashLink to="home-page#property-facts-features">Facts and features</HashLink>
+                            </div>HashLink
+                            <div className="property-nav-link">
+                                <HashLink to="home-page#property-cost-calculator">Monthly cost</HashLink>
+                            </div>
+                            <div className="property-nav-link">
+                                <HashLink to="home-page#property-rent-westimate">Rent Westimate</HashLink>
+                            </div>
+                            <div className="property-nav-link">
+                                <HashLink to="home-page#property-homes-for-you">Homes for you</HashLink>
+                            </div>
+                        </div>
+                        <div className="property-small-map">
+                        </div>
+                        <div className="property-overview">
+                            <div className="property-sub-header">
+                            </div>
+                            <div className="overview-details">
+                                <div className="overview-detail">
+                                    Time on Willow <span>2 days</span>
+                                </div>
+                                <div className="overview-detail">
+                                    Saves <span>31</span>
+                                </div>
+                            </div>
+                            <div className="overview-description">
+                                { this.props.property.description }
+                            </div>
+                        </div>
+                        <div className="property-facts-features">
+                            <div className="property-sub-header">
+                                Facts and features
+                            </div>
+                            <div className="property-dropdowns">
+                            </div>
+                        </div>
+                        <div className="property-cost-calculator">
+                            <div className="property-sub-header">
+                                Monthly cost
+                            </div>
+                        </div>
+                        <div className="property-rent-westimate">
+                            <div className="property-sub-header">
+                                Rent Westimate
+                            </div>
+                        </div>
+                        <div className="property-homes-for-you">
+                            <div className="property-sub-header">
+                                Homes for you
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -29,11 +29,11 @@ export default class PropertyDetail extends React.Component {
                     </div>
                 </div>
                 <div className="prop-bottom">
-                    <div className="prop-price">${property.price}</div>
+                    <div className="prop-price">${property.price.toLocaleString()}</div>
                     <div className="prop-mid-info">
                         <div className="prop-bd">{property.bedrooms} bd</div>
                         <div className="prop-ba">{property.bathrooms} ba</div>
-                        <div className="prop-sqft">{property.square_feet} sqft</div>
+                        <div className="prop-sqft">{property.square_feet.toLocaleString()} sqft</div>
                     </div>
                     <div className="prop-address">{property.address}</div>
                 </div>

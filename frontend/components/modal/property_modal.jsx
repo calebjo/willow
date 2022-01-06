@@ -1,7 +1,11 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link'
+
+import TopNavContainer from "../top_nav/top_nav_container"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default class PropertyModal extends React.Component {
     constructor(props){
@@ -11,23 +15,28 @@ export default class PropertyModal extends React.Component {
     // renders the appropriate form within the modal (sign in or sign up)
     render(){
         let saleType, ballStyle
-        if (this.props.for_sale) { 
+        if (this.props.property.for_sale) { 
             saleType = "For sale"
             ballStyle = { background: "rgb(255,90,80)" }
-        } else if (this.props.for_rent) { 
+        } else if (this.props.property.for_rent) { 
             saleType = "For rent"
             ballStyle = { background: "rgb(152,93,255)" }
         } else {
             saleType = "Sold"
             ballStyle = { background: "rgb(255,210,55)" }
         }
+        // DEBUG -- REPLACE WITH ACTUAL CALCULATION
+        const westimate = (this.props.property.price) * .95
         return (
             <div className="property-modal-container">
                 <div className="modal-cover"></div>
                 <div className="property-modal">
+                    <TopNavContainer />
                     <div className="property-item">
                         <div className="property-modal-top">
-                            <div className="modal-exit" onClick={this.props.hidePropModal}></div>
+                            <div className="modal-exit" onClick={this.props.hidePropModal}>
+                                <FontAwesomeIcon icon={ faChevronLeft } />
+                            </div>
                             <div className="property-modal-like"></div>
                             <div className="property-modal-share"></div>
                             <div className="property-modal-like"></div>
@@ -40,17 +49,17 @@ export default class PropertyModal extends React.Component {
                         <div className="property-details">
                             <div className="property-main-details">
                                 <div className="property-details-price">
-
+                                    ${this.props.property.price.toLocaleString()}
                                 </div>
                                 <div className="property-details-smaller">
                                     <div className="property-smaller-bedrooms">
-                                        {this.props.property.bedrooms}
+                                        <span>{this.props.property.bedrooms}</span> bd
                                     </div>
                                     <div className="property-smaller-bathrooms">
-                                        {this.props.property.bedrooms}
+                                        <span>{this.props.property.bathrooms}</span> ba
                                     </div>
                                     <div className="property-smaller-footage">
-                                        {this.props.property.square_feet}
+                                        <span>{this.props.property.square_feet.toLocaleString()}</span> sqft
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +73,7 @@ export default class PropertyModal extends React.Component {
                                 </div>
                                 <div className="property-lower-westimate">
                                     {/* DEBUG -- ADD WESTIMATE LATER */}
-                                    $123123
+                                    Westimate: <span>${westimate.toLocaleString()}</span>
                                 </div>
                             </div>
                             <div className="property-details-footer">
@@ -74,6 +83,7 @@ export default class PropertyModal extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        {/*  DEBUG -- DONT USE HASH LINKS */}
                         <div className="property-nav-bar">
                             <div className="property-nav-link">
                                 <HashLink to="home-page#property-small-map">Overview</HashLink>

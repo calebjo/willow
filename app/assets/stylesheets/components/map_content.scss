@@ -43,6 +43,10 @@
     width: 20rem;
 }
 
+.property-list .property-item {
+    cursor: pointer;
+}
+
 .property-header {
     height: 4rem;
     margin: 0.75rem 0.75rem 0.5rem 0.75rem;
@@ -82,7 +86,7 @@
     -webkit-transform-origin: 0 100%;
 }
 
-.property-item {
+.property-list .property-item {
     display: flex;
     flex-direction: column;
     margin: 0.75rem 0 0.75rem 0.75rem;

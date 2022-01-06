@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom'
 import { 
     Route, 
     Redirect,
@@ -8,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import { AuthRoute } from "../util/route_util";
+
 import MapContent from "./property_map/map_content";
 import SplashContent from "./pages/splash_content"
 import SavedHomesContent from "./pages/saved_homes_content"

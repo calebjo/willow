@@ -20,6 +20,7 @@ export default class PropertyDetail extends React.Component {
                             2 days on Willow
                         </div>
                         <div className="prop-saved">
+                            <img src={ window.saveIcon } />
                         </div>
                     </div>
                     <div className="prop-image">

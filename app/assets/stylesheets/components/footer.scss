@@ -60,11 +60,12 @@
 .greeting-socials {
     display: flex;
     justify-content: center;
-    width: 60%;
-    margin: 2rem 0;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-bottom: 4rem;
     .social-link {
         width: 6rem;
-        margin: 0 0.5rem;
+        margin: 0.5rem;
         img {
             width: 100%;
             border-radius: 0.5rem;

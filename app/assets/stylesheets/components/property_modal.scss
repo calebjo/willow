@@ -1,7 +1,7 @@
 
-@mixin center-fullscreen {
+.property-modal-container, .property-modal {
+    z-index: 100;
     position: fixed;
-    z-index: 99;
     width: 100vw;
     height: 100vh;
     transform: translate(-50%, -50%);
@@ -12,6 +12,7 @@
     animation: modal-cover 0.5s;
 }
 
-.property-modal-container, .property-modal {
-    @include center-fullscreen();
+.property-item {
+    border: none;
+    background: white;
 }

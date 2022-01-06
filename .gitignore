@@ -3,4 +3,7 @@ bundle.js*
 .DS_Store
 npm-debug.log
 master.key
-tmp/
+/tmp/*
+!/tmp/.keep
+/log/*
+!/log/.keep

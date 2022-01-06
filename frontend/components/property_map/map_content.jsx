@@ -2,7 +2,7 @@ import React from "react";
 
 import SearchNav from "../search/search_nav";
 import TopNavContainer from "../top_nav/top_nav_container";
-import { Dropdown } from "../splash/dropdown";
+import { Dropdown } from "../top_nav/dropdown";
 import PropertyMap from "./property_map";
 import PropertyShowContainer from "../property_show/property_show_container";
 

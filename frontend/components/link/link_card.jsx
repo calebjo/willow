@@ -12,6 +12,14 @@ export default class LinkCard extends React.Component {
         this.setCardContent = this.setCardContent.bind(this)
         this.setCardContent()
     }
+
+    handleMouseLeave(e) {
+        e.target.classList.remove("focused")
+    }
+
+    handleMouseEnter(e) {
+        e.target.classList.add("focused")
+    }
     
     setCardContent(){
         if (this.props.type === "buy") {

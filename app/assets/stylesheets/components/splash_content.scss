@@ -113,7 +113,7 @@ input:focus, textarea:focus, select:focus{
     .cards {
         flex-direction: row;
         margin: 0;
-        .link-card {
+        a {
             margin: 0 0.75rem 0;
             .card-image {
                 img {
@@ -127,7 +127,7 @@ input:focus, textarea:focus, select:focus{
 @media (min-width: 1218px) {
     .cards {
         justify-content: center;
-        .link-card {
+        a {
             width: 26rem;
         }
     }

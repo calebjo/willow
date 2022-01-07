@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import TopNavContainer from "../top_nav/top_nav_container"
 import Footer from "../footer/footer"
@@ -28,11 +29,11 @@ export default class SellContent extends React.Component {
                         Sell your home yourself
                     </div>
                     <div className="sell-cta-copy">
-
+                        Deciding to sell your home yourself is referred to as for-sale-by-owner (FSBO). The FSBO process is similar to traditional selling, but without the help of a real estate agent. In this case, you're responsible for the home prep, marketing, showings, and negotiations.
                     </div>
-                    <div className="sell-cta-button">
-                        
-                    </div>
+                    <Link to="/for-sale-by-owner" className="sell-cta-button">
+                        Post your home for sale
+                    </Link>
                 </div>
                 <div className="sell-value-check">
                     <div className="sell-value-check-header">
@@ -40,6 +41,10 @@ export default class SellContent extends React.Component {
                     </div>
                     <div className="sell-value-check-sub-header">
                         Enter your address to get your free Westimate.
+                    </div>
+                    {/* DEBUG -- REPLACE WITH ACTUAL ADDRESS FORM */}
+                    <div className="sell-value-check-form">
+                        Enter your address
                     </div>
                 </div>
                 <Footer />

@@ -14,14 +14,15 @@ export default class PropertyDetail extends React.Component {
             <div className="property-item" onClick={ () => this.props.getClickedProperty(property) }>
                 <div className="prop-top">
                     <div className="prop-details">
+                        <div className="prop-saved">
+                            <img src={ window.saveIcon } />
+                        </div>
                         <div className="prop-age">
                             {/* DEBUG */}
                             {/* { this.props.timeOnWillow } */}
                             2 days on Willow
                         </div>
-                        <div className="prop-saved">
-                            <img src={ window.saveIcon } />
-                        </div>
+                        
                     </div>
                     <div className="prop-image">
                         <img src={property.photo_url} />

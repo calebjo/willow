@@ -32,6 +32,12 @@ export default class PropertyShow extends React.Component {
                 <div className="property-list-container">
                     <div className="property-header">
                         {/* check if rental or for sale, render accordingly */}
+                        <div className="property-header-top">
+                            Real Estate & Homes For Sale
+                        </div>
+                        <div className="property-header-bottom">
+                            { this.props.properties.length } results
+                        </div>
                     </div>
                     <div className="property-list">
                         { properties }

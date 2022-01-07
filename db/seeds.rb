@@ -8,6 +8,9 @@
 
 require 'open-uri'
 
+Property.delete_all
+User.delete_all
+
 property_descriptions = [
     "As soon as you walk into this Fairview home you will be struck by the open space and clean lines - the perfect canvas on which to create your dream home. Substantially renovated with many sparkling clean features, this suite is in a concrete and steel, pet friendly, family building in a convenient downtown location. With 1 baths, 2BRs up and a fantastic rec room plumbed for a wet bar down plus a large single car garage this home offers excellent value and utility while also offering a family oriented tight knit community to call home. This 'as new' home is rich with heritage features, boasting an open contemporary design with all the modern conveniences. Beautiful Gibraltar Model enhanced by 36'x 17' Screened Patio with beautiful travertine floor adding natural richness & a unique appearance to the patio. Located in-town, adjacent to North Park, for an eco-friendly walk everywhere lifestyle. Located at the end of a quiet cul-de-sac and backing onto a regional trail system and green belt, this bright and sunny property has been fenced and cross fenced, is currently home to sheep and chickens and easily adapted for horses. In great condition with many character features including large commercial grade low E windows, fully developed attic area and drive in garage with workshop area. Call Now!",
     "Great Opportunity to get into the real estate market for less than the cost of Rent!! Beautifully suited to entertaining, this home delivers the very best of warm,period charm & superior upgrading. A traditional floorplan with 2 superb bedroom/1 bathroom and a spacious Rec Room w/wet bar above the garage. Needs some updating has all impact windows newer roof! Could be an excellent investment opportunity or a good place to call home while attending university. Located on a quiet cul de sac and backing onto Point Grey with trail access only steps away. There is a large double car garage at the south end as well as a large workshop attached at the north which could be redeveloped into your home office or studio. Features include White Cabinetry/Granite counters, private deck overlooking the back yard and park & inlayed oak and fir floors plus potential for a mortgage helper on the lower level. And in moments you can walk to downtown, to the seaside.",
@@ -125,28 +128,27 @@ property_data = [
 ]
 
 demo = User.create!(email: "demo@dmail.com", password: "xc9u0981234n123o")
-
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/heman.png')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/heman.png')
 demo.photo.attach(io: file, filename: 'heman.png')
 
 # -------------------------------------
 
 p1 = Property.create!(property_data[0])
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/Property Pictures/1.jpg')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/1.jpg')
 p1.photo.attach(io: file, filename: '1.jpg')
 
 p2 = Property.create!(property_data[1])
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/Property Pictures/2.jpg')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/2.jpg')
 p2.photo.attach(io: file, filename: '2.jpg')
 
 p3 = Property.create!(property_data[2])
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/Property Pictures/3.jpg')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/3.jpg')
 p3.photo.attach(io: file, filename: '3.jpg')
 
 p4 = Property.create!(property_data[3])
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/Property Pictures/4.jpg')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/4.jpg')
 p4.photo.attach(io: file, filename: '4.jpg')
 
 p5 = Property.create!(property_data[4])
-file = open('/home/caleb/AABootcamp/AAProjects/FSP - Willow/Non-project materials/Property Pictures/5.jpg')
+file = open('https://s3.amazonaws.com/willow-aa-seeds/5.jpg')
 p5.photo.attach(io: file, filename: '5.jpg')

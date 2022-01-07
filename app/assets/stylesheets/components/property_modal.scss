@@ -65,7 +65,8 @@
     .property-address, 
     .property-lower-details,
     .property-nav-bar,
-    .property-lower-sale {
+    .property-lower-sale,
+    .property-nav-link {
         display: flex;
     }
 }
@@ -144,4 +145,36 @@
     span {
         font-weight: 700;
     }
+}
+
+.property-nav-link {
+    display: inline-flex;
+}
+
+.property-sub-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.overview-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0
+}
+
+.overview-description {
+    line-height: 150%;
+}
+
+.property-modal .property-item > div {
+    padding: 1.5rem;
+}
+
+.property-nav-bar,
+.property-small-map,
+.property-overview,
+.property-facts-features,
+.property-cost-calculator,
+.property-rent-westimate {
+    border-bottom: 1px solid lightgray;
 }

@@ -117,6 +117,7 @@ export default class PropertyModal extends React.Component {
                         </div>
                         <div className="property-overview">
                             <div className="property-sub-header">
+                                Overview
                             </div>
                             <div className="overview-details">
                                 <div className="overview-detail">

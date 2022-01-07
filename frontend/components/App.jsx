@@ -19,6 +19,7 @@ import YourHomeContent from "./pages/your_home_content"
 import OffersClosingsContent from "./pages/offers_closings_content"
 import ProfileContent from "./pages/profile_content"
 import SellContent from "./pages/sell_content";
+import SellFormContent from "./pages/sell_form_content";
 
 const App = () => (
     <Switch>
@@ -26,6 +27,7 @@ const App = () => (
         <Route exact path="/homes" component={MapContent} />
         <Route exact path="/homes/for_rent" component={MapContent} />
         <Route exact path="/sell" component={SellContent} />
+        <AuthRoute exact path="/for-sale-by-owner" component={SellFormContent} />
         <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
         <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
         <AuthRoute exact path="/renting" component={RentingContent} />

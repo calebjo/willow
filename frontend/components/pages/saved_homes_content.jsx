@@ -9,6 +9,10 @@ export default class SavedHomesContent extends React.Component {
         super(props)
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+
     render(){
         return (
             <div className="saved-homes-content">

@@ -9,6 +9,10 @@ export default class YourHomeContent extends React.Component {
         super(props)
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+
     render(){
         return (
             <div className="your-home-content">

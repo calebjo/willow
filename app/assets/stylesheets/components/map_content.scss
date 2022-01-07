@@ -135,7 +135,7 @@
 .property-header {
     display: flex;
     flex-direction: column;
-    margin: 0.75rem 0.75rem 0.5rem 0.75rem;
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
     font-family: "Open sans", sans-serif;
     div {
         padding: 0.25rem 0;
@@ -182,6 +182,7 @@
     }
     .prop-saved {
         position: absolute;
+        right: 1.5rem;
         width: 2.5rem;
         height: 2.5rem;
         img {

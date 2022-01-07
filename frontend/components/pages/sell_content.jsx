@@ -25,16 +25,19 @@ export default class SellContent extends React.Component {
                     <div className="sell-cta-img">
                         <img src ={ window.sellCTA } />
                     </div>
-                    <div className="sell-cta-header">
-                        Sell your home yourself
+                    <div className="sell-cta-lower">
+                        <div className="sell-cta-header">
+                            Sell your home yourself
+                        </div>
+                        <div className="sell-cta-copy">
+                            Deciding to sell your home yourself is referred to as for-sale-by-owner (FSBO). The FSBO process is similar to traditional selling, but without the help of a real estate agent. In this case, you're responsible for the home prep, marketing, showings, and negotiations.
+                        </div>
+                        <Link to="/for-sale-by-owner" className="sell-cta-button">
+                            Post your home for sale
+                        </Link>
                     </div>
-                    <div className="sell-cta-copy">
-                        Deciding to sell your home yourself is referred to as for-sale-by-owner (FSBO). The FSBO process is similar to traditional selling, but without the help of a real estate agent. In this case, you're responsible for the home prep, marketing, showings, and negotiations.
-                    </div>
-                    <Link to="/for-sale-by-owner" className="sell-cta-button">
-                        Post your home for sale
-                    </Link>
                 </div>
+                <div className="sell-lower-line"></div>
                 <div className="sell-value-check">
                     <div className="sell-value-check-header">
                         Explore your home's value

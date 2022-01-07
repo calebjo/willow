@@ -7,3 +7,6 @@ master.key
 !/tmp/.keep
 /log/*
 !/log/.keep
+
+# Ignore application configuration
+/config/application.yml

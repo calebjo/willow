@@ -4,6 +4,7 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6}, allow_nil: true
 
+    # associations
     has_many :properties
     has_one_attached :photo
 

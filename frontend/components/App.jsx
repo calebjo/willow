@@ -18,12 +18,14 @@ import RentingContent from "./pages/renting_content"
 import YourHomeContent from "./pages/your_home_content"
 import OffersClosingsContent from "./pages/offers_closings_content"
 import ProfileContent from "./pages/profile_content"
+import SellContent from "./pages/sell_content";
 
 const App = () => (
     <Switch>
         <Route exact path="/" component={SplashContent} />
         <Route exact path="/homes" component={MapContent} />
         <Route exact path="/homes/for_rent" component={MapContent} />
+        <Route exact path="/sell" component={SellContent} />
         <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
         <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
         <AuthRoute exact path="/renting" component={RentingContent} />

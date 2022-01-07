@@ -18,5 +18,7 @@ json.extract! property,
     :agent_listing,
     :description
 
-json.photo_url url_for(property.photo)
+if property.photo
+    json.photo_url url_for(property.photo)
+end
 # json.photos property.photos

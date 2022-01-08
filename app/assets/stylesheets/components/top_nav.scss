@@ -15,11 +15,11 @@
 
 .splash-content .top-nav {
     color: white;
-    position: relative;
+    // position: relative;
     .sign-in {
-        position: absolute;
-        top: 0;
-        right: 1rem;
+        // position: absolute;
+        // top: 0;
+        // right: 1rem;
     }
 }
 
@@ -80,10 +80,10 @@
 }
 
 .sign-in {
-    max-width: 33%;
-    height: 100%;
     display: flex;
     align-items: center;
+    max-width: 50%;
+    height: 100%;
     font-size: 1rem;
     cursor: pointer;
 }

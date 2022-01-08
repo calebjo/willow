@@ -4,6 +4,21 @@
 
 // DEBUG NOTE --- REPLACING POSITION PROPERTIES WITH
 // CENTER FULLSCREEN IS HALF DECENT FOR MOBILE
+
+.modal-container {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    width: 100vw;
+    height: 100vh;
+}
+
 .modal-cover {
     z-index: 99;
     position: fixed;
@@ -24,20 +39,6 @@
     to {
         opacity: 100%;
     }
-}
-
-.modal-container {
-    z-index: 100;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    width: 100vw;
-    height: 100vh;
 }
 
 .welcome-modal div {

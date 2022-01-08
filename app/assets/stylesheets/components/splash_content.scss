@@ -10,7 +10,8 @@
 .top-container {
     image-rendering: optimizeSpeed;
     background-image: asset-data-url("splash-image.webp");
-    background-position: 80% 60%;
+    background-position: 80% 40%;
+    background-size: cover;
 }
 
 .splash-search {

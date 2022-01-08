@@ -2,12 +2,25 @@
 // Top nav
 
 .top-nav {
-    z-index: 2;
     display: flex;
+    z-index: 2;
     justify-content: space-around;
     height: 3.5rem;
     padding: 0.5rem;
     background: none;
+    color: #006aff;
+}
+
+// Distinct top nav colors for pages
+
+.splash-content .top-nav {
+    color: white;
+    position: relative;
+    .sign-in {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+    }
 }
 
 .top-left div:hover {
@@ -37,9 +50,7 @@
 }
 
 // Different color for map page
-.map-content .dropdown-bar {
-    background: #006aff;
-}
+// DEBUG -- DROPDOWN SHOULD BE BLUE
 
 .top-left, .top-right {
     display: flex;
@@ -72,11 +83,13 @@
     max-width: 33%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    color: white;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.splash-content .sign-in {
+    color: white;
 }
 
 .sign-up {
@@ -198,9 +211,12 @@
 // Full nav breaks out, session nav gets smaller and detaches from right
 @media (min-width: 890px) {
 
-    .top-nav {
+    .splash-content .top-nav {
         display: flex;
         background-color:white;
+        div {
+            color: rgb(42,42,51);
+        }
     }
 
     .top-dropdown {

@@ -1,0 +1,12 @@
+
+.top-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.splash-content .top-dropdown {
+    filter: invert(1);
+}

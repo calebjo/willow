@@ -1,5 +1,8 @@
 import React from "react"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 export class Dropdown extends React.Component {
     constructor(props){
         super(props)
@@ -13,9 +16,7 @@ export class Dropdown extends React.Component {
     render() {
         return(
             <div className="top-dropdown" onClick={this.handleClick}>
-                <div className="dropdown-bar"></div>
-                <div className="dropdown-bar"></div>
-                <div className="dropdown-bar"></div>
+                <FontAwesomeIcon icon={ faBars } />
             </div>
         )
     }

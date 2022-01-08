@@ -1,0 +1,70 @@
+.sell-form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background:#ffffff;
+    border-bottom: 1px solid lightgray;
+}
+
+.sell-form-content .top-nav {
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid lightgray;
+    .top-logo {
+        img {
+            filter: none;
+        }
+    }
+}
+
+.sell-form-banner {
+    width: 100%;
+    min-height: 30rem;
+    background-image: asset-data-url("sell-page-banner.png");
+    background-size: cover;
+    background-position: 51%;
+}
+
+.sell-form-mid {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem 2rem;
+    font-family: "Open sans", sans-serif;
+    font-weight: 600;
+    color: rgb(42,42,51);
+
+    .sell-form-header {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+.sell-form-cards {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.sell-form-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 1rem;
+    img {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+    }
+    .sell-form-card-copy {
+        text-align: center;
+    }
+}

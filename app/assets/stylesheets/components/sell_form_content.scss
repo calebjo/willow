@@ -52,6 +52,7 @@
 
 .sell-form-card {
     display: flex;
+    min-width: 25%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,5 +67,6 @@
     }
     .sell-form-card-copy {
         text-align: center;
+        width: 60%;
     }
 }

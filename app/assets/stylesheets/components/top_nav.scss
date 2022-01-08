@@ -216,6 +216,12 @@
         background-color:white;
     }
 
+    .splash-content .top-nav {
+        .sign-in {
+            position: static;
+        }
+    }
+
     div .top-nav {
         div {
             color: rgb(42,42,51);

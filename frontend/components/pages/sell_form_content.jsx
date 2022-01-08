@@ -36,7 +36,7 @@ export default class SellFormContent extends React.Component {
                         <div className="sell-form-card">
                             <img src={window.sellFormVolume} />
                             <div className="sell-form-card-copy">
-                                Your home will be listed on Willow, reaching the "largest" audience of shoppers on the Web.
+                                Your home will be listed on Willow, reaching the largest audience of shoppers on the Web.
                             </div>
                         </div>
                         <div className="sell-form-card">

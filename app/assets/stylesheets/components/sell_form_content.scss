@@ -20,6 +20,9 @@
 }
 
 .sell-form-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
     min-height: 30rem;
     background-image: asset-data-url("sell-page-banner.png");
@@ -69,4 +72,59 @@
         text-align: center;
         width: 60%;
     }
+}
+
+// Property Sell Form in banner
+
+.sell-form-container {
+    color: white;
+    font-family: "Open sans", sans-serif;
+    div {
+        padding: 0.75rem;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        input[type="text"]:not(:first-child), select {
+            width: 40%;
+        }
+        input:first-child {
+            width: 100%;
+        }
+    }
+    .sell-form-header {
+        background: #0D4599;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    input, select {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border: none;
+        font-weight: 400;
+        color: #A7A6B3;
+    }
+    input[type="text"], select {
+        background: white;
+        outline: 1px solid #A7A6AB;
+    }
+    input[type="submit"] {
+        background: #3DCA5A;
+        color: white;
+        border-radius: 6px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+.sell-form-wrapper {
+    background: rgba(0,116,228,.9);
+}
+
+.sell-form-sub-header {
+    border-bottom: 1px solid white;
+}
+
+.sign-in-checker {
+    text-decoration: underline;
 }

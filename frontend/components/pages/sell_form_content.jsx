@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import TopNavContainer from "../top_nav/top_nav_container"
 import Footer from "../footer/footer"
+import PropertyFormContainer from "../form/property_form_container";
 
 export default class SellFormContent extends React.Component {
     constructor(props){
@@ -18,9 +19,7 @@ export default class SellFormContent extends React.Component {
             <div className="sell-form-content">
                 <TopNavContainer />
                 <div className="sell-form-banner">
-                    <div className="sell-form-container">
-
-                    </div>
+                    <PropertyFormContainer />
                 </div>
                 <div className="sell-form-mid">
                     <div className="sell-form-header">

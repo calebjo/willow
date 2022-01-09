@@ -128,3 +128,23 @@
 .sign-in-checker {
     text-decoration: underline;
 }
+
+@media (min-width: 600px) {
+    .sell-form-container {
+        .sell-form-header {
+            font-size: 2.25rem;
+            width: 38rem;
+            height: 2.5rem;
+            padding: 1rem;
+            clip-path: polygon(95% 0, 0 0, 0 100%, 100% 100%);
+        }
+        form {
+            input[type="text"]:not(:first-child), select {
+                width: 12rem;
+            }
+            input:first-child {
+                width: 24rem;
+            }
+        }
+    }
+}

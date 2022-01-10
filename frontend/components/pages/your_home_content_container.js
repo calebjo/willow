@@ -12,7 +12,6 @@ const mapDispatchToProps = dispatch => ({
     fetchProperties: () => dispatch(fetchProperties()),
     updateProperty: (property) => dispatch(updateProperty(property)),
     deleteProperty: (property) => dispatch(deleteProperty(property)),
-
 });
 
 export default connect(

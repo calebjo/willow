@@ -1,6 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import EditSellContent from '../pages/edit_sell_content';
 
+// Takes in the address form information and geocodes a lat/lng coord
 class PropertyForm extends React.Component {
     constructor(props) {
         super(props);
@@ -11,6 +14,7 @@ class PropertyForm extends React.Component {
             state: '',
             zip_code: ''
         };
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     update(field) {
@@ -19,9 +23,46 @@ class PropertyForm extends React.Component {
         });
     }
 
+    handleSubmit(e) {
+        e.preventDefault()
+        const address = 
+        this.state.street_address + ", " +
+        this.state.unit_num + ", " +
+        this.state.city + ", " +
+        this.state.state + " " +
+        this.state.zip_code
+
+        const addressString = address.split(" ").join("+")
+        const requestUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${addressString}&key=${window.googleAPIKey}`
+        const response = $.ajax({
+            method: 'GET',
+            url: requestUrl
+        })
+        
+        let formatted_address, lat, lng
+        response.done(() => {
+            formatted_address = response.responseJSON.results[0].formatted_address
+            lat = response.responseJSON.results[0].geometry.location.lat
+            lng = response.responseJSON.results[0].geometry.location.lng
+            console.log(lat)
+            console.log(lng)
+            console.log(formatted_address)
+            this.setState({
+                address: address,
+                lat: lat,
+                lng: lng
+            })
+            this.props.redirect(address, lat, lng)
+        })
+        
+        response.fail(() => {
+            console.log("ERROR: The Geocoding request failed.")
+        })
+    }
+
     render() {
         const { street_address, unit_num, city, state, zip_code } = this.state
-
+        
         return (
             <div className="sell-form-container">
                 <div className="sell-form-header">

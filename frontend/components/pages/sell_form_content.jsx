@@ -4,22 +4,47 @@ import { Link } from "react-router-dom";
 import TopNavContainer from "../top_nav/top_nav_container"
 import Footer from "../footer/footer"
 import PropertyFormContainer from "../form/property_form_container";
+import PropertyForm from "../form/property_form";
 
 export default class SellFormContent extends React.Component {
     constructor(props){
         super(props)
+        this.state = { 
+            redirect: false,
+            address: null,
+            lat: null, 
+            lng: null
+        }
+        this.redirect = this.redirect.bind(this)
     }
 
     componentDidMount(){
         window.scrollTo(0,0)
     }
 
+    redirect(address, lat, lng){
+        this.setState({
+            redirect: true,
+            address: address,
+            lat: lat,
+            lng: lng
+        })
+    }
+
     render(){
-        return (
-            <div className="sell-form-content">
-                <TopNavContainer />
+        const formContent = this.state.redirect ? (
+            <PropertyFormContainer 
+                redirect={this.redirect}
+                address={this.state.address}
+                lat={this.state.lat}
+                lng={this.state.lng}
+            />
+        ) : (
+            <div className="sell-form-wrapper">
                 <div className="sell-form-banner">
-                    <PropertyFormContainer />
+                    <PropertyForm 
+                        redirect={this.redirect}
+                    />
                 </div>
                 <div className="sell-form-mid">
                     <div className="sell-form-header">
@@ -46,6 +71,12 @@ export default class SellFormContent extends React.Component {
                         </div>
                     </div>
                 </div>
+            </div>
+        )
+        return (
+            <div className="sell-form-content">
+                <TopNavContainer />
+                { formContent }
                 <Footer />
             </div>
         )

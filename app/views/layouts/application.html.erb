@@ -13,6 +13,8 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
+        window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
+        
         window.willowLogo = "<%= image_url('willow-logo.png') %>";
         window.buyHome = "<%= image_url('buy-home.webp') %>";
         window.rentHome = "<%= image_url('rent-home.webp') %>";

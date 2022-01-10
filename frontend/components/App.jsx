@@ -20,7 +20,6 @@ import OffersClosingsContent from "./pages/offers_closings_content"
 import ProfileContent from "./pages/profile_content"
 import SellContent from "./pages/sell_content";
 import SellFormContent from "./pages/sell_form_content";
-import PropertyFormContainer from "./form/property_form_container";
 
 const App = () => (
     <Switch>

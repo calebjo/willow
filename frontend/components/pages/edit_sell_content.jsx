@@ -3,8 +3,10 @@ import React from "react"
 export default class EditSellContent extends React.Component {
     constructor(props){
         super(props)
-        // DEBUG -- DEFAULTS TO DEMO USER AS CREATOR
-        const id = window.currentUser ? window.currentUser.id : 1
+
+        console.log(this.props)
+        const id = this.props.currentUser ? this.props.currentUser.id : null
+
         this.state = {
             user_id: id,
             address: this.props.address,
@@ -18,7 +20,7 @@ export default class EditSellContent extends React.Component {
             square_feet: 0,
             lot_size: 0,
             year_built: 0,
-            hoa_dues: 0,
+            hoa_fee: 0,
             has_basement: false,
             num_stories: 0,
             parking_spots: 0,
@@ -98,7 +100,7 @@ export default class EditSellContent extends React.Component {
         formData.append('property[square_feet]', this.state.square_feet)
         formData.append('property[lot_size]', this.state.lot_size)
         formData.append('property[year_built]', this.state.year_built)
-        formData.append('property[hoa_dues]', this.state.hoa_dues)
+        formData.append('property[hoa_fee]', this.state.hoa_fee)
         formData.append('property[has_basement]', this.state.has_basement)
         formData.append('property[num_stories]', this.state.num_stories)
         formData.append('property[parking_spots]', this.state.parking_spots)
@@ -110,7 +112,7 @@ export default class EditSellContent extends React.Component {
             formData.append('property[photo]', this.state.photoFile);
         }
 
-        if (window.currentUser) {
+        if (this.props.currentUser) {
             this.props.createProperty(formData);
         } else {
             console.log("You must be signed in to create a property.")
@@ -127,7 +129,7 @@ export default class EditSellContent extends React.Component {
             square_feet,
             lot_size,
             year_built,
-            hoa_dues,
+            hoa_fee,
             has_basement,
             num_stories,
             parking_spots,
@@ -222,8 +224,8 @@ export default class EditSellContent extends React.Component {
                             <label>Hoa dues</label>
                             <input
                                 type="text"
-                                value={hoa_dues}
-                                onChange={this.update("hoa_dues")}
+                                value={hoa_fee}
+                                onChange={this.update("hoa_fee")}
                                 className="property-fact-field"
                             />
                             <label>Basement?</label>

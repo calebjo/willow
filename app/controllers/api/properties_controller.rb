@@ -37,7 +37,8 @@ class Api::PropertiesController < ApplicationController
             :for_sale,
             :for_rent,
             :agent_listing,
-            :description
+            :description,
+            :photo
         )
     end
   

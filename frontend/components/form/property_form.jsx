@@ -25,13 +25,19 @@ class PropertyForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        const address = 
-        this.state.street_address + ", " +
-        this.state.unit_num + ", " +
-        this.state.city + ", " +
-        this.state.state + " " +
-        this.state.zip_code
-
+        const address = this.state.unit_num ? (
+            this.state.street_address + ", " +
+            this.state.unit_num + ", " +
+            this.state.city + ", " +
+            this.state.state + " " +
+            this.state.zip_code
+        ) : (
+            this.state.street_address + ", " +
+            this.state.city + ", " +
+            this.state.state + " " +
+            this.state.zip_code
+        )
+        
         const addressString = address.split(" ").join("+")
         const requestUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${addressString}&key=${window.googleAPIKey}`
         const response = $.ajax({
@@ -48,11 +54,11 @@ class PropertyForm extends React.Component {
             console.log(lng)
             console.log(formatted_address)
             this.setState({
-                address: address,
+                address: formatted_address,
                 lat: lat,
                 lng: lng
             })
-            this.props.redirect(address, lat, lng)
+            this.props.redirect(formatted_address, lat, lng)
         })
         
         response.fail(() => {

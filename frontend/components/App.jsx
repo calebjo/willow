@@ -15,7 +15,7 @@ import SplashContent from "./pages/splash_content"
 import SavedHomesContent from "./pages/saved_homes_content"
 import SavedSearchesContent from "./pages/saved_searches_content"
 import RentingContent from "./pages/renting_content"
-import YourHomeContent from "./pages/your_home_content"
+import YourHomeContentContainer from "./pages/your_home_content_container";
 import OffersClosingsContent from "./pages/offers_closings_content"
 import ProfileContent from "./pages/profile_content"
 import SellContent from "./pages/sell_content";
@@ -32,7 +32,7 @@ const App = () => (
         <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
         <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
         <AuthRoute exact path="/renting" component={RentingContent} />
-        <AuthRoute exact path="/mywillow/yourhome" component={YourHomeContent} />
+        <AuthRoute exact path="/mywillow/yourhome" component={YourHomeContentContainer} />
         <AuthRoute exact path="/mywillow/OffersAndClosings" component={OffersClosingsContent} />
         <AuthRoute exact path="/mywillow/account" component={ProfileContent} />
     </Switch>

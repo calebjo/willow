@@ -1,5 +1,6 @@
 json.extract! property, 
     :id,
+    :user_id,
     :address,
     :price,
     :bedrooms,

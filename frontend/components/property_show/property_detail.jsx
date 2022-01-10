@@ -28,6 +28,7 @@ export default class PropertyDetail extends React.Component {
             timeDiff /= 60000
         } else { // seconds
             timeType = "second"
+            timeDiff /= 1000
         }
         timeDiff = Math.floor(timeDiff)
         console.log(timeDiff)
@@ -49,7 +50,6 @@ export default class PropertyDetail extends React.Component {
                 <div className="prop-top">
                     <div className="prop-details">
                         <div className="prop-age">
-                            {/* DEBUG */}
                             { this.timeOnWillow }
                         </div>
                     </div>

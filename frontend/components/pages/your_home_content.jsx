@@ -3,18 +3,49 @@ import React from "react";
 import TopNavContainer from "../top_nav/top_nav_container"
 import TopSubNav from "../top_nav/top_sub_nav";
 import Footer from "../footer/footer"
-import PropertyDetailContainer from "../property_show/property_detail_container";
+import PropertyDetail from "../property_show/property_detail"
 
 export default class YourHomeContent extends React.Component {
     constructor(props){
         super(props)
+        console.log(this)
     }
 
     componentDidMount(){
         window.scrollTo(0,0)
+        this.props.fetchProperties()
     }
 
     render(){
+        const properties = this.props.properties.map((property, idx) => {
+            if (property.id && property.user_id === this.props.state.session.id) {
+                return (
+                    <div className="user-property-item" key={idx}>
+                        <div className="user-prop-image">
+                            <img src={property.photo_url} />
+                        </div>
+                        <div className="prop-bottom">
+                            <div className="prop-price">${property.price.toLocaleString()}</div>
+                            <div className="prop-mid-info">
+                                <div className="prop-bd">{property.bedrooms} bd</div>
+                                <div className="prop-ba">{property.bathrooms} ba</div>
+                                <div className="prop-sqft">{property.square_feet.toLocaleString()} sqft</div>
+                            </div>
+                            <div className="prop-address">{property.address}</div>
+                        </div>
+                        <div className="your-home-lower">
+                            <div className="your-home-setting">
+                                Edit home
+                            </div>
+                            <div className="your-home-setting">
+                                Delete your listing
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        })
+        
         return (
             <div className="your-home-content">
                 <div className="willow-top-container">
@@ -27,15 +58,7 @@ export default class YourHomeContent extends React.Component {
                     </div>
                     <div className="your-home-body">
                         <div className="your-home-data">
-                            <PropertyDetailContainer />
-                        </div>
-                        <div className="your-home-lower">
-                            <div className="your-home-setting">
-                                Edit home
-                            </div>
-                            <div className="your-home-setting">
-                                Delete your listing
-                            </div>
+                            { properties }
                         </div>
                     </div>
                     <Footer />

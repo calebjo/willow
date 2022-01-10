@@ -4,11 +4,6 @@ import PropertyDetail from "./property_detail";
 export default class PropertyShow extends React.Component {
     constructor(props){
         super(props)
-        // debugger
-    }
-
-    calcTimeOnWillow() {
-        // change time on willow text based on actual time on willow
     }
 
     componentDidMount() {
@@ -16,7 +11,6 @@ export default class PropertyShow extends React.Component {
     }
 
     render() {
-        // debugger
         const properties = this.props.properties.map((property, idx) => {
             if (property.id) {
                 return (

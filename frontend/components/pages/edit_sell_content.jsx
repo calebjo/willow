@@ -151,6 +151,9 @@ export default class EditSellContent extends React.Component {
                             Set your price
                             <input
                                 type="text"
+                                value={price}
+                                onChange={this.update("price")}
+                                className="property-fact-field"
                             />
                         </div>
                         <div className="create-property-photos">

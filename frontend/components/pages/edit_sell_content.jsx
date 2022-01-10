@@ -4,7 +4,6 @@ export default class EditSellContent extends React.Component {
     constructor(props){
         super(props)
 
-        console.log(this.props)
         const id = this.props.currentUser ? this.props.currentUser.id : null
 
         this.state = {

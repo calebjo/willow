@@ -3,6 +3,7 @@ import React from "react";
 import TopNavContainer from "../top_nav/top_nav_container"
 import TopSubNav from "../top_nav/top_sub_nav";
 import Footer from "../footer/footer"
+import PropertyDetailContainer from "../property_show/property_detail_container";
 
 export default class YourHomeContent extends React.Component {
     constructor(props){
@@ -25,17 +26,16 @@ export default class YourHomeContent extends React.Component {
                         Your home
                     </div>
                     <div className="your-home-body">
-                        <div className="your-home-title">
-                            <div className="your-home-image" />
-                            <div className="your-home-header">
-                                Put your home here
-                            </div>
-                            <div className="your-home-copy">
-                                Keep up-to-date on your home's estimated value so you can track your investment, plan your next purchase, view similar homes, and more.
-                            </div>
+                        <div className="your-home-data">
+                            <PropertyDetailContainer />
                         </div>
-                        <div className="your-home-search">
-                            HOME ADDRESS BAR HERE AA 
+                        <div className="your-home-lower">
+                            <div className="your-home-setting">
+                                Edit home
+                            </div>
+                            <div className="your-home-setting">
+                                Delete your listing
+                            </div>
                         </div>
                     </div>
                     <Footer />

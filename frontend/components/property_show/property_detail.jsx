@@ -6,6 +6,37 @@ export default class PropertyDetail extends React.Component {
     constructor(props){
         super(props)
         this.state = { modal: false }
+        this.setTimeOnWillow = this.setTimeOnWillow.bind(this)
+        this.setTimeOnWillow()
+    }
+
+    setTimeOnWillow() {
+        const createdDate = new Date(this.props.property.created_at)
+        const currentDate = new Date()
+
+        let timeDiff = currentDate.getTime() - createdDate.getTime()
+
+        let timeType;
+        if (timeDiff > 86400000) { // 1 day
+            timeType = "day"
+            timeDiff /= 86400000
+        } else if (timeDiff > 3600000) { // 1 hour
+            timeType = "hour"
+            timeDiff /= 3600000
+        } else if (timeDiff > 60000) { // 1 minute
+            timeType = "minute"
+            timeDiff /= 60000
+        } else { // seconds
+            timeType = "second"
+        }
+        timeDiff = Math.floor(timeDiff)
+        console.log(timeDiff)
+        if (timeDiff !== 1) {
+            this.timeOnWillow = `${timeDiff} ${timeType}s on Willow`
+        } else {
+            this.timeOnWillow = `${timeDiff} ${timeType} on Willow`
+        }
+        
     }
 
     render(){
@@ -19,8 +50,7 @@ export default class PropertyDetail extends React.Component {
                     <div className="prop-details">
                         <div className="prop-age">
                             {/* DEBUG */}
-                            {/* { this.props.timeOnWillow } */}
-                            2 days on Willow
+                            { this.timeOnWillow }
                         </div>
                     </div>
                     <div className="prop-image">

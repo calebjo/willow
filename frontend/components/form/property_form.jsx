@@ -50,9 +50,6 @@ class PropertyForm extends React.Component {
             formatted_address = response.responseJSON.results[0].formatted_address
             lat = response.responseJSON.results[0].geometry.location.lat
             lng = response.responseJSON.results[0].geometry.location.lng
-            console.log(lat)
-            console.log(lng)
-            console.log(formatted_address)
             this.setState({
                 address: formatted_address,
                 lat: lat,

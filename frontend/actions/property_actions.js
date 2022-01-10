@@ -20,8 +20,8 @@ export const fetchProperties = () => dispatch => (
 );
 
 export const fetchProperty = id => dispatch => (
-    APIUtil.fetchProperty(id).then(payload => (
-    dispatch(receiveProperty(payload))
+    APIUtil.fetchProperty(id).then(property => (
+    dispatch(receiveProperty(property))
     ))
 );
 

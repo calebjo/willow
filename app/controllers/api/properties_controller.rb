@@ -14,6 +14,22 @@ class Api::PropertiesController < ApplicationController
         @property = Property.create!(property_params)
         render :show
     end
+
+    def update
+        @property = Property.find_by(id: params[:id])
+        if @property.update(property_params)
+            render :show
+        else
+            render json: @property.errors.full_messages, status: 422
+        end
+    end
+
+    def destroy
+        @property = Property.find(params[:id])
+        @property.destroy
+    
+        render :show
+    end
   
     private
   

@@ -9,11 +9,24 @@ export default class YourHomeContent extends React.Component {
     constructor(props){
         super(props)
         console.log(this)
+
+        this.handleDelete = this.handleDelete.bind(this)
+        this.handleEdit = this.handleEdit.bind(this)
     }
 
     componentDidMount(){
         window.scrollTo(0,0)
         this.props.fetchProperties()
+    }
+
+    handleDelete(property){
+        console.log("Deleting selected property")
+        this.props.deleteProperty(property.id)
+    }
+
+    handleEdit(property){
+        console.log("Editing selected property")
+        // this.props.updateProperty()
     }
 
     render(){
@@ -34,10 +47,10 @@ export default class YourHomeContent extends React.Component {
                             <div className="prop-address">{property.address}</div>
                         </div>
                         <div className="your-home-lower">
-                            <div className="your-home-setting">
+                            <div className="your-home-setting edit" onClick={() => this.handleEdit(property)}>
                                 Edit home
                             </div>
-                            <div className="your-home-setting">
+                            <div className="your-home-setting delete" onClick={() => this.handleDelete(property)}>
                                 Delete your listing
                             </div>
                         </div>

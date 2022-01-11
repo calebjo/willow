@@ -1,8 +1,7 @@
 
 export default class MarkerManager {
-    constructor(map, handleClick){
+    constructor(map){
         this.map = map;
-        this.handleClick = handleClick;
         this.markers = {};
     }
 
@@ -12,7 +11,7 @@ export default class MarkerManager {
 
         properties
             .filter(property => !this.markers[property.id])
-            .forEach(newProperty => this.createMarkerFromProperty(newProperty, this.handleClick))
+            .forEach(newProperty => this.createMarkerFromProperty(newProperty))
 
         Object.keys(this.markers)
             .filter(propertyId => !propertiesObj[propertyId])
@@ -21,6 +20,7 @@ export default class MarkerManager {
 
     createMarkerFromProperty(property) {
         const position = new google.maps.LatLng(property.lat, property.lng);
+
         const marker = new google.maps.Marker({
             position,
             map: this.map,

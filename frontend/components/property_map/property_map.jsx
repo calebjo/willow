@@ -1,5 +1,5 @@
 import React from "react";
-
+import MarkerManager from "../../util/marker_manager"
 // SKELETON
 export default class PropertyMap extends React.Component {
     constructor(props){

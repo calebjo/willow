@@ -54,7 +54,9 @@ class Api::PropertiesController < ApplicationController
             :for_rent,
             :agent_listing,
             :description,
-            :photo
+            :photo,
+            :lat,
+            :lng
         )
     end
   

@@ -1,5 +1,6 @@
 import React from "react";
 import MarkerManager from "../../util/marker_manager"
+import PropertyIndexContainer from "../property_index/property_index_container";
 // SKELETON
 export default class PropertyMap extends React.Component {
     constructor(props){
@@ -48,7 +49,11 @@ export default class PropertyMap extends React.Component {
 
     render() {
         return(
-            <div className="property-map" ref="map">
+            <div className="properties-container">
+                <div className="property-map" ref="map">
+                </div>
+                <PropertyIndexContainer 
+                    getClickedProperty={this.props.getClickedProperty}/>
             </div>
         );
     }

@@ -4,6 +4,22 @@ class Api::PropertiesController < ApplicationController
     def index
         @properties = bounds ? Property.in_bounds(bounds) : Property.all
         render :index
+
+        if params
+            
+        # FILTERS TO ADD
+        # for sale type (for sale, for rent, sold)
+        # price (priceMin, priceMax)
+        # bedrooms (bedsMin or bedsExact)
+        # bathrooms (bathsMin)
+        # home_type (hometype)
+        # hoa_fee (maxHoa)
+        # parking_spots (minParkingSpots)
+        # square_feet (minSquareFeet, maxSquareFeet)
+        # lot_size (minLotSize, maxLotSize)
+        # year_built (minYearBuilt, maxYearBuilt)
+        # has_basement (hasBasement)
+        # num_stores (numStories)
     end
   
     def show

@@ -6,7 +6,11 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 export default class SearchBar extends React.Component {
     constructor(props){
         super(props)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
 
+    handleSubmit(){
+        console.log("Submitting the search....")
     }
 
     render() {
@@ -17,7 +21,7 @@ export default class SearchBar extends React.Component {
         )
         return(
             <div className="search-container">
-                <form action="/" method="get">
+                <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"
                         id="header-search"

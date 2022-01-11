@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchProperties } from "../../actions/property_actions"
-import PropertyShow from './property_show';
+import PropertyIndex from './property_index';
 
 const mapStateToProps = (state, ownProps) => ({
     properties: Object.values(state.entities.properties),
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PropertyShow);
+)(PropertyIndex);

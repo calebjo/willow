@@ -9,10 +9,12 @@ export default class MarkerManager {
         const propertiesObj = {};
         properties.forEach(property => propertiesObj[property.id] = property);
 
+        // create a marker for each property that satisfies the filters
         properties
             .filter(property => !this.markers[property.id])
             .forEach(newProperty => this.createMarkerFromProperty(newProperty))
 
+        // if any property no longer satisfies each filter, remove its marker
         Object.keys(this.markers)
             .filter(propertyId => !propertiesObj[propertyId])
             .forEach((propertyId) => this.removeMarker(this.markers[propertyId]))

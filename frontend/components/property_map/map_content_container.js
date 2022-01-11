@@ -2,11 +2,13 @@ import { connect } from 'react-redux';
 
 import { updateFilter } from '../../actions/filter_actions';
 import { asArray } from '../../reducers/selectors';
+import Search from './search';
 
 const mapStateToProps = state => ({
-    properties: asArray(state.entities),
-    minSeating: state.ui.filters.minSeating,
-    maxSeating: state.ui.filters.maxSeating
+    benches: asArray(state.entities),
+    price: state.ui.filters.price,
+    bedrooms: state.ui.filters.bedrooms,
+    bathrooms: state.ui.filters.bathrooms
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -16,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Search);
+)(MapContent);

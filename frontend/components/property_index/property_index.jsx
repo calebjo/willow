@@ -1,7 +1,7 @@
 import React from "react";
 import PropertyDetail from "./property_detail";
 
-export default class PropertyShow extends React.Component {
+export default class PropertyIndex extends React.Component {
     constructor(props){
         super(props)
     }

@@ -4,7 +4,7 @@ import SearchNav from "../search/search_nav";
 import TopNavContainer from "../top_nav/top_nav_container";
 import { Dropdown } from "../top_nav/dropdown";
 import PropertyMap from "./property_map";
-import PropertyShowContainer from "../property_show/property_show_container";
+import PropertyIndexContainer from "../property_index/property_index_container";
 import PropertyModal from "../modal/property_modal";
 
 export default class MapContent extends React.Component {
@@ -61,7 +61,7 @@ export default class MapContent extends React.Component {
                 <SearchNav />
                 <div className="properties-container">
                     <PropertyMap />
-                    <PropertyShowContainer 
+                    <PropertyIndexContainer 
                         getClickedProperty={this.getClickedProperty}/>
                 </div>
             </div>

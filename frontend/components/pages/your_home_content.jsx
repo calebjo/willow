@@ -3,7 +3,6 @@ import React from "react";
 import TopNavContainer from "../top_nav/top_nav_container"
 import TopSubNav from "../top_nav/top_sub_nav";
 import Footer from "../footer/footer"
-import PropertyDetail from "../property_show/property_detail"
 
 export default class YourHomeContent extends React.Component {
     constructor(props){

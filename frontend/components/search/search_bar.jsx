@@ -13,7 +13,6 @@ export default class SearchBar extends React.Component {
                         type="text"
                         id="header-search"
                         placeholder="Enter an address, neighborhood, city or ZIP code"
-                        name="s"
                     />
                     <button type="submit" id="search-submit"><img src={window.searchIcon} /></button>
                 </form>

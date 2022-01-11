@@ -22,7 +22,7 @@ property_descriptions = [
 property_data = [
     {
         user_id: 1,
-        address: "2108 Ferret St, Bogglington, AZ, 85011",
+        address: "159 Montecito Ave, Oakland, CA 94610",
         price: 650000,
         bedrooms: 4,
         bathrooms: 3,
@@ -39,11 +39,13 @@ property_data = [
         for_sale: true,
         for_rent: false,
         agent_listing: false,
-        description: property_descriptions[0]
+        description: property_descriptions[0],
+        lat: 37.8119204,
+        lng: -122.2593021
     },
     {
-        user_id: 1,
-        address: "808 Beats Dr, Producersville, CA, 90101",
+        user_id: 2,
+        address: "3909 Lakeshore Ave, Oakland, CA 94610",
         price: 450000,
         bedrooms: 2,
         bathrooms: 1,
@@ -60,11 +62,13 @@ property_data = [
         for_sale: true,
         for_rent: false,
         agent_listing: false,
-        description: property_descriptions[1]
+        description: property_descriptions[1],
+        lat: 37.8157803,
+        lng: -122.2374451
     },
     {
-        user_id: 1,
-        address: "4001 John Pl, Williamsville, WI, 29108",
+        user_id: 3,
+        address: "2525 Benvenue Ave, Berkeley, CA 94704",
         price: 835000,
         bedrooms: 6,
         bathrooms: 5,
@@ -81,11 +85,13 @@ property_data = [
         for_sale: true,
         for_rent: false,
         agent_listing: false,
-        description: property_descriptions[2]
+        description: property_descriptions[2],
+        lat: 37.8645572,
+        lng: -122.2551291
     },
     {
-        user_id: 1,
-        address: "12 Broccoli St, Vegetonia, OR, 30129",
+        user_id: 4,
+        address: "2721 Belrose Ave, Berkeley, CA 94705",
         price: 2400,
         bedrooms: 4,
         bathrooms: 3,
@@ -102,11 +108,13 @@ property_data = [
         for_sale: false,
         for_rent: true,
         agent_listing: false,
-        description: property_descriptions[3]
+        description: property_descriptions[3],
+        lat: 37.8616969,
+        lng: -122.245935
     },
     {
-        user_id: 1,
-        address: "9317 Huntington Blvd, Castro Valley, CA, 94546",
+        user_id: 5,
+        address: "1822 63rd St, Berkeley, CA 94703",
         price: 1200,
         bedrooms: 2,
         bathrooms: 1,
@@ -123,13 +131,31 @@ property_data = [
         for_sale: false,
         for_rent: true,
         agent_listing: false,
-        description: property_descriptions[4]
+        description: property_descriptions[4],
+        lat: 37.8479992,
+        lng: -122.2700971
     }
 ]
 
 demo = User.create!(email: "demo@dmail.com", password: "xc9u0981234n123o")
 file = open('https://s3.amazonaws.com/willow-aa-seeds/heman.png')
 demo.photo.attach(io: file, filename: 'heman.png')
+
+mario = User.create!(email: "mario@dmail.com", password: "mariomario101")
+file = open('https://s3.amazonaws.com/willow-aa-seeds/mario.png')
+mario.photo.attach(io: file, filename: 'mario.png')
+
+luigi = User.create!(email: "luigi@dmail.com", password: "luigiluigi101")
+file = open('https://s3.amazonaws.com/willow-aa-seeds/luigi.png')
+luigi.photo.attach(io: file, filename: 'luigi.png')
+
+peach = User.create!(email: "peach@dmail.com", password: "peachpeach101")
+file = open('https://s3.amazonaws.com/willow-aa-seeds/peach.png')
+peach.photo.attach(io: file, filename: 'peach.png')
+
+bowser = User.create!(email: "bowser@dmail.com", password: "bowserbowser101")
+file = open('https://s3.amazonaws.com/willow-aa-seeds/bowser.png')
+bowser.photo.attach(io: file, filename: 'bowser.png')
 
 # -------------------------------------
 

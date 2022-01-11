@@ -19,7 +19,7 @@ export default class PropertyMap extends React.Component {
         if (this.props.singleProperty) {
             this.props.fetchProperty(this.props.propertyId);
         } else {
-            this.registerListeners;
+            this.registerListeners();
             this.MarkerManager.updateMarkers(this.props.properties);
         }
     }
@@ -41,6 +41,7 @@ export default class PropertyMap extends React.Component {
                 northEast: { lat: north, lng: east },
                 southWest: { lat: south, lng: west } 
             };
+            
             this.props.updateFilter('bounds', bounds);
         });
     }

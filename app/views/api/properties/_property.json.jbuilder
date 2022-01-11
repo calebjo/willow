@@ -18,7 +18,9 @@ json.extract! property,
     :for_rent,
     :agent_listing,
     :description,
-    :created_at
+    :created_at,
+    :lat,
+    :lng
 
 if property.photo
     json.photo_url url_for(property.photo)

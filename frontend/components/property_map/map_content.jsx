@@ -61,7 +61,7 @@ export default class MapContent extends React.Component {
                 <div className="properties-container">
                     <PropertyMap 
                         properties={this.props.properties}
-                        updateFilters={this.props.updateFilter}/>
+                        updateFilter={this.props.updateFilter}/>
                     <PropertyIndexContainer 
                         getClickedProperty={this.getClickedProperty}/>
                 </div>

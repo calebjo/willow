@@ -8,7 +8,6 @@ export default class MarkerManager {
     updateMarkers(properties){
         const propertiesObj = {};
         properties.forEach(property => propertiesObj[property.id] = property);
-
         // create a marker for each property that satisfies the filters
         properties
             .filter(property => !this.markers[property.id])
@@ -31,6 +30,7 @@ export default class MarkerManager {
 
         // marker.addListener('click', () => this.handleClick(property));
         this.markers[marker.propertyId] = marker;
+        debugger
     }
 
     removeMarker(marker) {

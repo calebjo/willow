@@ -20,7 +20,7 @@ class Property < ApplicationRecord
     end
 
     # return self (a property) only if it satisfies the search filters
-    def.self.satisfies_filters(filters)
+    def.self.in_filters(filters)
         self.where("price >= ?", filters[:minPrice])
         self.where("price <= ?", filters[:maxPrice])
         self.where("bedrooms >= ?", filters[:minBeds])

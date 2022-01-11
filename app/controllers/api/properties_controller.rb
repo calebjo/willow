@@ -2,24 +2,18 @@ class Api::PropertiesController < ApplicationController
     before_action :ensure_logged_in, only: [:create]
   
     def index
-        @properties = bounds ? Property.in_bounds(bounds) : Property.all
+        if bounds
+            if filters
+                @properties = Property.in_bounds(bounds).in_filters(filters)
+            else
+                @properties = Property.in_bounds(bounds)
+            end
+        else
+            Property.all
+        end
+        
         render :index
-
-        if params
-            
-        # FILTERS TO ADD
-        # for sale type (for sale, for rent, sold)
-        # price (priceMin, priceMax)
-        # bedrooms (bedsMin or bedsExact)
-        # bathrooms (bathsMin)
-        # home_type (hometype)
-        # hoa_fee (maxHoa)
-        # parking_spots (minParkingSpots)
-        # square_feet (minSquareFeet, maxSquareFeet)
-        # lot_size (minLotSize, maxLotSize)
-        # year_built (minYearBuilt, maxYearBuilt)
-        # has_basement (hasBasement)
-        # num_stores (numStories)
+        
     end
   
     def show
@@ -78,6 +72,10 @@ class Api::PropertiesController < ApplicationController
   
     def bounds
         params[:bounds]
+    end
+
+    def filters
+        params[:filters]
     end
   
 end

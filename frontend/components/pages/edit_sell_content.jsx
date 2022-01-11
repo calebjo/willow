@@ -121,6 +121,7 @@ export default class EditSellContent extends React.Component {
 
     render(){
         const {
+            price,
             property_type,
             for_sale,
             bedrooms,
@@ -144,11 +145,26 @@ export default class EditSellContent extends React.Component {
         const formType = this.state.create ? (
             <div className="create-property-content">
                 <div className="create-property-title">
+                    <div className="title-upper">
+                        <div className="create-property-header">
+                            For Sale By Owner Listing
+                        </div>
+                        <div className="create-property-sub-header">
+                            { this.props.address }
+                        </div>
+                    </div>
+                    <div className="create-property-head-copy">
+                        Post once and your home will be listed on Willow, reaching buyers on the "largest" real estate network on the web.
+                        <br />
+                        <span>Disclaimer: actually quite small, don't upload too much stuff</span>
+                    </div>
                 </div>
                 <div className="create-property-form-wrapper">
                     <form onSubmit={this.handleSubmit}>
                         <div className="create-property-price">
-                            Set your price
+                            <div className="create-section-head">
+                                Set your price
+                            </div>
                             <input
                                 type="text"
                                 value={price}
@@ -157,7 +173,9 @@ export default class EditSellContent extends React.Component {
                             />
                         </div>
                         <div className="create-property-photos">
-                            Photos
+                            <div className="create-section-head">
+                                Photos
+                            </div>
                             <div className="property-photos-wrapper">
                                 Drag and drop to reorder. Click on a photo to delete.
                                 <div className="property-photos-inner">
@@ -173,7 +191,9 @@ export default class EditSellContent extends React.Component {
                             </div>
                         </div>
                         <div className="create-property-facts">
-                            Home facts
+                            <div className="create-section-head">
+                                Home facts
+                            </div>
                             <label>Home type</label>
                             <input
                                 type="text"

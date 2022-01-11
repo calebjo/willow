@@ -161,9 +161,88 @@
 }
 
 .create-property-content {
-    width: 80%;
+    width: 90%;
+    margin: 2rem;
     max-width: 1275px;
-    form input {
-        background: pink;
+    font-family: "Open sans", sans-serif;
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+        input {
+            width: 40%;
+            background: rgb(255, 255, 255);
+            border: 1px solid darkgray;
+            margin: 0.5rem;
+            font-weight: 400;
+            padding: 0.25rem;
+        }
+        input[type="submit"] {
+            width: 12rem;
+            background: #006DFF;
+            border-radius: 6px;
+            color: white;
+            border: none;
+            font-size: 0.9rem;
+            padding: 0.65rem 1rem;
+            cursor: pointer;
+        }
     }
+    form > div {
+        padding: 1rem;
+    }
+}
+
+.create-property-price,
+.create-property-photos,
+.create-property-facts {
+    .create-section-head {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #2A2A33;
+        padding: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid darkgray;
+}
+
+.title-upper {
+    font-weight: 600;
+    padding: 1rem 0;
+    color: #2A2A33;
+
+    .create-property-header {
+        font-size: 2rem;
+        padding: 0.5rem 0;
+    }
+    
+    .create-property-sub-header {
+        font-size: 1.25rem;
+        padding: 0.5rem 0;
+    }
+
+    .create-property-head-copy {
+        line-height: 150%;
+    }
+}
+
+.create-property-head-copy span {
+    font-size: 0.8rem;
+    margin: 1rem;
+    color: rgb(218, 218, 218);
+}
+
+.create-property-title {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid darkgray;
+}
+
+
+.property-photos-wrapper {
+    border: 1px solid lightgray;
 }

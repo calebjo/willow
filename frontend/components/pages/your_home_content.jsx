@@ -45,12 +45,12 @@ export default class YourHomeContent extends React.Component {
                             <div className="prop-address">{property.address}</div>
                         </div>
                         <div className="your-home-lower">
-                            <div className="your-home-setting edit" onClick={() => this.handleEdit(property)}>
+                            <button className="your-home-setting edit" onClick={() => this.handleEdit(property)}>
                                 Edit home
-                            </div>
-                            <div className="your-home-setting delete" onClick={() => this.handleDelete(property)}>
+                            </button>
+                            <button className="your-home-setting delete" onClick={() => this.handleDelete(property)}>
                                 Delete your listing
-                            </div>
+                            </button>
                         </div>
                     </div>
                 )
@@ -63,7 +63,7 @@ export default class YourHomeContent extends React.Component {
                     <TopNavContainer />
                     <TopSubNav />
                 </div>
-                <div className="your-home-lower">
+                <div className="your-home-main">
                     <div className="sub-nav-header">
                         Your home
                     </div>

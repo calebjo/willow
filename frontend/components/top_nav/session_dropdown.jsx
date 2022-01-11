@@ -45,9 +45,6 @@ export class SessionDropdown extends React.Component {
                         <Link to="/mywillow/yourhome">Your home</Link>
                     </div>
                     <div className="session-dropdown-link">
-                        <Link to="/mywillow/OffersAndClosings">Offers & Closings</Link>
-                    </div>
-                    <div className="session-dropdown-link">
                         <Link to="/renting">Renting</Link>
                     </div>
                     <div className="session-dropdown-link">

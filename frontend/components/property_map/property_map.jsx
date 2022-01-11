@@ -10,8 +10,8 @@ export default class PropertyMap extends React.Component {
 
     componentDidMount(){
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 }, // this is SF
-            zoom: 13
+            center: { lat: 37.8631657, lng: -122.2419483 }, // this is SF
+            zoom: 12
         };
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);

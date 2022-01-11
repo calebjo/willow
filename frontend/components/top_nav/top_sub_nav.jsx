@@ -24,9 +24,6 @@ export default class TopSubNav extends React.Component {
                         <Link to="/mywillow/yourhome">Your home</Link>
                     </div>
                     <div className="sub-nav-link">
-                        <Link to="/mywillow/OffersAndClosings">Offers & Closings</Link>
-                    </div>
-                    <div className="sub-nav-link">
                         <Link to="/mywillow/account">Account settings</Link>
                     </div>
                 </div>

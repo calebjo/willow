@@ -28,16 +28,75 @@
 }
 
 .user-prop-image {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
     img {
-        width: 200px;
-        height: 150px;
+        width: 100%;
     }
 }
 
 .your-home-setting.edit {
-    background: rgb(44, 96, 209);
+    background: #006DFF;
 }
 
 .your-home-setting.delete {
     background: red;
+}
+
+.sub-nav-header {
+    font-size: 2.5rem;
+    font-family: "Dutch 809", cursive;
+    color: #2A2A33;
+    padding: 1.5rem;
+}
+
+.your-home-body,
+.your-home-data,
+.user-property-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.your-home-body {
+    padding: 4rem;
+}
+
+.your-home-data {
+    width: 28rem;
+    padding: 1rem;
+    background: white;
+}
+
+.user-property-item {
+    flex-direction: column;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.prop-bottom {
+    width: 100%;
+    padding: 1rem;
+}
+
+.prop-mid-info {
+    display: flex;
+}
+
+.your-home-lower {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    button {
+        font-family: "Open sans", sans-serif;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    button:first-child {
+        color: white;
+    }
 }

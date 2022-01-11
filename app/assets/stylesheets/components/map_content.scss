@@ -92,7 +92,6 @@
                 padding: 0.5rem 2rem;
                 margin: 0 0.35rem;
                 border-radius: 2px;
-                border: 1px solid #006aff;
                 color: #006aff;
                 font-family: "Open Sans", sans-serif;
                 font-size: 0.75rem;
@@ -129,6 +128,7 @@
             }
             button {
                 width: 2rem;
+                filter: brightness(0) saturate(100%) invert(33%) sepia(50%) saturate(7362%) hue-rotate(209deg) brightness(101%) contrast(105%);
             }
         }
     }

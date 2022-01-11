@@ -14,6 +14,17 @@ export default class PropertyMap extends React.Component {
         const map = this.refs.map;
         
         this.map = new google.maps.Map(map, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map);
+    }
+
+    componentDidUpdate() {
+        if (this.props.singleBench) {
+            const targetBenchKey = Object.keys(this.props.benches)[0];
+            const targetBench = this.props.benches[targetBenchKey];
+            this.MarkerManager.updateMarkers([targetBench]); //grabs only that one bench
+        } else {
+            this.MarkerManager.updateMarkers(this.props.benches); 
+        }
     }
 
     render() {

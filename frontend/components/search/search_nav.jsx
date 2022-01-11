@@ -8,6 +8,12 @@ export default class SearchNav extends React.Component {
         super(props)
         this.state = {
             saleType: "forSale",
+
+            priceText: "Price",
+            bedText: "Beds & Baths",
+            typeText: "Home type",
+            moreText: "More",
+
             saleOpen: false,
             priceOpen: false,
             bedOpen: false,
@@ -20,8 +26,6 @@ export default class SearchNav extends React.Component {
     }
 
     openDropdown(type) {
-        console.log(`Opening ${type} dropdown!`)
-
         const key = `${type}Open`
         this.setState({
             [key]: true
@@ -33,11 +37,11 @@ export default class SearchNav extends React.Component {
     }
 
     exitDropdown(e) {
-        console.log(`in exitDropdown!`)
-        console.log(e.target)
         const dropdown = document.querySelector(".search-tab-dropdown")
         setTimeout(() => {
-            if (e.target.parentNode !== dropdown && e.target !== dropdown && e.target.parentNode.parentNode !== dropdown) {
+            if (e.target !== dropdown && 
+                e.target.parentNode !== dropdown && 
+                e.target.parentNode.parentNode !== dropdown) {
                 document.removeEventListener("click", this.exitDropdown)
                 this.setState({
                     saleOpen: false,
@@ -52,7 +56,6 @@ export default class SearchNav extends React.Component {
     
     handleChange = (filter, updateFilter) => e => {
         const value = e.target.getAttribute('value')
-        debugger
         updateFilter(filter, parseInt(value))
     }
 
@@ -77,7 +80,7 @@ export default class SearchNav extends React.Component {
                         </div>
                     </div>
                     <div className="search-tab price-dropdown" onClick={() => this.openDropdown("price")}>
-                        <div className="tab-header">Price</div>
+                        <div className="tab-header">{this.state.priceText}</div>
                         <div className={ this.state.priceOpen ? "search-tab-dropdown price-dropdown" : "hidden"}>
                             <div className="nav-dropdown-header">
                                 Price Range
@@ -86,55 +89,109 @@ export default class SearchNav extends React.Component {
                                 BOXES GO HERE
                             </div>
                             <div className="nav-dropdown-price-list">
-                                <div className="price-list-item"
-                                    value={ 0 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    $0+
+                                <div className="price-list-left">
+                                    <div className="price-list-item"
+                                        value={ 0 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        $0+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 100000 : 200 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "100,000" : "200"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 200000 : 400 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "200,000" : "400"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 300000 : 600 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "300,000" : "600"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 400000 : 800 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "400,000" : "800"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 500000 : 1000 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "500,000" : "1000"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 600000 : 1200 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "600,000" : "1200"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 700000 : 1400 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "700,000" : "1400"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 800000 : 1600 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "800,000" : "1600"}+
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 900000 : 1800 }
+                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "900,000" : "1800"}+
+                                    </div>
                                 </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "100,000" : "200"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "200,000" : "400"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "300,000" : "600"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "400,000" : "800"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "500,000" : "1000"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "600,000" : "1200"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "700,000" : "1400"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "800,000" : "1600"}+
-                                </div>
-                                <div className="price-list-item"
-                                    value={ this.state.saleType === "forSale" ? 300000 : 1200 }
-                                    onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                    ${ this.state.saleType === "forSale" ? "900,000" : "1800"}+
+                                <div className="price-list-right">
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 500000 : 2000 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "500,000" : "2000"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 600000 : 2200 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "600,000" : "2200"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 700000 : 2400 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "700,000" : "2400"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 800000 : 2600 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "800,000" : "2600"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 900000 : 2800 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "900,000" : "2800"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 1000000 : 13000200 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "1M" : "3000"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 1250000 : 3500 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "1.25M" : "3500"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 1500000 : 4000 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "1.5M" : "4000"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ this.state.saleType === "forSale" ? 1750000 : 4500 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "forSale" ? "1.75M" : "4500"}
+                                    </div>
+                                    <div className="price-list-item"
+                                        value={ 999999999 }
+                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        Any Price
+                                    </div>
                                 </div>
                             </div>
                             <div className="done-tab">
@@ -143,7 +200,7 @@ export default class SearchNav extends React.Component {
                         </div>
                     </div>
                     <div className="search-tab bed-dropdown">
-                        <div className="tab-header">Beds & Baths</div>
+                        <div className="tab-header">{this.state.bedText}</div>
                         <div className={ this.state.bedOpen ? "search-tab-dropdown bed-dropdown" : "hidden"}>
                             <div className="done-tab">
                                 <button value="Done" onClick={ this.exitDropdown } />
@@ -151,7 +208,7 @@ export default class SearchNav extends React.Component {
                         </div>
                     </div>
                     <div className="search-tab type-dropdown">
-                        <div className="tab-header">Home type</div>
+                        <div className="tab-header">{this.state.typeText}</div>
                         <div className={ this.state.typeOpen ? "search-tab-dropdown type-dropdown" : "hidden"}>
                             <div className="done-tab">
                                 <button value="Done" onClick={ this.exitDropdown } />
@@ -159,7 +216,7 @@ export default class SearchNav extends React.Component {
                         </div>
                     </div>
                     <div className="search-expand">
-                        <div className="tab-header">More</div>
+                        <div className="tab-header">{this.state.moreText}</div>
                         <div className={ this.state.moreOpen ? "search-tab-dropdown expand-dropdown" : "hidden"}>
                             <div className="done-tab">
                                 <button value="Done" onClick={ this.exitDropdown } />

@@ -1,8 +1,6 @@
 import React from "react";
 
-import TopNavContainer from "../top_nav/top_nav_container"
 import TopSubNav from "../top_nav/top_sub_nav";
-import Footer from "../footer/footer"
 
 export default class RentingContent extends React.Component {
     constructor(props){
@@ -17,7 +15,6 @@ export default class RentingContent extends React.Component {
         return (
             <div className="renting-content">
                 <div className="willow-top-container">
-                    <TopNavContainer />
                     <TopSubNav />
                 </div>
                 <div className="renting-lower">
@@ -32,7 +29,6 @@ export default class RentingContent extends React.Component {
                             Browse rentals
                         </div>
                     </div>
-                    <Footer />
                 </div>
             </div>
         )

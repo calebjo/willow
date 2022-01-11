@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import TopNavContainer from "../top_nav/top_nav_container"
-import Footer from "../footer/footer"
-
 export default class SellContent extends React.Component {
     constructor(props){
         super(props)
@@ -16,7 +13,6 @@ export default class SellContent extends React.Component {
     render(){
         return (
             <div className="sell-content">
-                <TopNavContainer />
                 <div className="sell-banner">
                     <div className="sell-banner-header">
                         Sell your home with confidence
@@ -54,7 +50,6 @@ export default class SellContent extends React.Component {
                         Enter your address
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }

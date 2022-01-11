@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link'
 
-import TopNavContainer from "../top_nav/top_nav_container"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -34,7 +32,6 @@ export default class PropertyModal extends React.Component {
             <div className="property-modal-container">
                 <div className="modal-cover"></div>
                 <div className="property-modal">
-                    <TopNavContainer />
                     <div className="property-item">
                         <div className="property-modal-top">
                             <div className="modal-exit" onClick={this.props.hidePropModal}>

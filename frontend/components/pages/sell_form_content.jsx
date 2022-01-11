@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import TopNavContainer from "../top_nav/top_nav_container"
-import Footer from "../footer/footer"
 import PropertyFormContainer from "../form/property_form_container";
 import PropertyForm from "../form/property_form";
 
@@ -75,9 +73,7 @@ export default class SellFormContent extends React.Component {
         )
         return (
             <div className="sell-form-content">
-                <TopNavContainer />
                 { formContent }
-                <Footer />
             </div>
         )
     }

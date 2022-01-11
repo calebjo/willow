@@ -1,8 +1,6 @@
 import React from "react";
 
-import TopNavContainer from "../top_nav/top_nav_container"
 import TopSubNav from "../top_nav/top_sub_nav";
-import Footer from "../footer/footer"
 
 export default class OffersClosingsContet extends React.Component {
     constructor(props){
@@ -17,7 +15,6 @@ export default class OffersClosingsContet extends React.Component {
         return (
             <div className="offers-closings-content">
                 <div className="willow-top-container">
-                    <TopNavContainer />
                     <TopSubNav />
                 </div>
                 <div className="offers-closings-lower">
@@ -35,7 +32,6 @@ export default class OffersClosingsContet extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Footer />
                 </div>
             </div>
         )

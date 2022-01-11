@@ -1,7 +1,5 @@
 import React from "react";
 
-import TopNavContainer from "../top_nav/top_nav_container";
-import Footer from "../footer/footer";
 import LinkCard from "../link/link_card";
 import { Dropdown } from "../top_nav/dropdown";
 import SearchNavContainer from "../search/search_nav_container"
@@ -20,7 +18,6 @@ export default class SplashContent extends React.Component {
             <div className="splash-content">
                 <div className="top-container">
                     <Dropdown />
-                    <TopNavContainer />
                     <div className="splash-search">
                         <div className="splash-header">Change starts here</div>
                         <SearchNavContainer 
@@ -35,7 +32,6 @@ export default class SplashContent extends React.Component {
                     <LinkCard type="sell" />
                     <LinkCard type="rent" />
                 </div>
-                <Footer />
             </div>
         );
     }

@@ -22,11 +22,10 @@ export class SessionDropdown extends React.Component {
         const dropdown = document.querySelector(".session-dropdown")
         setTimeout(() => {
             if (e.target.parentNode !== dropdown && e.target !== dropdown) {
-                this.setState({ show: false })
                 document.removeEventListener("click", this.hideDropdown)
+                this.setState({ show: false })
             }
         }, 50)
-        
     }
 
     render() {

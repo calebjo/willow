@@ -13,6 +13,19 @@ export default class SearchNav extends React.Component {
         updateFilter(filter, parseInt(e.currentTarget.value))
     )
 
+    // <div>
+    //     <input
+    //         type="number"
+    //         value={props.filters.minPrice}
+    //         onChange={handleChange('minSeating', props.updateFilter)}
+    //     />
+    //     <input
+    //         type="number"
+    //         value={props.filters.maxPrice}
+    //         onChange={handleChange('maxSeating', props.updateFilter)}
+    //     />
+    // </div>
+
     render() {
         const search = this.props.type === "splash" ? (
             <SearchBar 

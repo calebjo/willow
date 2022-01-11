@@ -20,25 +20,26 @@ class Property < ApplicationRecord
     end
 
     # return self (a property) only if it satisfies the search filters
+    # DEBUG -- DOES NOT ACCEPT EXACT FILTER TYPES
     def self.in_filters(filters)
         self.where("price >= ?", filters[:minPrice])
-        self.where("price <= ?", filters[:maxPrice])
-        self.where("bedrooms >= ?", filters[:minBeds])
-        self.where("bedrooms <= ?", filters[:maxBeds])
-        self.where("bathrooms >= ?", filters[:minBaths])
-        self.where("bathrooms <= ?", filters[:maxBaths])
-        self.where("home_type == ?", filters[:homeType])
-        self.where("hoa_fee <= ?", filters[:maxHoa])
-        self.where("parking_spots >= ?", filters[:minParkingSpots])
-        self.where("parking_spots <= ?", filters[:maxParkingSpots])
-        self.where("square_feet >= ?", filters[:minSquareFeet])
-        self.where("square_feet <= ?", filters[:maxSquareFeet])
-        self.where("lot_size >= ?", filters[:minLotSize])
-        self.where("lot_size <= ?", filters[:maxLotSize])
-        self.where("year_built >= ?", filters[:minYearBuilt])
-        self.where("year_built <= ?", filters[:maxYearBuilt])
-        self.where("has_basement == ?", filters[:hasBasement])
-        self.where("num_stories == ?", filters[:numStories])
+            .where("price <= ?", filters[:maxPrice])
+            .where("bedrooms >= ?", filters[:minBeds])
+            .where("bedrooms <= ?", filters[:maxBeds])
+            .where("bathrooms >= ?", filters[:minBaths])
+            .where("bathrooms <= ?", filters[:maxBaths])
+            #.where("property_type = ?", filters[:homeType])
+            .where("hoa_fee <= ?", filters[:maxHoa])
+            .where("parking_spots >= ?", filters[:minParkingSpots])
+            .where("parking_spots <= ?", filters[:maxParkingSpots])
+            .where("square_feet >= ?", filters[:minSquareFeet])
+            .where("square_feet <= ?", filters[:maxSquareFeet])
+            .where("lot_size >= ?", filters[:minLotSize])
+            .where("lot_size <= ?", filters[:maxLotSize])
+            .where("year_built >= ?", filters[:minYearBuilt])
+            .where("year_built <= ?", filters[:maxYearBuilt])
+            # .where("has_basement = ?", filters[:hasBasement])
+            # .where("num_stories = ?", filters[:numStories])
     end
 end
   

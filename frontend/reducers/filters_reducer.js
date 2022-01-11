@@ -1,6 +1,6 @@
 import { UPDATE_FILTER } from '../actions/filter_actions';
 
-const veryLarge = 9999999999999999999999999999;
+const veryLarge = 999999999;
 
 const defaultFilters = Object.freeze({
     bounds: {},
@@ -10,7 +10,7 @@ const defaultFilters = Object.freeze({
     maxBeds: veryLarge,
     minBaths: 0,
     maxBaths: veryLarge,
-    homeType: "House",
+    //homeType: "House",
     maxHoa: veryLarge,
     minParkingSpots: 0,
     maxParkingSpots: veryLarge,
@@ -20,8 +20,8 @@ const defaultFilters = Object.freeze({
     maxLotSize: veryLarge,
     minYearBuilt: 0,
     maxYearBuilt: veryLarge,
-    hasBasement: true,
-    numStories: 2,
+    //hasBasement: true,
+    //numStories: 1,
     // DEBUG -- FIGURE OUT HOW TO FIX DEFAULTS
 });
 

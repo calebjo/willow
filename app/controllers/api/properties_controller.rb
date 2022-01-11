@@ -3,11 +3,7 @@ class Api::PropertiesController < ApplicationController
   
     def index
         if bounds
-            if filters
-                @properties = Property.in_bounds(bounds).in_filters(filters)
-            else
-                @properties = Property.in_bounds(bounds)
-            end
+            @properties = Property.in_bounds(bounds).in_filters(params)
         else
             Property.all
         end
@@ -73,10 +69,5 @@ class Api::PropertiesController < ApplicationController
     def bounds
         params[:bounds]
     end
-
-    def filters
-        params[:filters]
-    end
-  
 end
   

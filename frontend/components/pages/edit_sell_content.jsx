@@ -305,14 +305,18 @@ export default class EditSellContent extends React.Component {
             </div>
         ) : (
             <div className="edit-sell-content">
-                <div className="edit-sell-header">
-                    For Sale by Owner Listing
-                </div>
-                <div className="edit-sell-sub-header">
-                    {this.state.address}
+                <div className="edit-sell-title-wrapper">
+                    <div className="edit-sell-header">
+                        For Sale by Owner Listing
+                    </div>
+                    <div className="edit-sell-sub-header">
+                        {this.state.address}
+                    </div>
                 </div>
                 <div className="edit-sell-mid">
-                    Is this an accurate location of your home?
+                    <div className="edit-sell-mid-text">
+                        Is this an accurate location of your home?
+                    </div>
                     <div className="edit-sell-map" ref="map">
                     </div>
                     <div className="edit-sell-buttons">

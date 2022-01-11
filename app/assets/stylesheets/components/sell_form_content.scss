@@ -150,14 +150,77 @@
     }
 }
 
-.edit-sell-mid {
+.edit-sell-content {
+    display: flex;
     width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.edit-sell-title-wrapper {
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgray;
+    color: rgb(42,42,51);
+
+    div {
+        padding: 0.5rem 0;
+    }
+    .edit-sell-header {
+        font-size: 2rem;
+        font-family: "Dutch 809", cursive;
+    }
+
+    .edit-sell-sub-header {
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: "Open sans", sans-serif;
+    }
+}
+
+.edit-sell-mid {
+    width: 100%;
     max-width: 1275px;
+    font-family: "Open sans", sans-serif;
+    font-size: 1rem;
+    .edit-sell-mid-text {
+        padding: 1.5rem 0;
+    }
 }
 
 .edit-sell-map {
     width: 100%;
     height: 24rem;
+}
+
+.edit-sell-buttons {
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    padding: 2rem 0;
+    div {
+        color: #006DFF;
+        background: white;
+        padding: 0.75rem 1rem;
+        border-radius: 3px;
+        margin-left: 1rem;
+        cursor: pointer;
+        outline: 1px solid #006DFF;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    div:first-child {
+        color: white;
+        background: #006DFF;
+        transition: all 0.1s linear;
+    }
+    div:last-child:hover {
+        background: #F2FAFF;
+        color: #0D4599;
+        transition: all 0.1s linear;
+    }
+    div:first-child:hover {
+        background: #0D4599;
+        transition: all 0.1s linear;
+    }
 }
 
 .create-property-content {

@@ -2,7 +2,7 @@ class Api::PropertiesController < ApplicationController
     before_action :ensure_logged_in, only: [:create]
   
     def index
-        @properties = Property.all
+        @properties = bounds ? Property.in_bounds(bounds) : Property.all
         render :index
     end
   

@@ -52,7 +52,7 @@ export default class PropertyMap extends React.Component {
             <div className="properties-container">
                 <div className="property-map" ref="map">
                 </div>
-                <PropertyIndexContainer 
+                <PropertyIndexContainer
                     getClickedProperty={this.props.getClickedProperty}/>
             </div>
         );

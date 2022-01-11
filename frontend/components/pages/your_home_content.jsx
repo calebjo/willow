@@ -7,7 +7,6 @@ import Footer from "../footer/footer"
 export default class YourHomeContent extends React.Component {
     constructor(props){
         super(props)
-        console.log(this)
 
         this.handleDelete = this.handleDelete.bind(this)
         this.handleEdit = this.handleEdit.bind(this)

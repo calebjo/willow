@@ -31,7 +31,6 @@ export default class PropertyDetail extends React.Component {
             timeDiff /= 1000
         }
         timeDiff = Math.floor(timeDiff)
-        console.log(timeDiff)
         if (timeDiff !== 1) {
             this.timeOnWillow = `${timeDiff} ${timeType}s on Willow`
         } else {

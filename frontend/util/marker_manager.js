@@ -30,7 +30,6 @@ export default class MarkerManager {
 
         // marker.addListener('click', () => this.handleClick(property));
         this.markers[marker.propertyId] = marker;
-        debugger
     }
 
     removeMarker(marker) {

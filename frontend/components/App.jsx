@@ -10,7 +10,7 @@ import {
 
 import { AuthRoute } from "../util/route_util";
 
-import MapContent from "./property_map/map_content";
+import MapContentContainer from "./property_map/map_content_container";
 import SplashContent from "./pages/splash_content"
 import SavedHomesContent from "./pages/saved_homes_content"
 import SavedSearchesContent from "./pages/saved_searches_content"
@@ -24,8 +24,8 @@ import SellFormContent from "./pages/sell_form_content";
 const App = () => (
     <Switch>
         <Route exact path="/" component={SplashContent} />
-        <Route exact path="/homes" component={MapContent} />
-        <Route exact path="/homes/for_rent" component={MapContent} />
+        <Route exact path="/homes" component={MapContentContainer} />
+        <Route exact path="/homes/for_rent" component={MapContentContainer} />
         <Route exact path="/sell" component={SellContent} />
         <AuthRoute exact path="/for-sale-by-owner" component={SellFormContent} />
         {/* <Route path="/edit-property-location" component={PropertyFormContainer} /> */}

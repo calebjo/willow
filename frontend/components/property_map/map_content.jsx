@@ -10,7 +10,6 @@ import PropertyModal from "../modal/property_modal";
 export default class MapContent extends React.Component {
     constructor(props){
         super(props)
-
         this.state = { modal: false }
         
         this.getClickedProperty = this.getClickedProperty.bind(this)
@@ -60,7 +59,9 @@ export default class MapContent extends React.Component {
                 <TopNavContainer />
                 <SearchNav />
                 <div className="properties-container">
-                    <PropertyMap />
+                    <PropertyMap 
+                        properties={this.props.properties}
+                        updateFilters={this.props.updateFilter}/>
                     <PropertyIndexContainer 
                         getClickedProperty={this.getClickedProperty}/>
                 </div>

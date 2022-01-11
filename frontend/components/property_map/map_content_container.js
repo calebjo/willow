@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 
 import { updateFilter } from '../../actions/filter_actions';
 import { asArray } from '../../reducers/selectors';
-import Search from './search';
+import MapContent from './map_content';
 
 const mapStateToProps = state => ({
-    benches: asArray(state.entities),
+    properties: asArray(state.entities),
     price: state.ui.filters.price,
     bedrooms: state.ui.filters.bedrooms,
     bathrooms: state.ui.filters.bathrooms

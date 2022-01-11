@@ -4,6 +4,7 @@ import MarkerManager from "../../util/marker_manager"
 export default class PropertyMap extends React.Component {
     constructor(props){
         super(props)
+        this.registerListeners = this.registerListeners.bind(this)
     }
 
     componentDidMount(){
@@ -12,18 +13,24 @@ export default class PropertyMap extends React.Component {
             zoom: 13
         };
         const map = this.refs.map;
-        
         this.map = new google.maps.Map(map, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
+
+        if (this.props.singleProperty) {
+            this.props.fetchProperty(this.props.propertyId);
+        } else {
+            this.registerListeners;
+            this.MarkerManager.updateMarkers(this.props.properties);
+        }
     }
 
     componentDidUpdate() {
-        if (this.props.singleBench) {
-            const targetBenchKey = Object.keys(this.props.benches)[0];
-            const targetBench = this.props.benches[targetBenchKey];
-            this.MarkerManager.updateMarkers([targetBench]); //grabs only that one bench
+        if (this.props.singleProperty) {
+            const targetPropertyKey = Object.keys(this.props.properties)[0];
+            const targetProperty = this.props.properties[targetPropertyKey];
+            this.MarkerManager.updateMarkers([targetProperty]);
         } else {
-            this.MarkerManager.updateMarkers(this.props.benches); 
+            this.MarkerManager.updateMarkers(this.props.properties); 
         }
     }
 
@@ -34,12 +41,7 @@ export default class PropertyMap extends React.Component {
                 northEast: { lat: north, lng: east },
                 southWest: { lat: south, lng: west } 
             };
-
             this.props.updateFilter('bounds', bounds);
-        });
-        google.maps.event.addListener(this.map, 'click', (event) => {
-            const coords = getCoordsObj(event.latLng);
-            this.handleClick(coords);
         });
     }
 

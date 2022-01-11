@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import SearchBar from "./search_bar";
-import SearchTab from "./search_tab";
 
 export default class SearchNav extends React.Component {
     constructor(props){
@@ -13,7 +12,8 @@ export default class SearchNav extends React.Component {
         return(
             <div className="search-nav">
                 <div className="search-nav-left">
-                    <SearchBar />
+                    <SearchBar 
+                        type="nav"/>
                 </div>
                 <div className="search-nav-center">
                     <div className="search-tab">

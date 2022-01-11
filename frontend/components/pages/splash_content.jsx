@@ -23,7 +23,8 @@ export default class SplashContent extends React.Component {
                     <TopNavContainer />
                     <div className="splash-search">
                         <div className="splash-header">Change starts here</div>
-                        <SearchBar type="splash" />
+                        <SearchBar 
+                            type="splash" />
                     </div>
                 </div>
                 <div className="splash-lower-tag">

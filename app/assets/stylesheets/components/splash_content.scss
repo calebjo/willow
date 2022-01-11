@@ -39,6 +39,20 @@
     border: 1px solid rgb(207, 207, 207);
 }
 
+.splash-search .search-container button {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding-right: 2rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        filter: invert(48%) brightness(80%) contrast(119%);
+    }
+}
+
 input:focus, textarea:focus, select:focus{
     outline: none;
 }

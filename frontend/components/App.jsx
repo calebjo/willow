@@ -23,11 +23,10 @@ import SellFormContent from "./pages/sell_form_content";
 const App = () => (
     <Switch>
         <Route exact path="/" component={SplashContent} />
-        <Route exact path="/homes" component={MapContentContainer} />
-        <Route exact path="/homes/for_rent" component={MapContentContainer} />
+        <Route path="/homes" component={MapContentContainer} />
+        {/* <Route path="/homes/for_rent" component={MapContentContainer} /> */}
         <Route exact path="/sell" component={SellContent} />
         <AuthRoute exact path="/for-sale-by-owner" component={SellFormContent} />
-        {/* <Route path="/edit-property-location" component={PropertyFormContainer} /> */}
         <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
         <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
         <AuthRoute exact path="/renting" component={RentingContent} />

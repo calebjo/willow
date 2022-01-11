@@ -6,6 +6,7 @@ export default class PropertyMap extends React.Component {
     constructor(props){
         super(props)
         this.registerListeners = this.registerListeners.bind(this)
+        // debugger
     }
 
     componentDidMount(){

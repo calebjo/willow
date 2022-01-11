@@ -16,10 +16,19 @@ export default class SearchNav extends React.Component {
                     <SearchBar />
                 </div>
                 <div className="search-nav-center">
-                    <SearchTab type="forSale"/>
-                    <SearchTab type="price"/>
-                    <SearchTab type="bedBaths"/>
-                    <SearchTab type="homeType"/>
+                    <div className="search-tab">
+                        <div className="sale-type-ball" />
+                        For Sale
+                    </div>
+                    <div className="search-tab">
+                        Price
+                    </div>
+                    <div className="search-tab">
+                        Beds & Baths
+                    </div>
+                    <div className="search-tab">
+                        Home type
+                    </div>
                     <div className="search-expand">
                         More
                     </div>

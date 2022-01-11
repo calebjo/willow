@@ -4,7 +4,7 @@ import TopNavContainer from "../top_nav/top_nav_container";
 import Footer from "../footer/footer";
 import LinkCard from "../link/link_card";
 import { Dropdown } from "../top_nav/dropdown";
-import SearchBar from "../search/search_bar"
+import SearchNavContainer from "../search/search_nav_container"
 
 export default class SplashContent extends React.Component {
     constructor(props){
@@ -23,7 +23,7 @@ export default class SplashContent extends React.Component {
                     <TopNavContainer />
                     <div className="splash-search">
                         <div className="splash-header">Change starts here</div>
-                        <SearchBar 
+                        <SearchNavContainer 
                             type="splash" />
                     </div>
                 </div>

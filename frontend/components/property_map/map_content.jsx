@@ -1,6 +1,6 @@
 import React from "react";
 
-import SearchNav from "../search/search_nav";
+import SearchNavContainer from "../search/search_nav_container";
 import TopNavContainer from "../top_nav/top_nav_container";
 import { Dropdown } from "../top_nav/dropdown";
 import PropertyMap from "./property_map";
@@ -56,7 +56,8 @@ export default class MapContent extends React.Component {
                         hideModal={this.hidePropModal}/>}
                 <Dropdown />
                 <TopNavContainer />
-                <SearchNav />
+                <SearchNavContainer 
+                    type="nav"/>
                 <PropertyMap 
                     properties={this.props.properties}
                     updateFilter={this.props.updateFilter}

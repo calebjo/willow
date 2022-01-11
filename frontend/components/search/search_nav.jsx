@@ -6,10 +6,18 @@ import SearchBar from "./search_bar";
 export default class SearchNav extends React.Component {
     constructor(props){
         super(props)
+        this.handleChange = this.handleChange.bind(this)
     }
 
+    handleChange = (filter, updateFilter) => e => (
+        updateFilter(filter, parseInt(e.currentTarget.value))
+    )
+
     render() {
-        return(
+        const search = this.props.type === "splash" ? (
+            <SearchBar 
+                type="splash"/>
+        ) : (
             <div className="search-nav">
                 <div className="search-nav-left">
                     <SearchBar 
@@ -43,6 +51,9 @@ export default class SearchNav extends React.Component {
                     </div>
                 </div>
             </div>
+        )
+        return(
+            search
         );
     }
 }

@@ -1,12 +1,14 @@
 class Property < ApplicationRecord
-    validates :user_id, :address, :price, :bedrooms, :bathrooms, :square_feet, :lot_size, :year_built, :property_type, :num_stories, :parking_spots, :heating, :cooling, :hoa_fee, :description, presence: true
+    validates :user_id, :address, :price, :bedrooms, :bathrooms, :square_feet, :lot_size, :year_built, presence: true
+    validates :property_type, :num_stories, :parking_spots, :heating, :cooling, :hoa_fee, :description, presence: true
   
     belongs_to :user
+
     # Active Storage Association
-    #has_many_attached :photos
+    # has_many_attached :photos
     has_one_attached :photo
     
-    # return self (a property) only if within the map bounds
+    # return self (a property) if within the map bounds
     def self.in_bounds(bounds)
         self.where("lat < ?", bounds[:northEast][:lat])
             .where("lat > ?", bounds[:southWest][:lat])
@@ -14,12 +16,15 @@ class Property < ApplicationRecord
             .where("lng < ?", bounds[:northEast][:lng])
     end
 
-    # return self (a property) only if it satisfies the location query
+    # return self (a property) if part of its address matches a part of the query
     def self.in_query(query)
-        #self.where("")
+        self.where("LOWER(address) LIKE ?", "%#{query.downcase}%")
+            .or(where("LOWER(city) LIKE ?", "%#{query.downcase}%")) 
+            .or(where("LOWER(state) LIKE ?", "%#{query.downcase}%")) 
+            .or(where("CAST(zip_code AS TEXT) LIKE ?", "%#{query}%"))
     end
 
-    # return self (a property) only if it satisfies the search filters
+    # return self (a property) if it satisfies the search filters
     # DEBUG -- DOES NOT ACCEPT EXACT FILTER TYPES
     def self.in_filters(filters)
         self.where("price >= ?", filters[:minPrice])

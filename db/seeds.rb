@@ -23,6 +23,9 @@ property_data = [
     {
         user_id: 1,
         address: "159 Montecito Ave, Oakland, CA 94610",
+        city: "Oakland",
+        state: "CA",
+        zip_code: 94610,
         price: 650000,
         bedrooms: 4,
         bathrooms: 3,
@@ -46,6 +49,10 @@ property_data = [
     {
         user_id: 2,
         address: "3909 Lakeshore Ave, Oakland, CA 94610",
+        city: "Oakland",
+        state: "CA",
+        neighborhood: "Lakeshore",
+        zip_code: 94610,
         price: 450000,
         bedrooms: 2,
         bathrooms: 1,
@@ -69,6 +76,9 @@ property_data = [
     {
         user_id: 3,
         address: "2525 Benvenue Ave, Berkeley, CA 94704",
+        city: "Berkeley",
+        state: "CA",
+        zip_code: 94704,
         price: 835000,
         bedrooms: 6,
         bathrooms: 5,
@@ -92,6 +102,9 @@ property_data = [
     {
         user_id: 4,
         address: "2721 Belrose Ave, Berkeley, CA 94705",
+        city: "Berkeley",
+        state: "CA",
+        zip_code: 94705,
         price: 2400,
         bedrooms: 4,
         bathrooms: 3,
@@ -115,6 +128,9 @@ property_data = [
     {
         user_id: 5,
         address: "1822 63rd St, Berkeley, CA 94703",
+        city: "Berkeley",
+        state: "CA",
+        zip_code: 94703,
         price: 1200,
         bedrooms: 2,
         bathrooms: 1,

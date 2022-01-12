@@ -16,6 +16,11 @@ export default class MapContent extends React.Component {
         this.hidePropModal = this.hidePropModal.bind(this)
     }
 
+    componentDidMount(){
+        // update filters using query string URL
+        
+    }
+
     getClickedProperty(property){
         this.setState({ property: property })
         this.showPropModal()

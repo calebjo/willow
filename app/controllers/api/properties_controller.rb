@@ -4,12 +4,14 @@ class Api::PropertiesController < ApplicationController
     def index
         if bounds
             @properties = Property.in_bounds(bounds).in_filters(params)
+            if params[:query]
+                @properties = @properties.in_query(params[:query])
+            end
         else
             Property.all
         end
         
         render :index
-        
     end
   
     def show
@@ -62,7 +64,10 @@ class Api::PropertiesController < ApplicationController
             :description,
             :photo,
             :lat,
-            :lng
+            :lng,
+            :city,
+            :state,
+            :zip_code
         )
     end
   

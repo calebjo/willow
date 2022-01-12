@@ -1,0 +1,1 @@
+json.extract! saved_home, :id, :user_id, :property_id

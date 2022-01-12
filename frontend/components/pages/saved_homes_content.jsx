@@ -26,7 +26,7 @@ export default class SavedHomesContent extends React.Component {
 
                         </div>
                         <div className="saved-homes-body">
-
+                            
                         </div>
                     </div>
                 </div>

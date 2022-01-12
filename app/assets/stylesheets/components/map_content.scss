@@ -24,6 +24,7 @@
         padding: 0 0.75rem;
         border-bottom: 1px solid lightgray;
         .search-nav-center {
+            display: flex;
             padding: 0 0.25rem;
             .search-tab {
                 display: flex;
@@ -83,7 +84,7 @@
                 background: #FFD237;
             }
 
-            :nth-child(5), :nth-child(6) {
+            .search-expand, .save-search {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -98,11 +99,11 @@
                 text-align: center;
             }
             // More
-            :nth-child(5) {
+            .search-expand {
                 width: 0.35rem;
             }
             // Save search
-            :nth-child(6) {
+            .save-search {
                 width: 1.3rem;
                 height: 1rem;
                 background: #006aff;

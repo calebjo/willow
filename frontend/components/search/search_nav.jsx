@@ -103,7 +103,7 @@ export default class SearchNav extends React.Component {
                         <div className="tab-header">For Sale</div>
                         <div className={ this.state.saleOpen ? "search-tab-dropdown sale-dropdown" : "hidden"}>
                             <div className="done-tab">
-                                <button value="Done" onClick={ this.exitDropdown } />
+                                <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
                     </div>
@@ -237,89 +237,91 @@ export default class SearchNav extends React.Component {
                                 </div>
                             </div>
                             <div className="done-tab">
-                                <button value="Done" onClick={ this.exitDropdown } />
+                                <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
                     </div>
                     <div className="search-tab bed-dropdown" onClick={() => this.openDropdown("bed")}>
                         <div className="tab-header">{this.state.bedText}</div>
                         <div className={ this.state.bedOpen ? "search-tab-dropdown bed-dropdown" : "hidden"}>
-                            <div className="bed-selection">
-                                <div className="bed-selection-header">
-                                    Bedrooms
+                            <div className="bed-selection-wrapper">
+                                <div className="bed-selection">
+                                    <div className="bed-selection-header">
+                                        Bedrooms
+                                    </div>
+                                    <div className="bed-selection-grid">
+                                        <div className="bed-selection-grid-tile"
+                                            value={0}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            Any
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={1}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            1+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={2}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            2+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={3}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            3+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={4}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            4+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={5}
+                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            5+
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="bed-selection-grid">
-                                    <div className="bed-selection-grid-tile"
-                                        value={0}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        Any
+                                <div className="bed-selection">
+                                    <div className="bed-selection-header">
+                                        Bathrooms
                                     </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={1}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        1+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={2}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        2+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={3}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        3+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={4}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        4+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={5}
-                                        onClick={this.handleChange('minBeds', this.props.updateFilter)}>
-                                        5+
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bed-selection">
-                                <div className="bed-selection-header">
-                                    Bathrooms
-                                </div>
-                                <div className="bed-selection-grid">
-                                    <div className="bed-selection-grid-tile"
-                                        value={0}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        Any
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={1}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        1+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={2}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        2+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={3}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        3+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={4}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        4+
-                                    </div>
-                                    <div className="bed-selection-grid-tile"
-                                        value={5}
-                                        onClick={this.handleChange('minBaths', this.props.updateFilter)}>
-                                        5+
+                                    <div className="bed-selection-grid">
+                                        <div className="bed-selection-grid-tile"
+                                            value={0}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            Any
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={1}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            1+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={2}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            2+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={3}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            3+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={4}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            4+
+                                        </div>
+                                        <div className="bed-selection-grid-tile"
+                                            value={5}
+                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            5+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="done-tab">
-                                <button value="Done" onClick={ this.exitDropdown } />
+                                <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
                     </div>
@@ -327,7 +329,7 @@ export default class SearchNav extends React.Component {
                         <div className="tab-header">{this.state.typeText}</div>
                         <div className={ this.state.typeOpen ? "search-tab-dropdown type-dropdown" : "hidden"}>
                             <div className="done-tab">
-                                <button value="Done" onClick={ this.exitDropdown } />
+                                <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
                     </div>
@@ -335,7 +337,7 @@ export default class SearchNav extends React.Component {
                         <div className="tab-header">{this.state.moreText}</div>
                         <div className={ this.state.moreOpen ? "search-tab-dropdown expand-dropdown" : "hidden"}>
                             <div className="done-tab">
-                                <button value="Done" onClick={ this.exitDropdown } />
+                                <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
                     </div>

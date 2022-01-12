@@ -13,19 +13,21 @@ export default class SavedHomesContent extends React.Component {
 
     render(){
         return (
-            <div className="saved-homes-content">
+            <div className="account-page-wrapper">
                 <div className="willow-top-container">
                     <TopSubNav />
                 </div>
-                <div className="saved-homes-lower">
-                    <div className="sub-nav-header">
-                        Saved homes
-                    </div>
-                    <div className="saved-homes-filters">
+                <div className="saved-homes-content account-page">
+                    <div className="saved-homes-lower">
+                        <div className="sub-nav-header">
+                            Saved homes
+                        </div>
+                        <div className="saved-homes-filters">
 
-                    </div>
-                    <div className="saved-homes-body">
+                        </div>
+                        <div className="saved-homes-body">
 
+                        </div>
                     </div>
                 </div>
             </div>

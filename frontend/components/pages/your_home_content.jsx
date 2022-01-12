@@ -56,17 +56,19 @@ export default class YourHomeContent extends React.Component {
         })
         
         return (
-            <div className="your-home-content">
+            <div className="account-page-wrapper">
                 <div className="willow-top-container">
                     <TopSubNav />
                 </div>
-                <div className="your-home-main">
-                    <div className="sub-nav-header">
-                        Your home
-                    </div>
-                    <div className="your-home-body">
-                        <div className="your-home-data">
-                            { properties }
+                <div className="your-home-content account-page">
+                    <div className="your-home-main">
+                        <div className="sub-nav-header">
+                            Your home
+                        </div>
+                        <div className="your-home-body">
+                            <div className="your-home-data">
+                                { properties }
+                            </div>
                         </div>
                     </div>
                 </div>

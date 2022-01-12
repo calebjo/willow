@@ -13,20 +13,20 @@ export default class RentingContent extends React.Component {
 
     render(){
         return (
-            <div className="renting-content">
+            <div className="account-page-wrapper">
                 <div className="willow-top-container">
                     <TopSubNav />
                 </div>
-                <div className="renting-lower">
-                    <div className="sub-nav-header">
-                        Renting
-                    </div>
-                    <div className="favorite-rentals">
+                <div className="renting-content account-page">
+                    <div className="renting-lower">
+                        <div className="sub-nav-header">
+                            Renting
+                        </div>
+                        <div className="renting-filters">
 
-                    </div>
-                    <div className="browse-rentals">
-                        <div className="browse-rentals-header">
-                            Browse rentals
+                        </div>
+                        <div className="renting-body">
+
                         </div>
                     </div>
                 </div>

@@ -9,16 +9,13 @@ export class SessionDropdown extends React.Component {
 
         this.showDropdown = this.showDropdown.bind(this)
         this.hideDropdown = this.hideDropdown.bind(this)
-
-        this._isMounted = false;
-    }
-
-    componentDidMount(){
-        this._isMounted = true;
     }
 
     componentWillUnmount(){
-        this._isMounted = false;
+        // Fix for memory leak error
+        this.setState = (state, callback)=>{
+            return;
+        };
     }
 
     showDropdown = () => {

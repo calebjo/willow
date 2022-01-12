@@ -13,16 +13,21 @@ export default class SavedSearchesContent extends React.Component {
 
     render(){
         return (
-            <div className="saved-searches-content">
+            <div className="account-page-wrapper">
                 <div className="willow-top-container">
                     <TopSubNav />
                 </div>
-                <div className="saved-searches-lower">
-                    <div className="sub-nav-header">
-                        Saved searches
-                    </div>
-                    <div className="saved-searches-list">
-                        
+                <div className="saved-searches-content account-page">
+                    <div className="saved-searches-lower">
+                        <div className="sub-nav-header">
+                            Saved searches
+                        </div>
+                        <div className="saved-searches-filters">
+
+                        </div>
+                        <div className="saved-searches-body">
+
+                        </div>
                     </div>
                 </div>
             </div>

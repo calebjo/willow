@@ -1,30 +1,17 @@
-.your-home-content {
+.account-page-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background:#ffffff;
-    border-bottom: 1px solid lightgray;
+    align-self: center;
+    width: 90%;
+    max-width: 1280px;
 }
 
-.your-home-content .top-nav {
-    width: 100%;
-    background: white;
-    border-bottom: 1px solid lightgray;
-    .top-logo {
-        img {
-            filter: none;
-        }
-    }
+.account-page {
+    background: #F9F9FB;
 }
 
 .sub-nav-links {
     display: flex;
-}
-
-.willow-top-container {
-    width: 100%;
 }
 
 .user-prop-image {
@@ -48,7 +35,6 @@
     font-size: 2.5rem;
     font-family: "Dutch 809", cursive;
     color: #2A2A33;
-    padding: 1.5rem;
 }
 
 .your-home-body,

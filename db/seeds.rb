@@ -351,3 +351,28 @@ file = open('https://s3.amazonaws.com/willow-aa-seeds/10.jpg')
 p10.photo.attach(io: file, filename: '10.jpg')
 
 # ------------------------------------------------------------
+
+saved_home_data = [
+    { user_id: 1, property_id: 2 },
+    { user_id: 1, property_id: 3 },
+    { user_id: 1, property_id: 5 },
+    { user_id: 1, property_id: 8 }
+]
+saved_search_data = [
+    { user_id: 1, min_price: 350000, min_square_feet: 1700 },
+    { user_id: 1, min_beds: 3, min_baths: 2 },
+    { user_id: 1, min_price: 250000, max_price: 2100000, min_beds: 4, query: '5940%20castle'},
+    { user_id: 1, min_year_built: 2000, min_square_feet: 2000 , query: 'Berkeley%20CA' },
+    { user_id: 1, min_price: 700000, query: 'The%20house%20from%20full%20house' }
+]
+
+sh1 = SavedHome.create!(saved_home_data[0])
+sh2 = SavedHome.create!(saved_home_data[1])
+sh3 = SavedHome.create!(saved_home_data[2])
+sh4 = SavedHome.create!(saved_home_data[3])
+
+ss1 = SavedSearch.create!(saved_search_data[0])
+ss2 = SavedSearch.create!(saved_search_data[1])
+ss3 = SavedSearch.create!(saved_search_data[2])
+ss4 = SavedSearch.create!(saved_search_data[3])
+ss5 = SavedSearch.create!(saved_search_data[4])

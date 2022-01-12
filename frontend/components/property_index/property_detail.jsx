@@ -7,6 +7,7 @@ export default class PropertyDetail extends React.Component {
         super(props)
         this.state = { modal: false }
         this.setTimeOnWillow = this.setTimeOnWillow.bind(this)
+        this.checkIfMapProperty = this.checkIfMapProperty.bind(this)
         this.setTimeOnWillow()
     }
 
@@ -39,10 +40,16 @@ export default class PropertyDetail extends React.Component {
         
     }
 
+    checkIfMapProperty(property){
+        if (this.props.getClickedProperty){
+            this.props.getClickedProperty(property)
+        }
+    }
+
     render(){
         const property = this.props.property
         return (
-            <div className="property-item" onClick={ () => this.props.getClickedProperty(property) }>
+            <div className="property-item" onClick={ () => this.checkIfMapProperty(property) }>
                 <div className="prop-saved">
                         <img src={ window.saveIcon } />
                 </div>

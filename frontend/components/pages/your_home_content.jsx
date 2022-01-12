@@ -6,6 +6,10 @@ export default class YourHomeContent extends React.Component {
     constructor(props){
         super(props)
 
+        this.state = {
+            properties: this.props.properties
+        }
+
         this.handleDelete = this.handleDelete.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
     }
@@ -13,7 +17,11 @@ export default class YourHomeContent extends React.Component {
     componentDidMount(){
         window.scrollTo(0,0)
         // DEBUG -- RETURNS NO PROPERTIES (MAYBE AN ISSUE WITH FILTERING)
-        this.props.fetchProperties()
+        this.props.fetchProperties().then(({ properties }) => {
+            this.setState({
+                properties: Object.values(properties)
+            })
+        })
     }
 
     handleDelete(property){
@@ -27,7 +35,12 @@ export default class YourHomeContent extends React.Component {
     }
 
     render(){
-        const properties = this.props.properties.map((property, idx) => {
+
+        if (this.state.properties.length === 0) {
+            return null;
+        } 
+
+        const properties = this.state.properties.map((property, idx) => {
             if (property.id && property.user_id === this.props.state.session.id) {
                 return (
                     <div className="user-property-item" key={idx}>

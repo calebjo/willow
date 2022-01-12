@@ -14,9 +14,6 @@ export default class SearchNav extends React.Component {
             typeText: "Home type",
             moreText: "More",
 
-            priceMin: 0,
-            priceMax: 0,
-
             saleOpen: false,
             priceOpen: false,
             bedOpen: false,
@@ -99,7 +96,7 @@ export default class SearchNav extends React.Component {
                 </div>
                 <div className="search-nav-center">
                     <div className="search-tab sale-dropdown selected"  onClick={() => this.openDropdown("sale")}>
-                        <div className="sale-type-ball" />
+                        <div className="sale-type-ball red" />
                         <div className="tab-header">For Sale</div>
                         <div className={ this.state.saleOpen ? "search-tab-dropdown sale-dropdown" : "hidden"}>
                             <div className="done-tab">
@@ -116,16 +113,18 @@ export default class SearchNav extends React.Component {
                             <div className="nav-dropdown-price-boxes">
                                 <input
                                     type="text"
-                                    value={ this.state.priceMin }
+                                    value={ this.props.filters.priceMin }
                                     className="dropdown-price-box"
+                                    placeholder="Min"
                                     onChange={this.update}
                                     onClick={this.handleInputClick}
                                 />
                                 <div className="dropdown-separator">-</div>
                                 <input
                                     type="text"
-                                    value={ this.state.priceMax }
+                                    value={ this.props.filters.priceMax }
                                     className="dropdown-price-box"
+                                    placeholder="Max"
                                     onChange={this.update}
                                     onClick={this.handleInputClick}
                                 />

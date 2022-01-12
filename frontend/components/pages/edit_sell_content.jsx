@@ -156,7 +156,7 @@ export default class EditSellContent extends React.Component {
                     <div className="create-property-head-copy">
                         Post once and your home will be listed on Willow, reaching buyers on the "largest" real estate network on the web.
                         <br />
-                        <span>Disclaimer: actually quite small, don't upload too much stuff</span>
+                        <span>Disclaimer: actually quite small, don't upload too much stuff...</span>
                     </div>
                 </div>
                 <div className="create-property-form-wrapper">

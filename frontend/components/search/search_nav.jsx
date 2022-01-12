@@ -14,6 +14,9 @@ export default class SearchNav extends React.Component {
             typeText: "Home type",
             moreText: "More",
 
+            priceMin: 0,
+            priceMax: 0,
+
             saleOpen: false,
             priceOpen: false,
             bedOpen: false,
@@ -38,25 +41,41 @@ export default class SearchNav extends React.Component {
 
     exitDropdown(e) {
         const dropdown = document.querySelector(".search-tab-dropdown")
+        this.setState({
+            saleOpen: false,
+            priceOpen: false,
+            bedOpen: false,
+            typeOpen: false,
+            moreOpen: false
+        })
         setTimeout(() => {
             if (e.target !== dropdown && 
                 e.target.parentNode !== dropdown && 
                 e.target.parentNode.parentNode !== dropdown) {
                 document.removeEventListener("click", this.exitDropdown)
-                this.setState({
-                    saleOpen: false,
-                    priceOpen: false,
-                    bedOpen: false,
-                    typeOpen: false,
-                    moreOpen: false
-                })
+                
             }
         }, 50)
     }
     
     handleChange = (filter, updateFilter) => e => {
+        debugger
         const value = e.target.getAttribute('value')
         updateFilter(filter, parseInt(value))
+    }
+
+    changeBoxText(type, value){
+
+    }
+
+    handleInputClick(e) {
+        const input = document.querySelectorAll(".dropdown-price-box")
+        setTimeout(() => {
+            if (input[0] !== e.target && input[1] !== e.target) {
+                // SUBMIT THE FORM
+                console.log("Clicked away, submitting the price form.")
+            }
+        }, 50)
     }
 
     render() {
@@ -70,7 +89,7 @@ export default class SearchNav extends React.Component {
                         type="nav"/>
                 </div>
                 <div className="search-nav-center">
-                    <div className="search-tab sale-dropdown selected">
+                    <div className="search-tab sale-dropdown selected"  onClick={() => this.openDropdown("sale")}>
                         <div className="sale-type-ball" />
                         <div className="tab-header">For Sale</div>
                         <div className={ this.state.saleOpen ? "search-tab-dropdown sale-dropdown" : "hidden"}>
@@ -85,8 +104,22 @@ export default class SearchNav extends React.Component {
                             <div className="nav-dropdown-header">
                                 Price Range
                             </div>
-                            <div className="nav-dropdown-header">
-                                BOXES GO HERE
+                            <div className="nav-dropdown-price-boxes">
+                                <input
+                                    type="text"
+                                    value={ this.state.priceMin }
+                                    className="dropdown-price-box"
+                                    onChange={this.onChange}
+                                    onClick={this.handleInputClick}
+                                />
+                                <div className="dropdown-separator">-</div>
+                                <input
+                                    type="text"
+                                    value={ this.state.priceMax }
+                                    className="dropdown-price-box"
+                                    onChange={this.onChange}
+                                    onClick={this.handleInputClick}
+                                />
                             </div>
                             <div className="nav-dropdown-price-list">
                                 <div className="price-list-left">
@@ -199,7 +232,7 @@ export default class SearchNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="search-tab bed-dropdown">
+                    <div className="search-tab bed-dropdown" onClick={() => this.openDropdown("bed")}>
                         <div className="tab-header">{this.state.bedText}</div>
                         <div className={ this.state.bedOpen ? "search-tab-dropdown bed-dropdown" : "hidden"}>
                             <div className="done-tab">
@@ -207,7 +240,7 @@ export default class SearchNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="search-tab type-dropdown">
+                    <div className="search-tab type-dropdown"  onClick={() => this.openDropdown("type")}>
                         <div className="tab-header">{this.state.typeText}</div>
                         <div className={ this.state.typeOpen ? "search-tab-dropdown type-dropdown" : "hidden"}>
                             <div className="done-tab">
@@ -215,7 +248,7 @@ export default class SearchNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="search-expand">
+                    <div className="search-expand"  onClick={() => this.openDropdown("more")}>
                         <div className="tab-header">{this.state.moreText}</div>
                         <div className={ this.state.moreOpen ? "search-tab-dropdown expand-dropdown" : "hidden"}>
                             <div className="done-tab">

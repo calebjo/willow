@@ -1,17 +1,16 @@
 import React from "react";
 import MarkerManager from "../../util/marker_manager"
 import PropertyIndexContainer from "../property_index/property_index_container";
-// SKELETON
+
 export default class PropertyMap extends React.Component {
     constructor(props){
         super(props)
         this.registerListeners = this.registerListeners.bind(this)
-        // debugger
     }
 
     componentDidMount(){
         const mapOptions = {
-            center: { lat: 37.8631657, lng: -122.2419483 }, // this is SF
+            center: { lat: 37.8631657, lng: -122.2419483 },
             zoom: 12
         };
         const map = this.refs.map;

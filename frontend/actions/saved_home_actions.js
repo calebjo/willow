@@ -19,8 +19,8 @@ const removeSavedHome = id => ({
     id
 })
 
-export const fetchSavedHomes = filters => dispatch => (
-    APIUtil.fetchSavedHomes(filters).then(savedHomes => (
+export const fetchSavedHomes = () => dispatch => (
+    APIUtil.fetchSavedHomes().then(savedHomes => (
         dispatch(receiveSavedHomes(savedHomes))
     ))
 );

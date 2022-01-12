@@ -19,8 +19,8 @@ const removeSavedSearch = id => ({
     id
 })
 
-export const fetchSavedSearches = filters => dispatch => (
-    APIUtil.fetchSavedSearches(filters).then(savedSearches => (
+export const fetchSavedSearches = () => dispatch => (
+    APIUtil.fetchSavedSearches().then(savedSearches => (
         dispatch(receiveSavedSearches(savedSearches))
     ))
 );

@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
     # associations
     has_many :properties
+    has_many :saved_homes
+    has_many :saved_searches
     has_one_attached :photo
 
     after_initialize :ensure_session_token

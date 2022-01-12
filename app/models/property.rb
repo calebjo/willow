@@ -3,7 +3,7 @@ class Property < ApplicationRecord
     validates :property_type, :num_stories, :parking_spots, :heating, :cooling, :hoa_fee, :description, presence: true
   
     belongs_to :user
-
+    has_many :saved_homes
     # Active Storage Association
     # has_many_attached :photos
     has_one_attached :photo

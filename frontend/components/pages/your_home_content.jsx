@@ -12,7 +12,7 @@ export default class YourHomeContent extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0,0)
-        this.props.fetchProperties()
+        this.props.fetchProperties(this.props.state.ui.filters)
     }
 
     handleDelete(property){

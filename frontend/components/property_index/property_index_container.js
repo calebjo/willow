@@ -5,7 +5,8 @@ import PropertyIndex from './property_index';
 
 const mapStateToProps = (state, ownProps) => ({
     properties: Object.values(state.entities.properties),
-    getClickedProperty: ownProps.getClickedProperty
+    getClickedProperty: ownProps.getClickedProperty,
+    state
 });
 
 const mapDispatchToProps = dispatch => ({

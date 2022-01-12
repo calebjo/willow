@@ -7,7 +7,7 @@ export default class PropertyIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchProperties()
+        this.props.fetchProperties(this.props.state.ui.filters)
     }
 
     render() {

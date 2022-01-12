@@ -13,8 +13,8 @@ import { AuthRoute } from "../util/route_util";
 
 import MapContentContainer from "./property_map/map_content_container";
 import SplashContent from "./pages/splash_content"
-import SavedHomesContent from "./pages/saved_homes_content"
-import SavedSearchesContent from "./pages/saved_searches_content"
+import SavedHomesContentContainer from "./pages/saved_homes_content_container"
+import SavedSearchesContentContainer from "./pages/saved_searches_content_container"
 import RentingContent from "./pages/renting_content"
 import YourHomeContentContainer from "./pages/your_home_content_container";
 import ProfileContent from "./pages/profile_content"
@@ -33,8 +33,8 @@ const App = (props) => (
             {/* DEBUG -- REPLACE TO HANDLE QUERY */}
             <Route path="/homes/for_rent" component={MapContentContainer} />
             <AuthRoute exact path="/for-sale-by-owner" component={SellFormContent} />
-            <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContent} />
-            <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContent} />
+            <AuthRoute exact path="/mywillow/favorites" component={SavedHomesContentContainer} />
+            <AuthRoute exact path="/mywillow/savedsearches" component={SavedSearchesContentContainer} />
             <AuthRoute exact path="/renting" component={RentingContent} />
             <AuthRoute exact path="/mywillow/yourhome" component={YourHomeContentContainer} />
             <AuthRoute exact path="/mywillow/account" component={ProfileContent} />

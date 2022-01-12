@@ -308,7 +308,7 @@ bowser = User.create!(email: "bowser@dmail.com", password: "bowserbowser101")
 file = open('https://s3.amazonaws.com/willow-aa-seeds/bowser.png')
 bowser.photo.attach(io: file, filename: 'bowser.png')
 
-# -------------------------------------
+# ------------------------------------------------------------
 
 p1 = Property.create!(property_data[0])
 file = open('https://s3.amazonaws.com/willow-aa-seeds/1.jpg')
@@ -349,3 +349,5 @@ p9.photo.attach(io: file, filename: '9.jpg')
 p10 = Property.create!(property_data[9])
 file = open('https://s3.amazonaws.com/willow-aa-seeds/10.jpg')
 p10.photo.attach(io: file, filename: '10.jpg')
+
+# ------------------------------------------------------------

@@ -19,8 +19,11 @@ class Api::PropertiesController < ApplicationController
     end
   
     def create
-        @property = Property.create!(property_params)
-        render :show
+        if @property = Property.create!(property_params)
+            render :show
+        else
+            render json: @property.errors.full_messages, status: 422
+        end
     end
 
     def update

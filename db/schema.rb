@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_12_020636) do
+ActiveRecord::Schema.define(version: 2022_01_12_155336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,41 @@ ActiveRecord::Schema.define(version: 2022_01_12_020636) do
     t.string "neighborhood"
     t.index ["address"], name: "index_properties_on_address", unique: true
     t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "saved_homes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "property_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_saved_homes_on_property_id"
+    t.index ["user_id", "property_id"], name: "index_saved_homes_on_user_id_and_property_id", unique: true
+    t.index ["user_id"], name: "index_saved_homes_on_user_id"
+  end
+
+  create_table "saved_searches", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "min_price"
+    t.integer "max_price"
+    t.integer "min_beds"
+    t.integer "max_beds"
+    t.integer "min_baths"
+    t.integer "max_baths"
+    t.string "home_type"
+    t.integer "max_hoa"
+    t.integer "min_parking_spots"
+    t.integer "max_parking_spots"
+    t.integer "min_square_feet"
+    t.integer "max_square_feet"
+    t.integer "min_lot_size"
+    t.integer "max_lot_size"
+    t.integer "min_year_built"
+    t.integer "max_year_built"
+    t.boolean "has_basement"
+    t.integer "num_stories"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_saved_searches_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

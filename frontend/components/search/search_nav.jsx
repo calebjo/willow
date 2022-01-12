@@ -57,6 +57,12 @@ export default class SearchNav extends React.Component {
             }
         }, 50)
     }
+
+    update(e) {
+        this.setState({
+            inputValue: e.currentTarget.value
+        })
+    }
     
     handleChange = (filter, updateFilter) => e => {
         const value = e.target.getAttribute('value')
@@ -80,12 +86,16 @@ export default class SearchNav extends React.Component {
     render() {
         const search = this.props.type === "splash" ? (
             <SearchBar 
-                type="splash"/>
+                type="splash"
+                updateFilter={this.props.updateFilter}
+                history={this.props.history} />
         ) : (
             <div className="search-nav">
                 <div className="search-nav-left">
                     <SearchBar 
-                        type="nav"/>
+                        type="nav"
+                        updateFilter={this.props.updateFilter}
+                        history={this.props.history} />
                 </div>
                 <div className="search-nav-center">
                     <div className="search-tab sale-dropdown selected"  onClick={() => this.openDropdown("sale")}>
@@ -108,7 +118,7 @@ export default class SearchNav extends React.Component {
                                     type="text"
                                     value={ this.state.priceMin }
                                     className="dropdown-price-box"
-                                    onChange={this.onChange}
+                                    onChange={this.update}
                                     onClick={this.handleInputClick}
                                 />
                                 <div className="dropdown-separator">-</div>
@@ -116,7 +126,7 @@ export default class SearchNav extends React.Component {
                                     type="text"
                                     value={ this.state.priceMax }
                                     className="dropdown-price-box"
-                                    onChange={this.onChange}
+                                    onChange={this.update}
                                     onClick={this.handleInputClick}
                                 />
                             </div>

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from "react-router-dom";
 
 import { fetchProperties, updateProperty, deleteProperty } from "../../actions/property_actions"
 import { updateFilter } from "../../actions/filter_actions"
@@ -18,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
     updateFilter: (filters, value) => dispatch(updateFilter(filters, value))
 });
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(SearchNav);
+)(SearchNav));

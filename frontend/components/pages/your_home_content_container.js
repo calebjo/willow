@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchProperties: () => dispatch(fetchProperties()),
+    fetchProperties: (filters) => dispatch(fetchProperties(filters)),
     updateProperty: (property) => dispatch(updateProperty(property)),
     deleteProperty: (property) => dispatch(deleteProperty(property)),
 });

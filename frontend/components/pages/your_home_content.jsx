@@ -12,7 +12,8 @@ export default class YourHomeContent extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0,0)
-        this.props.fetchProperties(this.props.state.ui.filters)
+        // DEBUG -- RETURNS NO PROPERTIES (MAYBE AN ISSUE WITH FILTERING)
+        this.props.fetchProperties()
     }
 
     handleDelete(property){
@@ -20,9 +21,9 @@ export default class YourHomeContent extends React.Component {
         this.props.deleteProperty(property.id)
     }
 
-    handleEdit(property){
+    handleEdit(property, data){
         console.log("Editing selected property")
-        // this.props.updateProperty()
+        // this.props.updateProperty(property, data)
     }
 
     render(){

@@ -8,7 +8,8 @@ class Api::PropertiesController < ApplicationController
                 @properties = @properties.in_query(params[:query])
             end
         else
-            Property.all
+            # debugger
+            @properties = Property.all
         end
         
         render :index

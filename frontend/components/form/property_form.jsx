@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-import EditSellContent from '../pages/edit_sell_content';
+import EditSellContent from '../form/edit_sell_content';
 
 // Takes in the address form information and geocodes a lat/lng coord
 class PropertyForm extends React.Component {

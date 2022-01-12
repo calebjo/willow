@@ -19,7 +19,7 @@ import RentingContent from "./pages/renting_content"
 import YourHomeContentContainer from "./pages/your_home_content_container";
 import ProfileContent from "./pages/profile_content"
 import SellContent from "./pages/sell_content";
-import SellFormContent from "./pages/sell_form_content";
+import SellFormContent from "./form/sell_form_content";
 import TopNavContainer from "./top_nav/top_nav_container";
 import Footer from "./footer/footer";
 

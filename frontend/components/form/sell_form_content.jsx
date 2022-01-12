@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import PropertyFormContainer from "../form/property_form_container";
-import PropertyForm from "../form/property_form";
+import PropertyFormContainer from "./property_form_container";
+import PropertyForm from "./property_form";
 
 export default class SellFormContent extends React.Component {
     constructor(props){

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { createProperty } from '../../actions/property_actions';
-import EditSellContent from '../pages/edit_sell_content';
+import EditSellContent from '../form/edit_sell_content';
 
 const mapStateToProps = (state, ownProps) => ({
     redirect: ownProps.redirect,

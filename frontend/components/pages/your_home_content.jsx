@@ -1,6 +1,7 @@
 import React from "react";
 
 import TopSubNav from "../top_nav/top_sub_nav";
+import SearchNavContainer from "../search/search_nav_container"
 
 export default class YourHomeContent extends React.Component {
     constructor(props){
@@ -40,7 +41,7 @@ export default class YourHomeContent extends React.Component {
             return null;
         } 
 
-        const properties = this.state.properties.map((property, idx) => {
+        let properties = this.state.properties.map((property, idx) => {
             if (property.id && property.user_id === this.props.state.session.id) {
                 return (
                     <div className="user-property-item" key={idx}>
@@ -68,6 +69,24 @@ export default class YourHomeContent extends React.Component {
                 )
             }
         })
+        if (!properties[0]) {
+            properties = (
+                <div className="user-no-content">
+                    <img src={ window.buyHome } />
+                    <div className="user-no-content-title">
+                        <div className="no-content-header">
+                            Put your home here
+                        </div> 
+                        <div className="no-content-sub-header">
+                            List your home on Willow for others to see, ponder, and generally admire. This is real copy text, I am a professional.
+                        </div>
+                    </div>
+                    <SearchNavContainer 
+                        type="splash"
+                    />
+                </div>
+            )
+        }
         
         return (
             <div className="account-page-wrapper">

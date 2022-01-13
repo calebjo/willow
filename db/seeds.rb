@@ -8,6 +8,8 @@
 
 require 'open-uri'
 
+SavedSearch.delete_all
+SavedHome.delete_all
 Property.delete_all
 User.delete_all
 
@@ -201,8 +203,8 @@ property_data = [
         heating: "Forced air",
         cooling: "Central",
         hoa_fee: 0,
-        for_sale: false,
-        for_rent: true,
+        for_sale: true,
+        for_rent: false,
         agent_listing: false,
         description: property_descriptions[6],
         lat: 37.9072717,
@@ -253,8 +255,8 @@ property_data = [
         heating: "Forced air",
         cooling: "Central",
         hoa_fee: 0,
-        for_sale: false,
-        for_rent: true,
+        for_sale: true,
+        for_rent: false,
         agent_listing: false,
         description: property_descriptions[8],
         lat: 37.7891089,
@@ -279,8 +281,8 @@ property_data = [
         heating: "Forced air",
         cooling: "Central",
         hoa_fee: 0,
-        for_sale: false,
-        for_rent: true,
+        for_sale: true,
+        for_rent: false,
         agent_listing: false,
         description: property_descriptions[9],
         lat: 37.8151065,
@@ -359,11 +361,11 @@ saved_home_data = [
     { user_id: 1, property_id: 8 }
 ]
 saved_search_data = [
-    { user_id: 1, min_price: 350000, min_square_feet: 1700 },
-    { user_id: 1, min_beds: 3, min_baths: 2 },
-    { user_id: 1, min_price: 250000, max_price: 2100000, min_beds: 4, query: '5940%20castle'},
-    { user_id: 1, min_year_built: 2000, min_square_feet: 2000 , query: 'Berkeley%20CA' },
-    { user_id: 1, min_price: 700000, query: 'The%20house%20from%20full%20house' }
+    { user_id: 1, title: 'My Search', min_price: 350000, min_square_feet: 1700 },
+    { user_id: 1, title: 'My Search2', min_beds: 3, min_baths: 2 },
+    { user_id: 1, title: 'The Budget Breaker', min_price: 250000, max_price: 2100000, min_beds: 4, query: '5940%20castle'},
+    { user_id: 1, title: 'Hi Mom!', min_year_built: 2000, min_square_feet: 2000 , query: 'Berkeley%20CA' },
+    { user_id: 1, title: 'My Search', min_price: 700000, query: 'The%20house%20from%20full%20house' }
 ]
 
 sh1 = SavedHome.create!(saved_home_data[0])

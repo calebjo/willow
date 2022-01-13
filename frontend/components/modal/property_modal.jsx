@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faTh } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faThermometerThreeQuarters } from '@fortawesome/free-solid-svg-icons'
+import { faSnowflake } from '@fortawesome/free-solid-svg-icons'
+import { faParking } from '@fortawesome/free-solid-svg-icons'
+import { faStreetView } from '@fortawesome/free-solid-svg-icons'
+import { faBed } from '@fortawesome/free-solid-svg-icons'
+import { faBath } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding } from '@fortawesome/free-solid-svg-icons'
 
 export default class PropertyModal extends React.Component {
     constructor(props){
@@ -28,6 +36,35 @@ export default class PropertyModal extends React.Component {
         const westimate = Math.round((this.props.property.price) * multiplier)
         const rentWestimate = Math.round((this.props.property.price) * multiplier)
 
+      
+        const createdDate = new Date(this.props.property.created_at)
+        const currentDate = new Date()
+
+        let timeDiff = currentDate.getTime() - createdDate.getTime()
+        let timeType;
+        if (timeDiff > 86400000) { // 1 day
+            timeType = "day"
+            timeDiff /= 86400000
+        } else if (timeDiff > 3600000) { // 1 hour
+            timeType = "hour"
+            timeDiff /= 3600000
+        } else if (timeDiff > 60000) { // 1 minute
+            timeType = "minute"
+            timeDiff /= 60000
+        } else { // seconds
+            timeType = "second"
+            timeDiff /= 1000
+        }
+        timeDiff = Math.floor(timeDiff)
+        if (timeDiff !== 1) {
+            this.timeOnWillow = `${timeDiff} ${timeType}s`
+        } else {
+            this.timeOnWillow = `${timeDiff} ${timeType}`
+        }
+
+        const original = this.props.property.property_type.toLowerCase()
+        const propertyType = original.charAt(0).toUpperCase() + original.slice(1);
+        
         return (
             <div className="property-modal-container">
                 <div className="modal-cover"></div>
@@ -86,29 +123,10 @@ export default class PropertyModal extends React.Component {
                             { this.props.property.for_sale && 
                             <div className="property-details-footer">
                                 <div className="footer-payment-estimate">
-                                    {/* DEBUG -- ADD PROPER PAYMENT ESTIMATE LATER */}
-                                    <span>Est. payment: </span>$WHOLEWALLET
+                                    <span>Est. payment: </span>${ Math.floor(this.props.property.price / 251) }
                                 </div>
                             </div>
                             }
-                        </div>
-                        {/*  DEBUG -- DONT USE HASH LINKS */}
-                        <div className="property-nav-bar">
-                            <div className="property-nav-link">
-                                <HashLink to="home-page#property-small-map">Overview</HashLink>
-                            </div>
-                            <div className="property-nav-link">
-                                <HashLink to="home-page#property-facts-features">Facts and features</HashLink>
-                            </div>HashLink
-                            <div className="property-nav-link">
-                                <HashLink to="home-page#property-cost-calculator">Monthly cost</HashLink>
-                            </div>
-                            <div className="property-nav-link">
-                                <HashLink to="home-page#property-rent-westimate">Rent Westimate</HashLink>
-                            </div>
-                            <div className="property-nav-link">
-                                <HashLink to="home-page#property-homes-for-you">Homes for you</HashLink>
-                            </div>
                         </div>
                         <div className="property-small-map">
                         </div>
@@ -118,10 +136,10 @@ export default class PropertyModal extends React.Component {
                             </div>
                             <div className="overview-details">
                                 <div className="overview-detail">
-                                    Time on Willow <span>2 days</span>
+                                    Time on Willow <span>{this.timeOnWillow}</span>
                                 </div>
                                 <div className="overview-detail">
-                                    Saves <span>31</span>
+                                    Saves <span>{this.props.property.saved_homes.length}</span>
                                 </div>
                             </div>
                             <div className="overview-description">
@@ -132,22 +150,39 @@ export default class PropertyModal extends React.Component {
                             <div className="property-sub-header">
                                 Facts and features
                             </div>
-                            <div className="property-dropdowns">
-                            </div>
-                        </div>
-                        <div className="property-cost-calculator">
-                            <div className="property-sub-header">
-                                Monthly cost
-                            </div>
-                        </div>
-                        <div className="property-rent-westimate">
-                            <div className="property-sub-header">
-                                Rent Westimate
-                            </div>
-                        </div>
-                        <div className="property-homes-for-you">
-                            <div className="property-sub-header">
-                                Homes for you
+                            <div className="property-facts-features">
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faBuilding } />
+                                    { propertyType }
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faBed } />
+                                    { this.props.property.bedrooms } bedrooms
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faBath } />
+                                    { this.props.property.bathrooms } bathrooms
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faCalendarAlt } />
+                                    Built in { this.props.property.year_built }
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faThermometerThreeQuarters } />
+                                    { this.props.property.heating }
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faSnowflake } />
+                                    { this.props.property.cooling }
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faParking } />
+                                    { this.props.property.parking_spots } parking spots
+                                </div>
+                                <div className="property-facts-item">
+                                    <FontAwesomeIcon icon={ faStreetView } />
+                                    { this.props.property.square_feet.toLocaleString() } sqft
+                                </div>
                             </div>
                         </div>
                     </div>

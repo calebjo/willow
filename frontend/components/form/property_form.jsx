@@ -55,7 +55,10 @@ class PropertyForm extends React.Component {
                 lat: lat,
                 lng: lng
             })
-            this.props.redirect(formatted_address, lat, lng)
+            let city = this.state.city
+            let state = this.state.state
+            let zip_code = this.state.zip_code
+            this.props.redirect(formatted_address, lat, lng, city, state, zip_code)
         })
         
         response.fail(() => {

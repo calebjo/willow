@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => ({
     fetchProperties: (filters) => dispatch(fetchProperties(filters)),
     updateProperty: (property) => dispatch(updateProperty(property)),
-    deleteProperty: (property) => dispatch(deleteProperty(property)),
+    deleteProperty: (property) => dispatch(deleteProperty(property))
 });
 
 export default connect(

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchProperties } from "../../actions/property_actions"
+import { createSavedHome, deleteSavedHome, fetchSavedHomes } from '../../actions/saved_home_actions';
 import PropertyIndex from './property_index';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -10,7 +11,10 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchProperties: () => dispatch(fetchProperties())
+    fetchProperties: () => dispatch(fetchProperties()),
+    fetchSavedHomes: () => dispatch(fetchSavedHomes()),
+    createSavedHome: savedHome => dispatch(createSavedHome(savedHome)),
+    deleteSavedHome: savedHome => dispatch(deleteSavedHome(savedHome))
 });
 
 export default connect(

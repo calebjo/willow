@@ -1,6 +1,8 @@
 import React from "react"
 
-export default class EditSellContent extends React.Component {
+import { withRouter } from "react-router-dom"
+
+class EditSellContent extends React.Component {
     constructor(props){
         super(props)
 
@@ -8,10 +10,13 @@ export default class EditSellContent extends React.Component {
 
         this.state = {
             user_id: id,
+            city: this.props.city,
+            state: this.props.state,
+            zip_code: this.props.zip_code,
             address: this.props.address,
             price: 0,
-            property_type: '',
-            for_sale: false,
+            property_type: 'house',
+            for_sale: true,
             for_rent: false,
             agent_listing: false,
             bedrooms: 0,
@@ -23,9 +28,9 @@ export default class EditSellContent extends React.Component {
             has_basement: false,
             num_stories: 0,
             parking_spots: 0,
-            heating: '',
-            cooling: '',
-            description: '',
+            heating: 'Contact Manager',
+            cooling: 'Contact Manager',
+            description: 'This is a placeholder!',
             create: false,
             lat: this.props.lat,
             lng: this.props.lng,
@@ -61,7 +66,7 @@ export default class EditSellContent extends React.Component {
     }
 
     changeLocation(){
-
+        window.location.reload(false);
     }
 
     update(field){
@@ -106,13 +111,21 @@ export default class EditSellContent extends React.Component {
         formData.append('property[heating]', this.state.heating)
         formData.append('property[cooling]', this.state.cooling)
         formData.append('property[description]', this.state.description)
+        // GEOCODED/PARSED DATA
+        formData.append('property[lat]', this.state.lat)
+        formData.append('property[lng]', this.state.lng)
+        formData.append('property[city]', this.state.city)
+        formData.append('property[state]', this.state.state)
+        formData.append('property[zip_code]', this.state.zip_code)
 
         if (this.state.photoFile) {
             formData.append('property[photo]', this.state.photoFile);
         }
 
         if (this.props.currentUser) {
-            this.props.createProperty(formData);
+            this.props.createProperty(formData).done( () => {
+                this.props.history.push('/mywillow/yourhome')
+            })
         } else {
             console.log("You must be signed in to create a property.")
         }
@@ -194,104 +207,140 @@ export default class EditSellContent extends React.Component {
                             <div className="create-section-head">
                                 Home facts
                             </div>
-                            <label>Home type</label>
-                            <input
-                                type="text"
-                                value={property_type}
-                                onChange={this.update("property_type")}
-                                className="property-fact-field"
-                            />
-                            <label>For sale?</label>
-                            <input
-                                type="text"
-                                value={for_sale}
-                                onChange={this.update("for_sale")}
-                                className="property-fact-field"
-                            />
-                            <label>Beds</label>
-                            <input
-                                type="text"
-                                value={bedrooms}
-                                onChange={this.update("bedrooms")}
-                                className="property-fact-field"
-                            />
-                            <label>Baths</label>
-                            <input
-                                type="text"
-                                value={bathrooms}
-                                onChange={this.update("bathrooms")}
-                                className="property-fact-field"
-                            />
-                            <label>Finished square feet</label>
-                            <input
-                                type="text"
-                                value={square_feet}
-                                onChange={this.update("square_feet")}
-                                className="property-fact-field"
-                            />
-                            <label>Lot size</label>
-                            <input
-                                type="text"
-                                value={lot_size}
-                                onChange={this.update("lot_size")}
-                                className="property-fact-field"
-                            />
-                            <label>Year built</label>
-                            <input
-                                type="text"
-                                value={year_built}
-                                onChange={this.update("year_built")}
-                                className="property-fact-field"
-                            />
-                            <label>Hoa dues</label>
-                            <input
-                                type="text"
-                                value={hoa_fee}
-                                onChange={this.update("hoa_fee")}
-                                className="property-fact-field"
-                            />
-                            <label>Basement?</label>
-                            <input
-                                type="text"
-                                value={has_basement}
-                                onChange={this.update("has_basement")}
-                                className="property-fact-field"
-                            />
-                            <label>Number of Stories</label>
-                            <input
-                                type="text"
-                                value={num_stories}
-                                onChange={this.update("num_stories")}
-                                className="property-fact-field"
-                            />
-                            <label>Parking spots</label>
-                            <input
-                                type="text"
-                                value={parking_spots}
-                                onChange={this.update("parking_spots")}
-                                className="property-fact-field"
-                            />
-                            <label>Heating</label>
-                            <input
-                                type="text"
-                                value={heating}
-                                onChange={this.update("heating")}
-                                className="property-fact-field"
-                            />
-                            <label>Cooling</label>
-                            <input
-                                type="text"
-                                value={cooling}
-                                onChange={this.update("cooling")}
-                                className="property-fact-field"
-                            />
-                            <label>Describe your home</label>
-                            <input
-                                type="textarea"
-                                value={description}
-                                onChange={this.update("description")}
-                                className="property-fact-field"
-                            />
+                            <div className="create-section-input">
+                                <label>Home type</label>
+                                <select
+                                    defaultValue="house"
+                                    onChange={this.update("property_type")}
+                                    className="property-fact-field" >
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="townhouse">Townhouse</option>
+                                    <option value="condo">Condo</option>
+                                </select>
+                            </div>
+                            <div className="create-section-input">
+                                <label>For sale?</label>
+                                <select
+                                    defaultValue="true"
+                                    onChange={this.update("for_sale")}
+                                    className="property-fact-field" >
+                                    <option value="true">For sale</option>
+                                    <option value="false">For rent</option>
+                                </select>
+                            </div>
+                            <div className="create-section-input">
+
+                                <label>Beds</label>
+                                <input
+                                    type="text"
+                                    value={bedrooms}
+                                    onChange={this.update("bedrooms")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+
+                                <label>Baths</label>
+                                <input
+                                    type="text"
+                                    value={bathrooms}
+                                    onChange={this.update("bathrooms")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+
+                                <label>Finished square feet</label>
+                                <input
+                                    type="text"
+                                    value={square_feet}
+                                    onChange={this.update("square_feet")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Lot size</label>
+                                <input
+                                    type="text"
+                                    value={lot_size}
+                                    onChange={this.update("lot_size")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Year built</label>
+                                <input
+                                    type="text"
+                                    value={year_built}
+                                    onChange={this.update("year_built")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Hoa dues</label>
+                                <input
+                                    type="text"
+                                    value={hoa_fee}
+                                    onChange={this.update("hoa_fee")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Does your home have a basement?</label>
+                                <select
+                                    defaultValue="true"
+                                    onChange={this.update("has_basement")}
+                                    className="property-fact-field" >
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                            <div className="create-section-input">
+                                <label>Number of Stories</label>
+                                <input
+                                    type="text"
+                                    value={num_stories}
+                                    onChange={this.update("num_stories")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Parking spots</label>
+                                <input
+                                    type="text"
+                                    value={parking_spots}
+                                    onChange={this.update("parking_spots")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Heating</label>
+                                <input
+                                    type="text"
+                                    value={heating}
+                                    onChange={this.update("heating")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Cooling</label>
+                                <input
+                                    type="text"
+                                    value={cooling}
+                                    onChange={this.update("cooling")}
+                                    className="property-fact-field"
+                                />
+                            </div>
+                            <div className="create-section-input">
+                                <label>Describe your home</label>
+                                <input
+                                    type="textarea"
+                                    value={description}
+                                    onChange={this.update("description")}
+                                    className="property-fact-field"
+                                />
+                            </div>
                         </div>
                         <div className="property-submit">
                             <input
@@ -323,7 +372,7 @@ export default class EditSellContent extends React.Component {
                         <div className="edit-sell-button" onClick={ this.changeForm }>
                             Yes, it's the correct location
                         </div>
-                        <div className="edit-sell-button" onClick={ this.changeLocation }>
+                        <div className="edit-sell-button" onClick={ () => this.changeLocation() }>
                             No, let me change it
                         </div>
                     </div>
@@ -335,3 +384,5 @@ export default class EditSellContent extends React.Component {
         )
     }
 }
+
+export default withRouter(EditSellContent);

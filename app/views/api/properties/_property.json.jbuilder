@@ -20,7 +20,9 @@ json.extract! property,
     :description,
     :created_at,
     :lat,
-    :lng
+    :lng,
+    :property_type,
+    :saved_homes
 
 if property.photo
     json.photo_url url_for(property.photo)

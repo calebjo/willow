@@ -27,7 +27,12 @@ export default class YourHomeContent extends React.Component {
 
     handleDelete(property){
         console.log("Deleting selected property")
-        this.props.deleteProperty(property.id)
+        this.props.deleteProperty(property.id).then(() => {
+            this.setState({
+                properties: this.props.state.properties
+            })
+            
+        })
     }
 
     handleEdit(property, data){
@@ -37,9 +42,9 @@ export default class YourHomeContent extends React.Component {
 
     render(){
 
-        if (this.state.properties.length === 0) {
-            return null;
-        } 
+        if (this.state.properties.length === 0){
+            return null
+        }
 
         let properties = this.state.properties.map((property, idx) => {
             if (property.id && property.user_id === this.props.state.session.id) {
@@ -69,7 +74,11 @@ export default class YourHomeContent extends React.Component {
                 )
             }
         })
-        if (!properties[0]) {
+        let anyProperties = false
+        properties.forEach((property)=> {
+            if (property) { anyProperties = true }
+        })
+        if (!anyProperties) {
             properties = (
                 <div className="user-no-content">
                     <img src={ window.buyHome } />

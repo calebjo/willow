@@ -1,12 +1,14 @@
-
 export default class MarkerManager {
     constructor(map){
         this.map = map;
         this.markers = {};
+        this.type = "sale"
+    }
 
-        this.state = {
-            type: "sale"
-        }
+    changeColor(color) {
+        Object.values(this.markers).forEach((marker) =>{
+            marker.fillColor = color
+        })
     }
 
     updateMarkers(properties){
@@ -25,11 +27,16 @@ export default class MarkerManager {
 
     createMarkerFromProperty(property) {
         const position = new google.maps.LatLng(property.lat, property.lng);
-        const symbolColor = this.state.type === 'sale' ? (
-            '#FC384A'
-        ) : (
-            '985DFF'
-        )
+
+        let symbolColor
+        if (this.type === "sale") {
+            symbolColor = '#FC384A'
+        } else if (this.type === "rent") {
+            symbolColor = '985DFF'
+        } else {
+            symbolColor = 'FFD237'
+        }
+
         const circleSymbol = {
             path: google.maps.SymbolPath.CIRCLE,
             fillOpacity: 1,

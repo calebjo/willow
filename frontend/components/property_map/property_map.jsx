@@ -33,6 +33,17 @@ export default class PropertyMap extends React.Component {
         } else {
             this.MarkerManager.updateMarkers(this.props.properties); 
         }
+
+        if (this.props.location.pathname === "/homes") {
+            this.MarkerManager.type = "sale"
+            this.MarkerManager.changeColor('#FC384A')
+        } else if (this.props.location.pathname === "/homes/for_rent") {
+            this.MarkerManager.type = "rent"
+            this.MarkerManager.changeColor('985DFF')
+        } else {
+            this.MarkerManager.type = "sold"
+            this.MarkerManager.changeColor('FFD237')
+        }
     }
 
     registerListeners() {

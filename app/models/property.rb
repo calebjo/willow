@@ -27,13 +27,12 @@ class Property < ApplicationRecord
     # return self (a property) if it satisfies the search filters
     # DEBUG -- DOES NOT ACCEPT EXACT FILTER TYPES
     def self.in_filters(filters)
-        self.where("price >= ?", filters[:minPrice])
+        property = self.where("price >= ?", filters[:minPrice])
             .where("price <= ?", filters[:maxPrice])
             .where("bedrooms >= ?", filters[:minBeds])
             .where("bedrooms <= ?", filters[:maxBeds])
             .where("bathrooms >= ?", filters[:minBaths])
             .where("bathrooms <= ?", filters[:maxBaths])
-            #.where("property_type = ?", filters[:homeType])
             .where("hoa_fee <= ?", filters[:maxHoa])
             .where("parking_spots >= ?", filters[:minParkingSpots])
             .where("parking_spots <= ?", filters[:maxParkingSpots])
@@ -43,10 +42,28 @@ class Property < ApplicationRecord
             .where("lot_size <= ?", filters[:maxLotSize])
             .where("year_built >= ?", filters[:minYearBuilt])
             .where("year_built <= ?", filters[:maxYearBuilt])
-            # .where("has_basement = ?", filters[:hasBasement])
-            # .where("num_stories = ?", filters[:numStories])
+
+        if filters[:homeType]
+            property = property.where("property_type = ?", filters[:homeType])
+        end
+
+        if filters[:hasBasement]
+            property = property.where("has_basement = ?", filters[:hasBasement])
+        end
+        
+        if filters[:numStories]
+            property = property.where("num_stories = ?", filters[:num_stories])
+        end
+
+        if filters[:forSale]
+            property = property.where("for_sale = ?", filters[:forSale])
+        end
+
+        if filters[:forRent]
+            property = property.where("for_rent = ?", filters[:forRent])
+        end
+        
+        property
     end
-
-
 end
   

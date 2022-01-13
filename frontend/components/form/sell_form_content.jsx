@@ -20,12 +20,15 @@ export default class SellFormContent extends React.Component {
         window.scrollTo(0,0)
     }
 
-    redirect(address, lat, lng){
+    redirect(address, lat, lng, city, state, zip_code){
         this.setState({
             redirect: true,
             address: address,
             lat: lat,
-            lng: lng
+            lng: lng,
+            city: city,
+            state: state,
+            zip_code: zip_code
         })
     }
 
@@ -36,6 +39,9 @@ export default class SellFormContent extends React.Component {
                 address={this.state.address}
                 lat={this.state.lat}
                 lng={this.state.lng}
+                city={this.state.city}
+                state={this.state.state}
+                zip_code={this.state.zip_code}
             />
         ) : (
             <div className="sell-form-wrapper">

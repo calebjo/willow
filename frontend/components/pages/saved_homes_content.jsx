@@ -30,9 +30,6 @@ export default class SavedHomesContent extends React.Component {
     }
 
     render(){
-        // if (this.props.state.entities.users[this.state.currentUser].saved_homes.length >= 1){
-
-
         let saveIds, savedHomes, userSaves
         if (this.state.properties.length >= 1) {
             if (this.state.currentUser.saved_homes.length >= 1) {
@@ -48,6 +45,9 @@ export default class SavedHomesContent extends React.Component {
                     <PropertyDetail 
                         key={idx}
                         property={home}
+                        state={this.props.state} 
+                        createSavedHome={this.props.createSavedHome}
+                        deleteSavedHome={this.props.deleteSavedHome}
                     />
                 )
             } else {

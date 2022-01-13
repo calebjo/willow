@@ -23,7 +23,7 @@ class Api::SavedHomesController < ApplicationController
     private
   
     def saved_home_params
-        params.require(:property).permit(:user_id, :property_id)
+        params.require(:saved_home).permit(:user_id, :property_id)
     end
 end
   

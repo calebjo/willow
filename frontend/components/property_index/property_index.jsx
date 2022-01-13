@@ -8,6 +8,7 @@ export default class PropertyIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties(this.props.state.ui.filters)
+        this.props.fetchSavedHomes()
     }
 
     render() {
@@ -16,7 +17,10 @@ export default class PropertyIndex extends React.Component {
                 return (
                     <PropertyDetail 
                         property={property}
-                        getClickedProperty={this.props.getClickedProperty} 
+                        getClickedProperty={this.props.getClickedProperty}
+                        state={this.props.state} 
+                        createSavedHome={this.props.createSavedHome}
+                        deleteSavedHome={this.props.deleteSavedHome}
                         key={idx} />
                 )
             }

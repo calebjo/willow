@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
 
 import { fetchProperties, updateProperty, deleteProperty } from "../../actions/property_actions"
-import { updateFilter } from "../../actions/filter_actions"
+import { updateFilter, resetFilters } from "../../actions/filter_actions"
 import SearchNav from './search_nav';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => ({
     fetchProperties: () => dispatch(fetchProperties()),
     updateProperty: (property) => dispatch(updateProperty(property)),
     deleteProperty: (property) => dispatch(deleteProperty(property)),
-    updateFilter: (filters, value) => dispatch(updateFilter(filters, value))
+    updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),
+    resetFilters: () => dispatch(resetFilters())
 });
 
 export default withRouter(connect(

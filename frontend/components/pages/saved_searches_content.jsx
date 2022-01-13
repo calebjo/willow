@@ -26,28 +26,25 @@ export default class SavedSearchesContent extends React.Component {
             savedSearches = this.state.currentUser.saved_searches
 
             searches = savedSearches.map((search, idx) =>
-            <div key={idx} className="saved-search-wrapper">
-                <div className="saved-search-inner">
-                    <div className="saved-search-left">
-                        <div className="saved-search-title">
-                            My Saved Search
+                <div key={idx} className="saved-search-wrapper">
+                    <div className="saved-search-inner">
+                        <div className="saved-search-left">
+                            <div className="saved-search-title">
+                                { search.title }
+                            </div>
                         </div>
-                        <div className="saved-search-content">
-                            INSERT CONTENT HERE
-                        </div>
-                    </div>
-                    <div className="saved-search-right">
-                        <div className="saved-search-edit">
-                            <FontAwesomeIcon icon={ faTrashAlt } />
-                            Edit
-                        </div>
-                        <div className="saved-search-delete">
-                            <FontAwesomeIcon icon={ faPencilAlt } />
-                            Delete
+                        <div className="saved-search-right">
+                            <div className="saved-search-edit">
+                                <FontAwesomeIcon icon={ faTrashAlt } />
+                                Edit
+                            </div>
+                            <div className="saved-search-delete">
+                                <FontAwesomeIcon icon={ faPencilAlt } />
+                                Delete
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             )
         } else {
             searches = (

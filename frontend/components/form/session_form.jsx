@@ -22,12 +22,14 @@ class SessionForm extends React.Component {
         e.preventDefault();
         this.props.removeSessionErrors()
         const user = Object.assign({}, this.state)
-        this.props.processForm(user)
-        setTimeout(() => {
+        this.props.processForm(user).then( () => {
             if (this.props.errors.length === 0){
                 this.props.hideModal()
             }
-        }, 100)
+        })
+        // setTimeout(() => {
+            
+        // }, 50)
     }
 
     handleDemoSubmit(e) {
@@ -48,7 +50,11 @@ class SessionForm extends React.Component {
     }
   
     render(){
-        const errorList = this.props.errors.map( error => <li key={error}>{error}</li> )
+        const errorList = this.props.errors.map( error => 
+            <li key={error}>
+                {error}
+            </li> 
+        )
         let placeholderText;
         if ( this.props.formType === "Submit"){
             placeholderText = "Create password"

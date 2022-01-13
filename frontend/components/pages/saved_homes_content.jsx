@@ -8,7 +8,8 @@ export default class SavedHomesContent extends React.Component {
         super(props)
 
         this.state = {
-            properties: this.props.properties
+            properties: this.props.properties,
+            currentUser: this.props.state.entities.users[1]
         }
     }
 
@@ -33,7 +34,7 @@ export default class SavedHomesContent extends React.Component {
             return null;
         } 
 
-        const saveIds = this.props.state.entities.users[1].saved_homes.map(
+        const saveIds = this.state.currentUser.saved_homes.map(
             (save) => (save.property_id)
         )
 

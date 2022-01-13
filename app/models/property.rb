@@ -46,5 +46,7 @@ class Property < ApplicationRecord
             # .where("has_basement = ?", filters[:hasBasement])
             # .where("num_stories = ?", filters[:numStories])
     end
+
+
 end
   

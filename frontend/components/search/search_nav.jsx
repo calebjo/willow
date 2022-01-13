@@ -346,8 +346,7 @@ export default class SearchNav extends React.Component {
                 </div>
                 <div className="search-nav-right">
                     <div className="saved-homes">
-                        {/* <Link to="/mywillow/savedhomes">Saved homes</Link> */}
-                        Saved homes
+                        <Link to="/mywillow/favorites">Saved homes</Link>
                     </div>
                 </div>
             </div>

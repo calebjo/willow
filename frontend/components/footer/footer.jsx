@@ -16,9 +16,6 @@ export default class Footer extends React.Component {
                         Rentals
                     </div>
                     <div className="footer-link">
-                        Mortgage Rates
-                    </div>
-                    <div className="footer-link">
                         Browse Homes
                     </div>
                 </div>

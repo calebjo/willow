@@ -38,18 +38,17 @@ export default class SellContent extends React.Component {
                     </div>
                 </div>
                 <div className="sell-lower-line"></div>
-                <div className="sell-value-check">
+                {/* <div className="sell-value-check">
                     <div className="sell-value-check-header">
                         Explore your home's value
                     </div>
                     <div className="sell-value-check-sub-header">
                         Enter your address to get your free Westimate.
                     </div>
-                    {/* DEBUG -- REPLACE WITH ACTUAL ADDRESS FORM */}
                     <div className="sell-value-check-form">
                         Enter your address
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }

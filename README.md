@@ -1,5 +1,5 @@
 
-![willow logo](https://i.imgur.com/XWQTEA8.png)
+![willow logo](https://i.imgur.com/CGTosdt.png)
 
 Willow is a clone of Zillow, the real estate platform for finding your next home or rental. It was built in 2 weeks and allows users to search for, view, and save properties to their profiles.  
 

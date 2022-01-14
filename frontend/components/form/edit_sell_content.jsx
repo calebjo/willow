@@ -127,7 +127,7 @@ class EditSellContent extends React.Component {
                 this.props.history.push('/mywillow/yourhome')
             })
         } else {
-            console.log("You must be signed in to create a property.")
+            // console.log("You must be signed in to create a property.")
         }
         
     }
@@ -190,7 +190,7 @@ class EditSellContent extends React.Component {
                                 Photos
                             </div>
                             <div className="property-photos-wrapper">
-                                Drag and drop to reorder. Click on a photo to delete.
+                                {/* Drag and drop to reorder. Click on a photo to delete. */}
                                 <div className="property-photos-inner">
                                     { preview }
                                     <div className="property-photos-button">

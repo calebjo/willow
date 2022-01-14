@@ -181,3 +181,38 @@
 .property-rent-westimate {
     border-bottom: 1px solid lightgray;
 }
+
+.property-facts-item {
+    display: flex;
+    padding: 1rem 0;
+    div {
+        margin: 0 0.5rem;
+    }
+    svg {
+        filter: brightness(0) saturate(100%) invert(33%) sepia(50%) saturate(7362%) hue-rotate(209deg) brightness(101%) contrast(105%);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .property-modal-container {
+        z-index: 100;
+        position: fixed;
+        width: 80%;
+        max-width: 1000px;
+        height: 90vh;
+        margin-left: 10%;
+        top: 0;
+        left: 0;
+    }
+    .property-modal {
+        z-index: 100;
+        position: fixed;
+        width: 80%;
+        max-width: 1000px;
+        height: 100vh;
+        margin-left: 10%;
+        top: 0;
+        left: 0;
+    }
+}

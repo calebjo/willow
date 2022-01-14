@@ -153,35 +153,51 @@ export default class PropertyModal extends React.Component {
                             <div className="property-facts-features">
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faBuilding } />
-                                    { propertyType }
+                                    <div className="facts-text">
+                                        { propertyType }
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faBed } />
-                                    { this.props.property.bedrooms } bedrooms
+                                    <div className="facts-text">
+                                        {this.props.property.bedrooms } bedrooms
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faBath } />
-                                    { this.props.property.bathrooms } bathrooms
+                                    <div className="facts-text">
+                                        { this.props.property.bathrooms } bathrooms
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faCalendarAlt } />
-                                    Built in { this.props.property.year_built }
+                                    <div className="facts-text">
+                                        Built in { this.props.property.year_built }
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faThermometerThreeQuarters } />
-                                    { this.props.property.heating }
+                                    <div className="facts-text">
+                                        { this.props.property.heating }
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faSnowflake } />
-                                    { this.props.property.cooling }
+                                    <div className="facts-text">
+                                        { this.props.property.cooling }
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faParking } />
-                                    { this.props.property.parking_spots } parking spots
+                                    <div className="facts-text">
+                                        { this.props.property.parking_spots } parking spots
+                                    </div>
                                 </div>
                                 <div className="property-facts-item">
                                     <FontAwesomeIcon icon={ faStreetView } />
-                                    { this.props.property.square_feet.toLocaleString() } sqft
+                                    <div className="facts-text">
+                                        { this.props.property.square_feet.toLocaleString() } sqft
+                                    </div>
                                 </div>
                             </div>
                         </div>

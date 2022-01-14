@@ -89,7 +89,6 @@ export default class PropertyDetail extends React.Component {
                 let that = this
                 homes.forEach((home) => {
                     if (home.property_id === that.props.property.id){
-                        // debugger
                         thisSaveId = home.id
                     }
                 })
@@ -141,7 +140,7 @@ export default class PropertyDetail extends React.Component {
                     </div>
                 </div>
                 <div className="prop-bottom">
-                    <div className="prop-price">${property.price.toLocaleString()}</div>
+                    <div className="prop-price">${property.price.toLocaleString()}{property.for_rent ?"/month":""}</div>
                     <div className="prop-mid-info">
                         <div className="prop-bd">{property.bedrooms} bd</div>
                         <div className="prop-ba">{property.bathrooms} ba</div>

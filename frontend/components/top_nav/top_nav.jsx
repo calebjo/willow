@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import WelcomeModal from "../modal/welcome_modal";
 import { SessionDropdown } from "./session_dropdown";
+import { Dropdown } from "../top_nav/dropdown";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
@@ -59,6 +60,7 @@ export default class TopNav extends React.Component {
                     <WelcomeModal 
                         hideModal={this.hideModal}/>
                 }
+                <Dropdown />
                 <div className="top-left">
                     <div>
                         <Link to="/homes">

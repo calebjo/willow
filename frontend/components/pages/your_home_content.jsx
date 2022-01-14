@@ -8,11 +8,16 @@ export default class YourHomeContent extends React.Component {
         super(props)
 
         this.state = {
-            properties: this.props.properties
+            properties: this.props.properties,
+            price: "",
+            bedrooms: "",
+            bathrooms: ""
         }
 
         this.handleDelete = this.handleDelete.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
+        this.update = this.update.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount(){
@@ -26,24 +31,88 @@ export default class YourHomeContent extends React.Component {
     }
 
     handleDelete(property){
-        console.log("Deleting selected property")
+        // console.log("Deleting selected property")
         this.props.deleteProperty(property.id).then(() => {
             this.setState({
                 properties: this.props.state.properties
             })
-            
         })
     }
 
-    handleEdit(property, data){
-        console.log("Editing selected property")
-        // this.props.updateProperty(property, data)
+    handleEdit(property){
+        // console.log("Editing selected property")
+        this.setState({
+            selectedProperty: property,
+            updating: true
+        })
+    }
+
+    update(field){
+        return e => this.setState({
+            [field]: e.target.value
+        });
+    }
+
+    handleSubmit(e){
+        // console.log("Submitting edits...")
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('property[price]', this.state.price)
+        formData.append('property[bedrooms]', this.state.bedrooms)
+        formData.append('property[bathrooms]', this.state.bathrooms)
+        this.props.updateProperty(this.state.selectedProperty, formData)
+        this.setState({
+            selectedProperty: null,
+            updating: false
+        })
     }
 
     render(){
 
+        const {
+            price,
+            bedrooms,
+            bathrooms,
+            square_feet
+        } = this.state
+
         if (this.state.properties.length === 0){
             return null
+        }
+
+        let updateForm = null
+        if (this.state.updating) {
+            updateForm = (
+                <div className="home-update-form">
+                    <form onSubmit={ this.handleSubmit }>
+                        <label>New Price</label>
+                        <input
+                            type="text"
+                            value={ price }
+                            onChange={ this.update("price")}
+                            className="property-edit-field"
+                        />
+                        <label>New Bedroom Amount</label>
+                        <input
+                            type="text"
+                            value={ bedrooms }
+                            onChange={ this.update("bedrooms")}
+                            className="property-edit-field"
+                        />
+                        <label>New Bathroom Amount</label>
+                        <input
+                            type="text"
+                            value={ bathrooms }
+                            onChange={ this.update("bathrooms")}
+                            className="property-edit-field"
+                        />
+                        <input
+                            type="submit"
+                            className="property-edit-submit"
+                        />
+                    </form>
+                </div>
+            )
         }
 
         let properties = this.state.properties.map((property, idx) => {
@@ -100,7 +169,8 @@ export default class YourHomeContent extends React.Component {
         return (
             <div className="account-page-wrapper">
                 <div className="willow-top-container">
-                    <TopSubNav />
+                    <TopSubNav 
+                        type="yourHome"/>
                 </div>
                 <div className="your-home-content account-page">
                     <div className="your-home-main">
@@ -108,6 +178,7 @@ export default class YourHomeContent extends React.Component {
                             Your home
                         </div>
                         <div className="your-home-body">
+                            { updateForm }
                             <div className="your-home-data">
                                 { properties }
                             </div>

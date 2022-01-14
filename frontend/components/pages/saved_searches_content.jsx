@@ -20,6 +20,16 @@ export default class SavedSearchesContent extends React.Component {
         this.props.fetchSavedSearches()
     }
 
+    handleEdit(search){
+        // console.log("Editing the selected search...")
+        // this.props.updateSavedSearch(search.id)
+    }
+
+    handleDelete(search){
+        // console.log("Deleting the selected search...")
+        this.props.deleteSavedSearch(search.id)
+    }
+
     render(){
         let savedSearches, searches = null;
         if (this.state.currentUser.saved_searches.length >= 1){
@@ -34,11 +44,11 @@ export default class SavedSearchesContent extends React.Component {
                             </div>
                         </div>
                         <div className="saved-search-right">
-                            <div className="saved-search-edit">
+                            <div className="saved-search-edit" onClick={ () => this.handleEdit(search) }>
                                 <FontAwesomeIcon icon={ faTrashAlt } />
                                 Edit
                             </div>
-                            <div className="saved-search-delete">
+                            <div className="saved-search-delete" onClick={ () => this.handleDelete(search) }>
                                 <FontAwesomeIcon icon={ faPencilAlt } />
                                 Delete
                             </div>
@@ -64,24 +74,12 @@ export default class SavedSearchesContent extends React.Component {
                 </div>
             )
         }
-        // let searchesText = ''
-        // // DEBUG -- NEED TO CREATE A STRING C
-        // savedSearches.forEach((search) =>{
-        //     const parsed = JSON.parse(JSON.stringify(search))
-        //     for (const x in parsed){
-        //         if (parsed[x] !== null && x !== "created_at" && x !== "updated_at"){
-        //             // debugger
-        //             searchesText += parsed[x]
-        //             console.log(parsed[x])
-                    
-        //         }
-        //     }
-        // })
         
         return (
             <div className="account-page-wrapper">
                 <div className="willow-top-container">
-                    <TopSubNav />
+                    <TopSubNav 
+                        type="savedSearches"/>
                 </div>
                 <div className="saved-searches-content account-page">
                     <div className="saved-searches-lower">

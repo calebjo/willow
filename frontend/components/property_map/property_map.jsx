@@ -39,10 +39,10 @@ export default class PropertyMap extends React.Component {
             this.MarkerManager.changeColor('#FC384A')
         } else if (this.props.location.pathname === "/homes/for_rent") {
             this.MarkerManager.type = "rent"
-            this.MarkerManager.changeColor('985DFF')
+            this.MarkerManager.changeColor('#985DFF')
         } else {
             this.MarkerManager.type = "sold"
-            this.MarkerManager.changeColor('FFD237')
+            this.MarkerManager.changeColor('#FFD237')
         }
     }
 

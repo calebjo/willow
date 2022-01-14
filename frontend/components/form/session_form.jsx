@@ -80,7 +80,11 @@ class SessionForm extends React.Component {
                         onChange={this.updateField("password")} 
                     />
                 </label>
-                { errorList }
+                <div className="form-errors">
+                    <ul>
+                        { errorList }
+                    </ul>
+                </div>
                 <input type="submit" value={this.props.formType} />
                 { this.props.formType === "Sign in" && (
                     <input 

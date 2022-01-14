@@ -15,7 +15,8 @@ export default class ProfileContent extends React.Component {
         return (
             <div className="account-page-wrapper">
                 <div className="willow-top-container">
-                    <TopSubNav />
+                    <TopSubNav 
+                        type="profile"/>
                 </div>
                 <div className="profile-content account-page">
                     <div className="profile-lower">

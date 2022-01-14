@@ -51,6 +51,7 @@ export default class WelcomeModal extends React.Component {
                     <LoginFormContainer hideModal={this.props.hideModal}/>
                     <SignupFormContainer hideModal={this.props.hideModal}/>
                     <div className="modal-lower">
+                        <img src={ window.welcomeModalImg } />
                     </div>
                 </div>
             </div>

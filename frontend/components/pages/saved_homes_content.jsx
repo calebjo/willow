@@ -73,7 +73,8 @@ export default class SavedHomesContent extends React.Component {
         return (
             <div className="account-page-wrapper">
                 <div className="willow-top-container">
-                    <TopSubNav />
+                    <TopSubNav 
+                        type="savedHomes"/>
                 </div>
                 <div className="saved-homes-content account-page">
                     <div className="saved-homes-lower">

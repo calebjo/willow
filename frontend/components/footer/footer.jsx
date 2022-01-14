@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Footer extends React.Component {
     constructor(props){
@@ -10,13 +11,13 @@ export default class Footer extends React.Component {
             <div className="footer">
                 <div className="footer-links">
                     <div className="footer-link">
-                        Real Estate
+                        <Link to="/homes">Real Estate</Link>
                     </div>
                     <div className="footer-link">
-                        Rentals
+                        <Link to="/homes/for_rent">Rentals</Link>
                     </div>
                     <div className="footer-link">
-                        Browse Homes
+                        <Link to="/">Browse Homes</Link>
                     </div>
                 </div>
                 <div className="footer-greeting">

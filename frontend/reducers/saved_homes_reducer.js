@@ -7,7 +7,6 @@ const savedHomesReducer = (state = {}, action) => {
         case RECEIVE_SAVED_HOMES:
             return action.savedHomes;
         case RECEIVE_SAVED_HOME:
-            // debugger
             const newSavedHome = { [action.savedHome.saved_home.id]: action.savedHome.saved_home };
             return Object.assign({}, state, newSavedHome);
         default:

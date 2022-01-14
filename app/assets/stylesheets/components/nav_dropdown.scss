@@ -1,12 +1,99 @@
 
-.top-dropdown {
+.top-dropdown-icon {
+    position: absolute;
+    top: 1rem;
+    left: 0.25rem;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-dropdown-icon:active {
+    border: 4px solid red;
+}
+
+.top-dropdown-icon-set {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-dropdown-icon-set:active {
+    border: 4px solid black;
+}
+
+.top-dropdown-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2rem;
-    height: 2rem;
+    position: relative;
+    width: 100vw;
+    top: 0;
+    height: 4.25rem;
+    background: white;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.39);
 }
 
-.splash-content .top-dropdown {
-    filter: invert(1);
+.top-dropdown-top > img {
+    width: 120px;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.filtered-blue {
+    filter: none;
+}
+
+.top-dropdown-icon {
+    filter: brightness(0) invert(1);
+}
+
+.top-dropdown-wrapper {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+.top-dropdown-items {
+    width: 100%;
+    .top-dropdown-item {
+        width: 100%;
+        height: 4.25rem;
+        a {
+            font-family: "Open sans", sans-serif;
+            color: black;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        a:hover {
+            color: #006aff;
+        }
+        border-bottom: 1px solid rgb(224, 224, 224);
+    }
+}
+
+@media (min-width: 890px) {
+    .top-dropdown-icon, .top-dropdown-wrapper, .top-dropdown-items {
+        display: none;
+    }
 }

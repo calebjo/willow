@@ -25,7 +25,6 @@ export default class MapContent extends React.Component {
             this.props.updateFilter('forRent', true)
             this.props.updateFilter('forSale', false)
         }
-        // debugger
     }
 
     getClickedProperty(property){
@@ -60,6 +59,7 @@ export default class MapContent extends React.Component {
     }
 
     render() {
+
         return(
             <div className="map-content">
                 { this.state.modal && 

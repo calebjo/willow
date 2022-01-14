@@ -131,3 +131,81 @@
         font-family: "Open sans", sans-serif;
     }
 }
+
+.sale-dropdown-radio {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+    font-weight: 600;
+    input {
+        margin-right: 1rem;
+        width: 1rem;
+        height: 1rem;
+    }
+}
+.sale-dropdown-ball {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+}
+.sale-dropdown-ball.red {
+    background: #FF5A50;
+}
+
+.sale-dropdown-ball.yellow {
+    background: #985DFF;
+}
+
+.sale-dropdown-ball.purple {
+    background: #FFD237;
+}
+
+.type-dropdown {
+    width: 16rem;
+    .nav-dropdown-header {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+    }
+    input {
+        margin-right: 0.5rem;
+    }
+}
+
+.type-dropdown-checks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.15rem;
+    div {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+.done-tab {
+    cursor: default;
+    button {
+        cursor: pointer;
+    }
+}
+
+.expand-dropdown {
+    .search-expand-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+        select {
+            width: 8rem;
+            height: 2rem;
+            margin-right: 0.75rem;
+        }
+    }
+    .done-tab {
+        display: flex;
+        justify-content: space-between;
+    }
+}

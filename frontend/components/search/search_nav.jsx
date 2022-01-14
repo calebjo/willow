@@ -35,6 +35,7 @@ export default class SearchNav extends React.Component {
         this.handleChange = this.handleChange.bind(this)
         this.changeBoxText = this.changeBoxText.bind(this)
         this.clearFilters = this.clearFilters.bind(this)
+        this.saveSearch = this.saveSearch.bind(this)
     }
 
     openDropdown(type) {
@@ -75,7 +76,17 @@ export default class SearchNav extends React.Component {
     
     handleChange = (filter, updateFilter) => e => {
         const value = e.target.getAttribute('value')
-        updateFilter(filter, parseInt(value))
+        updateFilter(filter, parseInt(value)).then(() => {
+            let saleType
+            if (this.props.state.ui.filters.forSale === true) {
+                saleType = "forSale"
+            } else {
+                saleType = "forRent"
+            }
+            this.setState({
+                saleType: saleType
+            })
+        })
     }
 
     changeBoxText(type, value){
@@ -87,14 +98,18 @@ export default class SearchNav extends React.Component {
         setTimeout(() => {
             if (input[0] !== e.target && input[1] !== e.target) {
                 // SUBMIT THE FORM
-                console.log("Clicked away, submitting the price form.")
+                // console.log("Clicked away, submitting the price form.")
             }
         }, 50)
     }
 
     clearFilters() {
-        console.log("Resetting filters to default...")
+        // console.log("Resetting filters to default...")
         this.props.resetFilters()
+    }
+
+    saveSearch() {
+        
     }
 
     render() {
@@ -509,7 +524,7 @@ export default class SearchNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="save-search">
+                    <div className="save-search" onClick={ this.saveSearch }>
                         <div className="tab-header">Save search</div>
                     </div>
                 </div>

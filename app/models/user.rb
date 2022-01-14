@@ -2,7 +2,10 @@ class User < ApplicationRecord
     # validations
     validates :email, :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
-    validates :password, length: {minimum: 6}, allow_nil: true
+
+    # formatting validations
+    validates :email, length: {minimum: 4}
+    validates :password, length: {minimum: 8}, allow_nil: true
 
     # associations
     has_many :properties

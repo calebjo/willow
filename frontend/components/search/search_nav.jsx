@@ -109,7 +109,7 @@ export default class SearchNav extends React.Component {
     }
 
     saveSearch() {
-        
+        console.log(this.props.state.ui.filters)
     }
 
     render() {

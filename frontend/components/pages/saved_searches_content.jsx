@@ -22,10 +22,8 @@ export default class SavedSearchesContent extends React.Component {
             that.setState({
                 savedSearches: searches.savedSearches
             })
-            // debugger
             console.log(searches.savedSearches)
         })
-        // debugger
     }
 
     handleEdit(search){

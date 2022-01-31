@@ -123,7 +123,7 @@ export default class PropertyModal extends React.Component {
                             { this.props.property.for_sale && 
                             <div className="property-details-footer">
                                 <div className="footer-payment-estimate">
-                                    <span>Est. payment: </span>${ Math.floor(this.props.property.price / 251) }
+                                    <span>Est. payment: </span>${ Math.floor(this.props.property.price / 251) }/month
                                 </div>
                             </div>
                             }

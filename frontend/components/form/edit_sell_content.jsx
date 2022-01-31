@@ -152,7 +152,7 @@ class EditSellContent extends React.Component {
         } = this.state
 
         const preview = this.state.photoUrl ? 
-        <img height="200px" width="200px" src={this.state.photoUrl} /> : 
+        <img height="200px" width="250px" src={this.state.photoUrl} /> : 
         null;
 
         const formType = this.state.create ? (

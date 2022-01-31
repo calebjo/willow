@@ -97,7 +97,12 @@ export default class PropertyDetail extends React.Component {
                     this.setState({
                         saved: false
                     })
-                );
+                    
+                ).then(() => {
+                    if (this.props.updateSavedHomes) {
+                        this.props.updateSavedHomes();
+                    }
+                });
 
             } else {
                 // save the property
@@ -112,7 +117,6 @@ export default class PropertyDetail extends React.Component {
                 );
                 
             }
-            
         } else {
             // OPEN SIGN IN MODAL
         }

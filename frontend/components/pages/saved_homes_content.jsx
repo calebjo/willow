@@ -13,6 +13,7 @@ export default class SavedHomesContent extends React.Component {
             savedHomes: this.props.savedHomes,
             currentUser: this.props.state.entities.users[this.props.state.session.id]
         }
+        this.updateSavedHomes = this.updateSavedHomes.bind(this);
     }
 
     componentDidMount(){
@@ -23,6 +24,10 @@ export default class SavedHomesContent extends React.Component {
             })
         })
 
+        this.updateSavedHomes();
+    }
+
+    updateSavedHomes() {
         this.props.fetchSavedHomes().then(({ savedHomes }) => {
             this.setState({
                 savedHomes: Object.values(savedHomes)
@@ -31,7 +36,6 @@ export default class SavedHomesContent extends React.Component {
     }
 
     render(){
-        // debugger
         let saveIds, savedHomes, userSaves
         if (this.state.properties.length >= 1) { // make sure properties have been fetched
             if (this.state.savedHomes.length >= 1) {
@@ -50,6 +54,7 @@ export default class SavedHomesContent extends React.Component {
                         state={this.props.state} 
                         createSavedHome={this.props.createSavedHome}
                         deleteSavedHome={this.props.deleteSavedHome}
+                        updateSavedHomes={this.updateSavedHomes}
                     />
                 )
             } else {

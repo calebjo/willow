@@ -45,7 +45,6 @@ export default class SavedSearchesContent extends React.Component {
     }
 
     render(){
-        debugger
         let savedSearches, searches = null;
         if (this.state.savedSearches && this.state.savedSearches.length >= 1){
             savedSearches = this.state.savedSearches

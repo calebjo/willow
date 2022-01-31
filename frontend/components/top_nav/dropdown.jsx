@@ -14,7 +14,6 @@ export class Dropdown extends React.Component {
     }
 
     handleClick(e){
-        console.log("in handleClick")
         if (this.state.open) {
             this.setState({
                 open: false

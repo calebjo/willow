@@ -4,11 +4,14 @@ import SignupFormContainer from "../form/signup_form_container"
 
 export default class WelcomeModal extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
+        this.toggleForm = this.toggleForm.bind(this);
     }
 
     toggleForm(e){
         e.preventDefault();
+        this.props.removeSessionErrors();
+
         let signinForm = e.target.parentNode.parentNode.children[3]
         let signupForm = e.target.parentNode.parentNode.children[4]
         if (e.target.classList[0] === "sign-in-link") {

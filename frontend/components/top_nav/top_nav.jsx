@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import WelcomeModal from "../modal/welcome_modal";
 import { SessionDropdown } from "./session_dropdown";
 import { Dropdown } from "../top_nav/dropdown";
+import WelcomeModalContainer from "../modal/welcome_modal_container";
 
 // Renders the top left links, logo, top right links, user info (or sign in)
 export default class TopNav extends React.Component {
@@ -57,7 +57,7 @@ export default class TopNav extends React.Component {
         return (
             <div className="top-nav">
                 { this.state.modal && 
-                    <WelcomeModal 
+                    <WelcomeModalContainer 
                         hideModal={this.hideModal}/>
                 }
                 <Dropdown />

@@ -4,10 +4,18 @@ import PropertyDetail from "./property_detail";
 export default class PropertyIndex extends React.Component {
     constructor(props){
         super(props)
+        // this.state = {
+        //     properties: this.props.properties
+        // }
+        // debugger
     }
 
     componentDidMount() {
-        this.props.fetchProperties(this.props.state.ui.filters)
+        this.props.fetchProperties(this.props.state.ui.filters).then(() => {
+            // this.setState({
+            //     properties: this.props.state.entities.properties
+            // })
+        })
         this.props.fetchSavedHomes()
     }
 
@@ -29,7 +37,6 @@ export default class PropertyIndex extends React.Component {
             <div className="property-list-wrapper">
                 <div className="property-list-container">
                     <div className="property-header">
-                        {/* check if rental or for sale, render accordingly */}
                         <div className="property-header-top">
                             Real Estate & Homes For Sale
                         </div>

@@ -10,6 +10,7 @@ export default class SavedHomesContent extends React.Component {
 
         this.state = {
             properties: this.props.properties,
+            savedHomes: this.props.savedHomes,
             currentUser: this.props.state.entities.users[this.props.state.session.id]
         }
     }
@@ -30,10 +31,11 @@ export default class SavedHomesContent extends React.Component {
     }
 
     render(){
+        // debugger
         let saveIds, savedHomes, userSaves
-        if (this.state.properties.length >= 1) {
-            if (this.state.currentUser.saved_homes.length >= 1) {
-                saveIds = this.state.currentUser.saved_homes.map(
+        if (this.state.properties.length >= 1) { // make sure properties have been fetched
+            if (this.state.savedHomes.length >= 1) {
+                saveIds = this.state.savedHomes.map(
                     (save) => (save.property_id)
                 )
         

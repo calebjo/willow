@@ -104,6 +104,7 @@ export default class PropertyDetail extends React.Component {
                 const formData = new FormData();
                 formData.append('saved_home[user_id]', this.state.currentUser.id)
                 formData.append('saved_home[property_id]', this.props.property.id)
+                let that = this;
                 this.props.createSavedHome(formData).then(
                     this.setState({
                         saved: true

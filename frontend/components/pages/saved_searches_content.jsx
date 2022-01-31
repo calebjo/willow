@@ -17,7 +17,15 @@ export default class SavedSearchesContent extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0,0)
-        this.props.fetchSavedSearches()
+        let that = this;
+        this.props.fetchSavedSearches().then((searches) => {
+            that.setState({
+                savedSearches: searches.savedSearches
+            })
+            // debugger
+            console.log(searches.savedSearches)
+        })
+        // debugger
     }
 
     handleEdit(search){
@@ -27,14 +35,20 @@ export default class SavedSearchesContent extends React.Component {
 
     handleDelete(search){
         // console.log("Deleting the selected search...")
-        this.props.deleteSavedSearch(search.id)
+        this.props.deleteSavedSearch(search.id).then(() => {
+            this.props.fetchSavedSearches().then((searches) => {
+                this.setState({
+                    savedSearches: searches.savedSearches
+                })
+            })
+        })
     }
 
     render(){
+        debugger
         let savedSearches, searches = null;
-        if (this.state.currentUser.saved_searches.length >= 1){
-            savedSearches = this.state.currentUser.saved_searches
-
+        if (this.state.savedSearches && this.state.savedSearches.length >= 1){
+            savedSearches = this.state.savedSearches
             searches = savedSearches.map((search, idx) =>
                 <div key={idx} className="saved-search-wrapper">
                     <div className="saved-search-inner">

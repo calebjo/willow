@@ -14,7 +14,10 @@ export default class SearchNav extends React.Component {
             saleType = "forRent"
         }
 
+        const id = this.props.currentUser ? this.props.currentUser.id : null
+
         this.state = {
+            user_id: id,
             saleType: saleType,
 
             priceText: "Price",
@@ -109,7 +112,25 @@ export default class SearchNav extends React.Component {
     }
 
     saveSearch() {
-        console.log(this.props.state.ui.filters)
+        const filters = this.props.state.ui.filters
+
+        const defaultData = { user_id: this.state.user_id, title: 'My Search' }
+        const newData = Object.assign(defaultData)
+
+        // const formData = new FormData();
+        // formData.append('saved_search[user_id]', this.state.user_id)
+        // formData.append('saved_search[address]', this.state.address)
+
+        console.log(newData)
+        if (this.props.currentUser) {
+            this.props.createSavedSearch(newData)
+        } else {
+            console.log("Must be logged in to save searches")
+        }
+    }
+
+    openSavedSearchModal() {
+        console.log("Saved a search!")
     }
 
     render() {

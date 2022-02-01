@@ -11,32 +11,32 @@ export default class SavedSearchesContent extends React.Component {
     constructor(props){
         super(props)
         this.state = {
+            savedSearches: this.props.savedSearches,
             currentUser: this.props.state.entities.users[this.props.state.session.id]
         }
     }
 
     componentDidMount(){
         window.scrollTo(0,0)
-        let that = this;
         this.props.fetchSavedSearches().then((searches) => {
-            that.setState({
-                savedSearches: searches.savedSearches
+            this.setState({
+                savedSearches: Object.values(searches.savedSearches)
             })
-            console.log(searches.savedSearches)
+            
         })
     }
 
     handleEdit(search){
-        // console.log("Editing the selected search...")
+        console.log("Editing the selected search...")
         // this.props.updateSavedSearch(search.id)
     }
 
     handleDelete(search){
-        // console.log("Deleting the selected search...")
+        console.log("Deleting the selected search...")
         this.props.deleteSavedSearch(search.id).then(() => {
             this.props.fetchSavedSearches().then((searches) => {
                 this.setState({
-                    savedSearches: searches.savedSearches
+                    savedSearches: Object.values(searches.savedSearches)
                 })
             })
         })
@@ -46,12 +46,13 @@ export default class SavedSearchesContent extends React.Component {
         let savedSearches, searches = null;
         if (this.state.savedSearches && this.state.savedSearches.length >= 1){
             savedSearches = this.state.savedSearches
+            console.log(savedSearches)
             searches = savedSearches.map((search, idx) =>
                 <div key={idx} className="saved-search-wrapper">
                     <div className="saved-search-inner">
                         <div className="saved-search-left">
                             <div className="saved-search-title">
-                                { search.title }
+                                { search.title || "404: TITLE NOT FOUND"}
                             </div>
                         </div>
                         <div className="saved-search-right">

@@ -1,4 +1,6 @@
 json.extract! saved_search, 
+    :title,
+    :id,
     :user_id,
     :min_price,
     :max_price,

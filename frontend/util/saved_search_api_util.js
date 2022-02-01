@@ -13,21 +13,19 @@ export const fetchSavedSearch = id => (
     })
 );
   
-export const createSavedSearch = savedSearchForm => (
+export const createSavedSearch = saved_search => (
     $.ajax({
         method: 'POST',
         url: '/api/saved_searches',
-        data: savedSearchForm,
-        contentType: false,
-        processData: false
+        data: { saved_search }
     })
 );
   
-export const updateSavedSearch = savedSearch => (
+export const updateSavedSearch = saved_search => (
     $.ajax({
         method: 'PATCH',
-        url: `/api/saved_searches/${savedSearch.id}`,
-        data: { savedSearch }
+        url: `/api/saved_searches/${saved_search.id}`,
+        data: { saved_search }
     })
 );
 

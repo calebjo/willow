@@ -117,7 +117,6 @@ class EditSellContent extends React.Component {
         formData.append('property[city]', this.state.city)
         formData.append('property[state]', this.state.state)
         formData.append('property[zip_code]', this.state.zip_code)
-
         if (this.state.photoFile) {
             formData.append('property[photo]', this.state.photoFile);
         }

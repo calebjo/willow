@@ -23,7 +23,7 @@ class Api::SavedSearchesController < ApplicationController
     private
   
     def saved_search_params
-        params.require(:saved_search).permit(:user_id, :property_id)
+        params.require(:saved_search).permit(:user_id, :title)
     end
 end
   

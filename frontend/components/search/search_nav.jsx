@@ -8,10 +8,10 @@ export default class SearchNav extends React.Component {
         super(props)
 
         let saleType
-        if (this.props.state.ui.filters.forSale === true) {
-            saleType = "forSale"
+        if (this.props.state.ui.filters.for_sale === true) {
+            saleType = "for_sale"
         } else {
-            saleType = "forRent"
+            saleType = "for_rent"
         }
 
         const id = this.props.currentUser ? this.props.currentUser.id : null
@@ -81,10 +81,10 @@ export default class SearchNav extends React.Component {
         const value = e.target.getAttribute('value')
         updateFilter(filter, parseInt(value)).then(() => {
             let saleType
-            if (this.props.state.ui.filters.forSale === true) {
-                saleType = "forSale"
+            if (this.props.state.ui.filters.for_sale === true) {
+                saleType = "for_sale"
             } else {
-                saleType = "forRent"
+                saleType = "for_rent"
             }
             this.setState({
                 saleType: saleType
@@ -115,15 +115,15 @@ export default class SearchNav extends React.Component {
         const filters = this.props.state.ui.filters
 
         const defaultData = { user_id: this.state.user_id, title: 'My Search' }
-        const newData = Object.assign(defaultData)
+        const newData = {}
 
-        // const formData = new FormData();
-        // formData.append('saved_search[user_id]', this.state.user_id)
-        // formData.append('saved_search[address]', this.state.address)
-
-        console.log(newData)
         if (this.props.currentUser) {
-            this.props.createSavedSearch(newData)
+            Object.keys(filters).forEach(key => {
+                newData[key] = filters[key]
+            })
+            const formData = Object.assign(defaultData, newData)
+            this.props.createSavedSearch(formData)
+            console.log(formData)
         } else {
             console.log("Must be logged in to save searches")
         }
@@ -135,10 +135,10 @@ export default class SearchNav extends React.Component {
 
     render() {
         let saleText, ballColor
-        if (this.state.saleType === "forSale"){
+        if (this.state.saleType === "for_sale"){
             saleText = "For Sale"
             ballColor = "#FF5A50"
-        } else if (this.state.saleType === "forRent"){
+        } else if (this.state.saleType === "for_rent"){
             saleText = "For Rent"
             ballColor = "#985DFF"
         } else {
@@ -229,104 +229,104 @@ export default class SearchNav extends React.Component {
                                 <div className="price-list-left">
                                     <div className="price-list-item"
                                         value={ 0 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
                                         $0+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 100000 : 200 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "100,000" : "200"}+
+                                        value={ this.state.saleType === "for_sale" ? 100000 : 200 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "100,000" : "200"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 200000 : 400 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "200,000" : "400"}+
+                                        value={ this.state.saleType === "for_sale" ? 200000 : 400 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "200,000" : "400"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 300000 : 600 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "300,000" : "600"}+
+                                        value={ this.state.saleType === "for_sale" ? 300000 : 600 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "300,000" : "600"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 400000 : 800 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "400,000" : "800"}+
+                                        value={ this.state.saleType === "for_sale" ? 400000 : 800 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "400,000" : "800"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 500000 : 1000 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "500,000" : "1000"}+
+                                        value={ this.state.saleType === "for_sale" ? 500000 : 1000 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "500,000" : "1000"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 600000 : 1200 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "600,000" : "1200"}+
+                                        value={ this.state.saleType === "for_sale" ? 600000 : 1200 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "600,000" : "1200"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 700000 : 1400 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "700,000" : "1400"}+
+                                        value={ this.state.saleType === "for_sale" ? 700000 : 1400 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "700,000" : "1400"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 800000 : 1600 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "800,000" : "1600"}+
+                                        value={ this.state.saleType === "for_sale" ? 800000 : 1600 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "800,000" : "1600"}+
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 900000 : 1800 }
-                                        onClick={this.handleChange('minPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "900,000" : "1800"}+
+                                        value={ this.state.saleType === "for_sale" ? 900000 : 1800 }
+                                        onClick={this.handleChange('min_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "900,000" : "1800"}+
                                     </div>
                                 </div>
                                 <div className="price-list-right">
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 500000 : 2000 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "500,000" : "2000"}
+                                        value={ this.state.saleType === "for_sale" ? 500000 : 2000 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "500,000" : "2000"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 600000 : 2200 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "600,000" : "2200"}
+                                        value={ this.state.saleType === "for_sale" ? 600000 : 2200 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "600,000" : "2200"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 700000 : 2400 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "700,000" : "2400"}
+                                        value={ this.state.saleType === "for_sale" ? 700000 : 2400 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "700,000" : "2400"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 800000 : 2600 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "800,000" : "2600"}
+                                        value={ this.state.saleType === "for_sale" ? 800000 : 2600 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "800,000" : "2600"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 900000 : 2800 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "900,000" : "2800"}
+                                        value={ this.state.saleType === "for_sale" ? 900000 : 2800 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "900,000" : "2800"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 1000000 : 13000200 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "1M" : "3000"}
+                                        value={ this.state.saleType === "for_sale" ? 1000000 : 13000200 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "1M" : "3000"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 1250000 : 3500 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "1.25M" : "3500"}
+                                        value={ this.state.saleType === "for_sale" ? 1250000 : 3500 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "1.25M" : "3500"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 1500000 : 4000 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "1.5M" : "4000"}
+                                        value={ this.state.saleType === "for_sale" ? 1500000 : 4000 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "1.5M" : "4000"}
                                     </div>
                                     <div className="price-list-item"
-                                        value={ this.state.saleType === "forSale" ? 1750000 : 4500 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
-                                        ${ this.state.saleType === "forSale" ? "1.75M" : "4500"}
+                                        value={ this.state.saleType === "for_sale" ? 1750000 : 4500 }
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
+                                        ${ this.state.saleType === "for_sale" ? "1.75M" : "4500"}
                                     </div>
                                     <div className="price-list-item"
                                         value={ 999999999 }
-                                        onClick={this.handleChange('maxPrice', this.props.updateFilter)}>
+                                        onClick={this.handleChange('max_price', this.props.updateFilter)}>
                                         Any Price
                                     </div>
                                 </div>
@@ -347,32 +347,32 @@ export default class SearchNav extends React.Component {
                                     <div className="bed-selection-grid">
                                         <div className="bed-selection-grid-tile"
                                             value={0}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             Any
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={1}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             1+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={2}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             2+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={3}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             3+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={4}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             4+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={5}
-                                            onClick={this.handleChange('minBeds', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_beds', this.props.updateFilter)}>
                                             5+
                                         </div>
                                     </div>
@@ -384,32 +384,32 @@ export default class SearchNav extends React.Component {
                                     <div className="bed-selection-grid">
                                         <div className="bed-selection-grid-tile"
                                             value={0}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             Any
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={1}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             1+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={2}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             2+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={3}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             3+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={4}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             4+
                                         </div>
                                         <div className="bed-selection-grid-tile"
                                             value={5}
-                                            onClick={this.handleChange('minBaths', this.props.updateFilter)}>
+                                            onClick={this.handleChange('min_baths', this.props.updateFilter)}>
                                             5+
                                         </div>
                                     </div>

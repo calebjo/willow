@@ -54,14 +54,17 @@ export default class SavedSearchesContent extends React.Component {
                             <div className="saved-search-title">
                                 { search.title || "404: TITLE NOT FOUND"}
                             </div>
+                            <div className="saved-search-type">
+                                {/* { search.for_sale ? ( "For Sale" ) : ( "For Rent" ) } */}
+                            </div>
                         </div>
                         <div className="saved-search-right">
                             <div className="saved-search-edit" onClick={ () => this.handleEdit(search) }>
-                                <FontAwesomeIcon icon={ faTrashAlt } />
+                                <FontAwesomeIcon icon={ faPencilAlt } />
                                 Edit
                             </div>
                             <div className="saved-search-delete" onClick={ () => this.handleDelete(search) }>
-                                <FontAwesomeIcon icon={ faPencilAlt } />
+                                <FontAwesomeIcon icon={ faTrashAlt } />
                                 Delete
                             </div>
                         </div>

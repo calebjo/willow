@@ -76,10 +76,6 @@ export default class YourHomeContent extends React.Component {
             square_feet
         } = this.state
 
-        if (this.state.properties.length === 0){
-            return null
-        }
-
         let updateForm = null
         if (this.state.updating) {
             updateForm = (
@@ -113,6 +109,10 @@ export default class YourHomeContent extends React.Component {
                     </form>
                 </div>
             )
+        }
+
+        if (!this.state.properties || this.state.properties.length === 0){
+            return null
         }
 
         let properties = this.state.properties.map((property, idx) => {

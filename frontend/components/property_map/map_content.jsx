@@ -19,11 +19,11 @@ export default class MapContent extends React.Component {
     componentDidMount(){
         // update filters using URL
         if (this.props.location.pathname === '/homes') {
-            this.props.updateFilter('forSale', true)
-            this.props.updateFilter('forRent', false)
+            this.props.updateFilter('for_sale', true)
+            this.props.updateFilter('for_rent', false)
         } else if (this.props.location.pathname === '/homes/for_rent') {
-            this.props.updateFilter('forRent', true)
-            this.props.updateFilter('forSale', false)
+            this.props.updateFilter('for_rent', true)
+            this.props.updateFilter('for_sale', false)
         }
     }
 

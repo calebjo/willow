@@ -23,7 +23,7 @@ export default class SearchNav extends React.Component {
             priceText: "Price",
             bedText: "Beds & Baths",
             typeText: "Home type",
-            moreText: "More",
+            moreText: "Reset Filters",
 
             saleOpen: false,
             priceOpen: false,
@@ -96,19 +96,26 @@ export default class SearchNav extends React.Component {
         // DEBUG -- TODO
     }
 
-    handleInputClick(e) {
-        const input = document.querySelectorAll(".dropdown-price-box")
-        setTimeout(() => {
-            if (input[0] !== e.target && input[1] !== e.target) {
-                // SUBMIT THE FORM
-                // console.log("Clicked away, submitting the price form.")
-            }
-        }, 50)
-    }
+    // handleInputClick(e) {
+    //     const input = document.querySelectorAll(".dropdown-price-box")
+    //     setTimeout(() => {
+    //         if (input[0] !== e.target && input[1] !== e.target) {
+    //             // SUBMIT THE FORM
+    //             // console.log("Clicked away, submitting the price form.")
+    //         }
+    //     }, 50)
+    // }
 
     clearFilters() {
         // console.log("Resetting filters to default...")
         this.props.resetFilters()
+
+        // this.setState = ({
+        //     priceText: "Price",
+        //     bedText: "Beds & Baths",
+        //     typeText: "Home type",
+        //     moreText: "Reset Filters"
+        // })
     }
 
     saveSearch() {
@@ -129,9 +136,9 @@ export default class SearchNav extends React.Component {
         }
     }
 
-    openSavedSearchModal() {
-        console.log("Saved a search!")
-    }
+    // openSavedSearchModal() {
+    //     console.log("Saved a search!")
+    // }
 
     render() {
         let saleText, ballColor
@@ -160,7 +167,7 @@ export default class SearchNav extends React.Component {
                         history={this.props.history} />
                 </div>
                 <div className="search-nav-center">
-                    <div className="search-tab sale-dropdown selected"  onClick={() => this.openDropdown("sale")}>
+                    {/* <div className="search-tab sale-dropdown selected"  onClick={() => this.openDropdown("sale")}>
                         <div className="sale-type-ball" style={{backgroundColor: ballColor}}/>
                         <div className="tab-header">
                             { saleText }
@@ -199,11 +206,11 @@ export default class SearchNav extends React.Component {
                                 <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="search-tab price-dropdown" onClick={() => this.openDropdown("price")}>
                         <div className="tab-header">{this.state.priceText}</div>
                         <div className={ this.state.priceOpen ? "search-tab-dropdown price-dropdown" : "hidden"}>
-                            <div className="nav-dropdown-header">
+                            {/* <div className="nav-dropdown-header">
                                 Price Range
                             </div>
                             <div className="nav-dropdown-price-boxes">
@@ -224,7 +231,7 @@ export default class SearchNav extends React.Component {
                                     onChange={this.update}
                                     onClick={this.handleInputClick}
                                 />
-                            </div>
+                            </div> */}
                             <div className="nav-dropdown-price-list">
                                 <div className="price-list-left">
                                     <div className="price-list-item"
@@ -420,7 +427,7 @@ export default class SearchNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="search-tab type-dropdown"  onClick={() => this.openDropdown("type")}>
+                    {/* <div className="search-tab type-dropdown"  onClick={() => this.openDropdown("type")}>
                         <div className="tab-header">{this.state.typeText}</div>
                         <div className={ this.state.typeOpen ? "search-tab-dropdown type-dropdown" : "hidden"}>
                             <div className="nav-dropdown-header">
@@ -456,10 +463,10 @@ export default class SearchNav extends React.Component {
                                 <button onClick={ this.exitDropdown }>Done</button>
                             </div>
                         </div>
-                    </div>
-                    <div className="search-expand"  onClick={() => this.openDropdown("more")}>
+                    </div> */}
+                    <div className="search-expand"  onClick={this.clearFilters}>
                         <div className="tab-header">{this.state.moreText}</div>
-                        <div className={ this.state.moreOpen ? "search-tab-dropdown expand-dropdown" : "hidden"}>
+                        {/* <div className={ this.state.moreOpen ? "search-tab-dropdown expand-dropdown" : "hidden"}>
                             <div className="search-expand-list">
                                 <div className="search-expand-item">
                                     Max HOA
@@ -543,7 +550,7 @@ export default class SearchNav extends React.Component {
                                 <button onClick={ () => this.clearFilters() }>Reset all filters</button>
                                 <button onClick={ this.exitDropdown }>Done</button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="save-search" onClick={ this.saveSearch }>
                         <div className="tab-header">Save search</div>

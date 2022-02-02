@@ -19,6 +19,7 @@
     }
     .search-nav {
         display: flex;
+        align-items: center;
         overflow: hidden;
         height: 3rem;
         padding: 0 0.75rem;
@@ -100,7 +101,7 @@
             }
             // More
             .search-expand {
-                width: 4rem;
+                width: 6rem;
             }
             // Save search
             .save-search {

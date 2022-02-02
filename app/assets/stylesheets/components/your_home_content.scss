@@ -182,6 +182,7 @@
 
 .home-update-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -193,6 +194,8 @@
     padding: 2rem;
     border-radius: 4px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.555);
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
     form {
         display: flex;
         flex-direction: column;
@@ -203,7 +206,28 @@
     }
     input {
         background:rgb(236, 236, 236);
+        margin: 8px;
     }
+    input[type="submit"] {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.2s all ease-out;
+    }
+    input[type="submit"]:hover {
+        background: #d3d3d3;
+        transition: 0.2s all ease-out;
+    }
+    .cancel-edit {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        svg {
+            filter: invert(27%) sepia(49%) saturate(4131%) hue-rotate(207deg) brightness(100%) contrast(107%);
+        }
+    }
+
     animation: bring-in 0.25s ease-out;
 }
 

@@ -2,6 +2,8 @@ import React from "react";
 
 import TopSubNav from "../top_nav/top_sub_nav";
 import SearchNavContainer from "../search/search_nav_container"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default class YourHomeContent extends React.Component {
     constructor(props){
@@ -18,6 +20,7 @@ export default class YourHomeContent extends React.Component {
         this.handleEdit = this.handleEdit.bind(this)
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.stopEditing = this.stopEditing.bind(this)
     }
 
     componentDidMount(){
@@ -54,13 +57,25 @@ export default class YourHomeContent extends React.Component {
     }
 
     handleSubmit(e){
-        // console.log("Submitting edits...")
         e.preventDefault();
-        const formData = new FormData();
-        formData.append('property[price]', this.state.price)
-        formData.append('property[bedrooms]', this.state.bedrooms)
-        formData.append('property[bathrooms]', this.state.bathrooms)
-        this.props.updateProperty(this.state.selectedProperty, formData)
+        const data = { 
+            id: this.state.selectedProperty.id,
+            price: parseInt(this.state.price),
+            bedrooms: parseInt(this.state.bedrooms),
+            bathrooms: parseInt(this.state.bathrooms),
+        }
+
+        this.props.updateProperty(data).then(()=> {
+            this.props.fetchProperties().then(()=> {
+                this.setState({
+                    properties: this.props.properties
+                })
+            })
+        })
+        this.stopEditing();
+    }
+
+    stopEditing() {
         this.setState({
             selectedProperty: null,
             updating: false
@@ -68,7 +83,6 @@ export default class YourHomeContent extends React.Component {
     }
 
     render(){
-
         const {
             price,
             bedrooms,
@@ -80,6 +94,14 @@ export default class YourHomeContent extends React.Component {
         if (this.state.updating) {
             updateForm = (
                 <div className="home-update-form">
+                    <div className="cancel-edit">
+                        <FontAwesomeIcon 
+                            icon={ faTimesCircle } 
+                            color="black"
+                            size="2x"
+                            onClick={this.stopEditing}
+                        />
+                    </div>
                     <form onSubmit={ this.handleSubmit }>
                         <label>New Price</label>
                         <input

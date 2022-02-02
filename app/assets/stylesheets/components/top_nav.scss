@@ -142,6 +142,8 @@
     background: white;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    clip-path: polygon(0 0, 0 42.5%, 42.5% 0);
+    box-shadow: -2px -4px 8px rgba(0, 0, 0, 0.75);
 }
 
 .session-dropdown {
@@ -265,6 +267,6 @@
     }
 
     .dropdown-chip {
-        right: 2rem;
+        right: 6%;
     }
 }

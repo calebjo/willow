@@ -1,7 +1,7 @@
 
-![willow logo](https://i.imgur.com/CGTosdt.png)
+[![willow logo](https://i.imgur.com/CGTosdt.png)](https://willow-aa.herokuapp.com/#/)
 
-Willow is a clone of Zillow, the real estate platform for finding your next home or rental. It was built in 2 weeks and allows users to search for, view, and save properties to their profiles.  
+Willow is a clone of Zillow, the real estate platform for finding your next home or rental. It was built in 2 weeks and allows users to search for, view, and save properties to their profiles. [Check it out here!](https://willow-aa.herokuapp.com/)
 
 ![willow splash page](https://i.imgur.com/WW1RCSj.jpeg)
 

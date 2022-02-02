@@ -4,8 +4,7 @@ import TopSubNav from "../top_nav/top_sub_nav";
 import SearchNavContainer from "../search/search_nav_container"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { faTrashAlt, faPencilAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default class SavedSearchesContent extends React.Component {
     constructor(props){
@@ -14,6 +13,11 @@ export default class SavedSearchesContent extends React.Component {
             savedSearches: this.props.savedSearches,
             currentUser: this.props.state.entities.users[this.props.state.session.id]
         }
+        this.handleEdit = this.handleEdit.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
+        this.update = this.update.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.stopEditing = this.stopEditing.bind(this)
     }
 
     componentDidMount(){
@@ -27,12 +31,43 @@ export default class SavedSearchesContent extends React.Component {
     }
 
     handleEdit(search){
-        console.log("Editing the selected search...")
-        // this.props.updateSavedSearch(search.id)
+        this.setState({
+            selectedSearch: search,
+            updating: true
+        })
+    }
+
+    update(field){
+        return e => this.setState({
+            [field]: e.target.value
+        });
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        const data = { 
+            id: this.state.selectedSearch.id,
+            title: this.state.title
+        }
+
+        this.props.updateSavedSearch(data).then(()=> {
+            this.props.fetchSavedSearches().then(()=> {
+                this.setState({
+                    savedSearches: this.props.savedSearches
+                })
+            })
+        })
+        this.stopEditing();
+    }
+
+    stopEditing() {
+        this.setState({
+            selectedSearch: null,
+            updating: false
+        })
     }
 
     handleDelete(search){
-        console.log("Deleting the selected search...")
         this.props.deleteSavedSearch(search.id).then(() => {
             this.props.fetchSavedSearches().then((searches) => {
                 this.setState({
@@ -43,10 +78,41 @@ export default class SavedSearchesContent extends React.Component {
     }
 
     render(){
+        const {
+            title
+        } = this.state
+        let updateForm = null;
+        if (this.state.updating) {
+            updateForm = (
+                <div className="home-update-form">
+                    <div className="cancel-edit">
+                        <FontAwesomeIcon 
+                            icon={ faTimesCircle } 
+                            color="black"
+                            size="2x"
+                            onClick={this.stopEditing}
+                        />
+                    </div>
+                    <form onSubmit={ this.handleSubmit }>
+                        <label>New Title</label>
+                        <input
+                            type="text"
+                            value={ title }
+                            onChange={ this.update("title")}
+                            className="property-edit-field"
+                        />
+                        <input
+                            type="submit"
+                            className="property-edit-submit"
+                        />
+                    </form>
+                </div>
+            )
+        }
+
         let savedSearches, searches = null;
         if (this.state.savedSearches && this.state.savedSearches.length >= 1){
             savedSearches = this.state.savedSearches
-            console.log(savedSearches)
             searches = savedSearches.map((search, idx) =>
                 <div key={idx} className="saved-search-wrapper">
                     <div className="saved-search-inner">
@@ -101,9 +167,7 @@ export default class SavedSearchesContent extends React.Component {
                         <div className="sub-nav-header">
                             Saved searches
                         </div>
-                        <div className="saved-searches-filters">
-
-                        </div>
+                        { updateForm }
                         <div className="saved-searches-body">
                             { searches }
                         </div>

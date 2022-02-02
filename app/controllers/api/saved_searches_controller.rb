@@ -19,6 +19,15 @@ class Api::SavedSearchesController < ApplicationController
     
         render :show
     end
+
+    def update
+        @saved_search = SavedSearch.find_by(id: params[:id])
+        if @saved_search.update(saved_search_params)
+            render :show
+        else
+            render json: @saved_search.errors.full_messages, status: 422
+        end
+    end
   
     private
   

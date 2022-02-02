@@ -20,16 +20,16 @@ export default class Footer extends React.Component {
                 <div className="footer-greeting">
                     <div className ="greeting-socials">
                         <div className="social-link">
-                            <a href="https://github.com/calebjo"><img src={window.githubIcon} /></a>
+                            <a href="https://github.com/calebjo" target="_blank"><img src={window.githubIcon} /></a>
                         </div>
                         <div className="social-link">
-                            <a href="https://www.linkedin.com/in/caleb-jones-928521126/"><img src={window.linkedinIcon} /></a>
+                            <a href="https://www.linkedin.com/in/caleb-jones-928521126/" target="_blank"><img src={window.linkedinIcon} /></a>
                         </div>
                         {/* <div className="social-link">
                             <a href=""><img src={window.angellistIcon} /></a>
                         </div> */}
                         <div className="social-link">
-                            <a href="https://www.linkedin.com/in/caleb-jones-928521126/"><img src={window.portfolioIcon} /></a>
+                            <a href="https://www.linkedin.com/in/caleb-jones-928521126/" target="_blank"><img src={window.portfolioIcon} /></a>
                         </div>
                     </div>
                     <span>

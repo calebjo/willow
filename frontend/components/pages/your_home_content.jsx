@@ -134,7 +134,22 @@ export default class YourHomeContent extends React.Component {
         }
 
         if (!this.state.properties || this.state.properties.length === 0){
-            return null
+            return (
+                <div className="user-no-content">
+                    <img src={ window.buyHome } />
+                    <div className="user-no-content-title">
+                        <div className="no-content-header">
+                            Put your home here
+                        </div> 
+                        <div className="no-content-sub-header">
+                            List your home on Willow for others to see, ponder, and generally admire. This is real copy text, I am a professional.
+                        </div>
+                    </div>
+                    <SearchNavContainer 
+                        type="splash"
+                    />
+                </div>
+            )
         }
 
         let properties = this.state.properties.map((property, idx) => {

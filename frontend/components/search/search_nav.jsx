@@ -130,9 +130,8 @@ export default class SearchNav extends React.Component {
             })
             const formData = Object.assign(defaultData, newData)
             this.props.createSavedSearch(formData)
-            console.log(formData)
         } else {
-            console.log("Must be logged in to save searches")
+            // console.log("Must be logged in to save searches")
         }
     }
 
